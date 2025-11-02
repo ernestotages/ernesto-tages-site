@@ -167,3 +167,8 @@
 - [x] Fix conferences photo being truncated at the top in desktop version
 - [x] Ensure full photo is visible without cropping
 - [x] Applied object-contain to both service photos for consistency
+
+## Services Page - Adjust Photo Positioning with object-position
+- [x] Revert to object-cover for both photos to fill space properly
+- [x] Adjust conferences photo with object-position to prevent top truncation
+- [x] Adjust consultancy photo with object-position (30% from top) to crop space above heads instead of feet

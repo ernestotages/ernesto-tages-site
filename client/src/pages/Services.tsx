@@ -63,7 +63,7 @@ export default function Services() {
                 <img
                   src="/consultancy.webp"
                   alt="Individual Consultancy"
-                  className="w-full h-48 object-contain rounded-lg"
+                  className="w-full h-48 object-cover object-[center_30%] rounded-lg"
                 />
               </div>
               <h3 className="text-2xl text-[#121212]">
@@ -91,7 +91,7 @@ export default function Services() {
                 <img
                   src="/conferences.webp"
                   alt="Professional Conferences and Seminars"
-                  className="w-full h-48 object-contain rounded-lg"
+                  className="w-full h-48 object-cover object-center rounded-lg"
                 />
               </div>
               <h3 className="text-2xl text-[#121212]">
