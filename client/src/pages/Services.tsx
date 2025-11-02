@@ -56,7 +56,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Individual Consultancy */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow relative"
               onClick={() => toggleSection("individual")}
             >
               <div className="flex justify-center mb-4">
@@ -75,11 +75,16 @@ export default function Services() {
               <p className="text-base text-[#777777] leading-relaxed">
                 {t("services.twoLines.individual.description")}
               </p>
+              <div className="absolute bottom-4 right-4">
+                <button className="px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
+                  {t("services.explore")}
+                </button>
+              </div>
             </div>
 
             {/* Professional Conferences and Seminars */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow relative"
               onClick={() => toggleSection("conferences")}
             >
               <div className="flex justify-center mb-4">
@@ -98,6 +103,11 @@ export default function Services() {
               <p className="text-base text-[#777777] leading-relaxed">
                 {t("services.twoLines.conferences.description")}
               </p>
+              <div className="absolute bottom-4 right-4">
+                <button className="px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
+                  {t("services.explore")}
+                </button>
+              </div>
             </div>
           </div>
 

@@ -153,3 +153,8 @@
 - [x] Add decorative typographic quotation marks (not too large) - REVERTED
 - [x] Reduce line spacing between quote lines for more compact appearance
 - [x] Remove typographic quotation marks and keep only reduced line spacing
+
+## Services Page - Add Explore Buttons
+- [x] Add discrete "Explore" button in bottom-right corner of each service block
+- [x] Use outline style (magenta border and text, transparent background) like newsletter button
+- [x] Improve discoverability of click-to-expand functionality

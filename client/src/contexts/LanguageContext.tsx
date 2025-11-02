@@ -136,6 +136,7 @@ const translations: Record<Language, any> = {
         intro:
           "When decisions carry real consequences, clarity becomes the most valuable form of power. I work with leaders who want to act with coherence, serenity, and integrity — transforming complexity into lucidity and reflection into decisive action.",
       },
+      explore: "Explore",
       twoLines: {
         title: "Two Lines of Work",
         individual: {
@@ -396,6 +397,7 @@ const translations: Record<Language, any> = {
         intro:
           "Cuando las decisiones tienen consecuencias reales, la claridad se convierte en la forma más valiosa de poder. Trabajo con líderes que quieren actuar con coherencia, serenidad e integridad — transformando la complejidad en lucidez y la reflexión en acción decisiva.",
       },
+      explore: "Explorar",
       twoLines: {
         title: "Dos Líneas de Trabajo",
         individual: {
@@ -660,6 +662,7 @@ const translations: Record<Language, any> = {
         intro:
           "Quando as decisões têm consequências reais, a clareza torna-se a forma mais valiosa de poder. Trabalho com líderes que querem agir com coerência, serenidade e integridade — transformando a complexidade em lucidez e a reflexão em ação decisiva.",
       },
+      explore: "Explorar",
       twoLines: {
         title: "Duas Linhas de Trabalho",
         individual: {
