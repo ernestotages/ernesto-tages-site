@@ -38,7 +38,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/">
               <img
-                src="/logo_ENG.jpg"
+                src="/logo_ET.jpg"
                 alt="Ernesto Tages"
                 className="h-12 w-auto cursor-pointer"
               />

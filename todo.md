@@ -132,3 +132,8 @@
 - [x] Check About page photo path (should be /SiteAbout_2486.jpg or /about-photo.jpg)
 - [x] Verify footer methodology logo path
 - [x] Test all pages for missing images or broken links
+
+## Correções Solicitadas pelo Utilizador
+- [x] Remove vertical line and text from ET logo (keep only "ernesto tages" text)
+- [x] Adjust Home hero section - text and button should occupy only left half of screen (prepare for future background image)
+- [x] Change Strategic support section background to gray while keeping the three white blocks

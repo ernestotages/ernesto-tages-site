@@ -19,28 +19,30 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 bg-[#F4F4F4]">
+      <section className="relative py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#121212] leading-tight">
-              {t("home.hero.title")}
-            </h1>
-            <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
-              {t("home.hero.subtitle")}
-            </p>
-            <Button
-              size="lg"
-              className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
-              onClick={scrollToStrategic}
-            >
-              {t("home.hero.cta")}
-            </Button>
+          <div className="max-w-7xl mx-auto">
+            <div className="w-full md:w-1/2 space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#121212] leading-tight">
+                {t("home.hero.title")}
+              </h1>
+              <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
+                {t("home.hero.subtitle")}
+              </p>
+              <Button
+                size="lg"
+                className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
+                onClick={scrollToStrategic}
+              >
+                {t("home.hero.cta")}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Strategic Support Section */}
-      <section id="strategic-support" className="py-20">
+      <section id="strategic-support" className="py-20 bg-[#F4F4F4]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto space-y-12">
             <h2 className="text-3xl md:text-4xl text-[#121212] text-center">
