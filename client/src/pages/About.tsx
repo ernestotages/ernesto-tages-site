@@ -44,7 +44,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-center pt-8">
+            <div className="flex justify-center md:justify-start pt-8">
               <Button
                 size="lg"
                 className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"

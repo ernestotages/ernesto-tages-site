@@ -140,3 +140,4 @@
 
 ## About Page Button Alignment
 - [x] Center the "Learn more about my approach" button for better visual coherence
+- [x] Make button alignment responsive: left-aligned on desktop, centered on mobile
