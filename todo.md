@@ -162,3 +162,8 @@
 ## Services Page - Adjust Explore Buttons
 - [x] Move Explore buttons from bottom-right to bottom-left for consistency with expanded section buttons
 - [x] Add more spacing above Explore button in conferences block to prevent text crowding
+
+## Services Page - Fix Conferences Photo Truncation
+- [x] Fix conferences photo being truncated at the top in desktop version
+- [x] Ensure full photo is visible without cropping
+- [x] Applied object-contain to both service photos for consistency
