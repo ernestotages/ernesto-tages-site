@@ -92,11 +92,10 @@ export default function About() {
                 {t("about.approach.phase4")}
               </p>
 
-              <h3 className="text-2xl md:text-3xl text-[#121212] mt-12 text-center">
-                {t("about.approach.pillarsTitle")}
-              </h3>
-
-              <div className="bg-[#F4F4F4] p-8 rounded-lg space-y-8 mt-8">
+              <div className="bg-[#F4F4F4] p-8 rounded-lg space-y-8 mt-12">
+                <h3 className="text-2xl md:text-3xl text-[#121212] text-center mb-8">
+                  {t("about.approach.pillarsTitle")}
+                </h3>
                 <div>
                   <h4 className="text-xl text-[#121212] mb-2">
                     {t("about.approach.pillar1Title")}

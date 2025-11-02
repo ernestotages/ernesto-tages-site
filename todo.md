@@ -144,3 +144,6 @@
 
 ## Header Logo Fix
 - [x] Fix logo to work as a single clickable link without text selection (prevent blue selection box on click)
+
+## About Page - Three Pillars Section
+- [x] Move "The Three Pillars of My Approach" title inside the gray section with the three pillars
