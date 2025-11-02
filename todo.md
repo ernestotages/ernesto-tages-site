@@ -141,3 +141,6 @@
 ## About Page Button Alignment
 - [x] Center the "Learn more about my approach" button for better visual coherence
 - [x] Make button alignment responsive: left-aligned on desktop, centered on mobile
+
+## Header Logo Fix
+- [x] Fix logo to work as a single clickable link without text selection (prevent blue selection box on click)

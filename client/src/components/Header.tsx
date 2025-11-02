@@ -36,11 +36,12 @@ export default function Header() {
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link href="/">
+            <Link href="/" className="select-none">
               <img
                 src="/logo_ET.jpg"
                 alt="Ernesto Tages"
-                className="h-12 w-auto cursor-pointer"
+                className="h-12 w-auto cursor-pointer select-none"
+                draggable="false"
               />
             </Link>
 
