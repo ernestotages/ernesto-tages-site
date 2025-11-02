@@ -43,39 +43,41 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Ernesto Tages Brand Colors */
+  /* White: #FFFFFF, Graphite Black: #121212, Light Gray: #F4F4F4, Warm Gray: #777777, Magenta: #D9307E */
+  --primary: #D9307E; /* Magenta accent */
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #121212;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #D9307E;
+  --chart-2: #777777;
+  --chart-3: #F4F4F4;
+  --chart-4: #121212;
+  --chart-5: #FFFFFF;
+  --radius: 0.25rem; /* Minimal radius for clean, architectural look */
+  --background: #FFFFFF; /* Pure white background */
+  --foreground: #121212; /* Graphite black text */
+  --card: #FFFFFF;
+  --card-foreground: #121212;
+  --popover: #FFFFFF;
+  --popover-foreground: #121212;
+  --secondary: #F4F4F4; /* Light gray */
+  --secondary-foreground: #121212;
+  --muted: #F4F4F4;
+  --muted-foreground: #777777; /* Warm gray */
+  --accent: #D9307E; /* Magenta */
+  --accent-foreground: #FFFFFF;
+  --destructive: #D9307E;
+  --destructive-foreground: #FFFFFF;
+  --border: #E6E6E6; /* Very light gray for subtle borders */
+  --input: #F4F4F4;
+  --ring: #D9307E; /* Magenta focus ring */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #121212;
+  --sidebar-accent: #F4F4F4;
+  --sidebar-accent-foreground: #121212;
+  --sidebar-border: #E6E6E6;
+  --sidebar-ring: #D9307E;
 }
 
 .dark {
@@ -119,6 +121,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300; /* Light weight for body text */
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 200 !important; /* Extra light weight for visibly thin, elegant titles */
+    line-height: 1.3;
+    letter-spacing: 0.01em; /* Subtle letter spacing for elegant appearance */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -173,5 +187,55 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Additional spacing utilities for brand aesthetic */
+  .section-spacing {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-spacing {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  /* Menu animations */
+  @keyframes fadeInSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInSlideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fadeInSlideDown {
+    animation: fadeInSlideDown 0.3s ease-out forwards;
+  }
+
+  .animate-fadeInSlideRight {
+    animation: fadeInSlideRight 0.3s ease-out forwards;
+    opacity: 0; /* Start invisible */
   }
 }
