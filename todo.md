@@ -172,3 +172,9 @@
 - [x] Revert to object-cover for both photos to fill space properly
 - [x] Adjust conferences photo with object-position to prevent top truncation
 - [x] Adjust consultancy photo with object-position (30% from top) to crop space above heads instead of feet
+
+## Services Page - Replace Photos with Pre-Cropped Versions
+- [x] Optimize consultancy photo (pre-cropped) to WebP format (49KB)
+- [x] Optimize conferences photo (pre-cropped) to WebP format (38KB)
+- [x] Replace current photos with new optimized versions
+- [x] Use object-cover object-center for both photos since they are already properly cropped
