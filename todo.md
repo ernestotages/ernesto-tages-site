@@ -137,3 +137,6 @@
 - [x] Remove vertical line and text from ET logo (keep only "ernesto tages" text)
 - [x] Adjust Home hero section - text and button should occupy only left half of screen (prepare for future background image)
 - [x] Change Strategic support section background to gray while keeping the three white blocks
+
+## About Page Button Alignment
+- [x] Center the "Learn more about my approach" button for better visual coherence
