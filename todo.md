@@ -197,3 +197,7 @@
 - [x] Use w-full with auto height to let images display at natural aspect ratio
 - [x] Ensure both photos display completely without any cropping in desktop and mobile
 - [x] Test thoroughly on both desktop and mobile before checkpoint - VERIFIED: Photos display perfectly at natural aspect ratio
+
+## Footer - Fix Email Input and Button Width Alignment in Mobile
+- [x] Ensure email input and "Join the Newsletter" button have same width in mobile version
+- [x] Adjust CSS to make both elements full-width on mobile (w-full sm:max-w-xs)

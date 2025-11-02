@@ -48,7 +48,7 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-white text-[#121212] border-none max-w-xs"
+                className="bg-white text-[#121212] border-none w-full sm:max-w-xs"
               />
               <Button
                 type="submit"
