@@ -125,3 +125,10 @@
 - [x] Copy optimized photos to public directory
 - [x] Replace abstract icons with real photos in Services page
 - [x] Adjust layout for better photo presentation
+
+## Erros Identificados para Correção
+- [x] Fix logo path in Header - currently pointing to /logo.png but file is logo_ENG.jpg
+- [x] Verify all image paths are correct across all pages
+- [x] Check About page photo path (should be /SiteAbout_2486.jpg or /about-photo.jpg)
+- [x] Verify footer methodology logo path
+- [x] Test all pages for missing images or broken links

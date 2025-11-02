@@ -16,7 +16,7 @@ export default function About() {
               {/* Left Column: Photo */}
               <div className="relative">
                 <img
-                  src="/about-photo.jpg"
+                  src="/SiteAbout_2486.jpg"
                   alt="Ernesto Tages"
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
