@@ -184,3 +184,10 @@
 - [x] Increase image height from h-48 to h-64 for better visual size
 - [x] Add background color (bg-gray-50) to image containers
 - [x] Test on both desktop and mobile to ensure no truncation - VERIFIED: Photos display completely without cropping
+
+## Services Page - Replace Photos with Equal Dimensions
+- [x] Verify both new photos have identical dimensions (937x812)
+- [x] Optimize both photos to WebP format (consultancy 49KB, conferences 67KB)
+- [x] Replace current photos with new equal-dimension versions
+- [x] Change back to object-cover (remove object-contain and gray background)
+- [x] Test that photos display without gray backgrounds or black lines - VERIFIED: Both photos display perfectly with equal dimensions
