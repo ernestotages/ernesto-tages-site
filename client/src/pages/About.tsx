@@ -44,21 +44,25 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-center md:justify-start pt-8">
-              <Button
-                size="lg"
-                className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
-                onClick={() => {
-                  const element = document.getElementById("approach");
-                  if (element) {
-                    const yOffset = -80;
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  }
-                }}
-              >
-                {t("about.hero.cta")}
-              </Button>
+            {/* Button aligned with text column on desktop, centered on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
+              <div className="hidden md:block"></div>
+              <div className="flex justify-center md:justify-start">
+                <Button
+                  size="lg"
+                  className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
+                  onClick={() => {
+                    const element = document.getElementById("approach");
+                    if (element) {
+                      const yOffset = -80;
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                >
+                  {t("about.hero.cta")}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
