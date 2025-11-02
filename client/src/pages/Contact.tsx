@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,6 +55,14 @@ export default function Contact() {
   };
 
   return (
+    <>
+      <SEO
+        title="Contacta Ernesto Tages | Consultoria em Liderança Ética"
+        description="Entra em contacto para explorar programas de decisão ética e liderança consciente."
+        ogTitle="Fala com Ernesto Tages"
+        ogDescription="Cria um espaço de rigor e reflexão para decisões com integridade e clareza."
+        ogImage="/og-image.png"
+      />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-[#F4F4F4]">
@@ -203,6 +212,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

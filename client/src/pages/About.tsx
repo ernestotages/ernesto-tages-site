@@ -1,13 +1,22 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
+import SEO from "@/components/SEO";
 
 export default function About() {
   const { t } = useLanguage();
   const [, navigate] = useLocation();
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SEO
+        title="Sobre Ernesto Tages | Mentor de Líderes Éticos"
+        description="Autor e mentor dedicado a formar líderes que decidem com rigor, reflexão e integridade."
+        ogTitle="Conhece Ernesto Tages, Mentor de Líderes Éticos"
+        ogDescription="Mais de 25 anos a apoiar executivos na construção de clareza decisional e liderança ética."
+        ogImage="/og-image.png"
+      />
+      <div className="min-h-screen bg-white">
       {/* Hero Section with Photo */}
       <section className="py-20 bg-[#F4F4F4]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +184,7 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

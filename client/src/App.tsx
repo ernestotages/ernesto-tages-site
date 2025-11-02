@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -42,17 +43,19 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <LanguageProvider>
-        <ThemeProvider
-          defaultTheme="light"
-          // switchable
-        >
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
-        </ThemeProvider>
-      </LanguageProvider>
+      <HelmetProvider>
+        <LanguageProvider>
+          <ThemeProvider
+            defaultTheme="light"
+            // switchable
+          >
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+            </TooltipProvider>
+          </ThemeProvider>
+        </LanguageProvider>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }

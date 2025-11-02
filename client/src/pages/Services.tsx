@@ -3,6 +3,7 @@ import { useLocation } from "wouter";
 import { User, Users, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Services() {
   const [, setLocation] = useLocation();
@@ -28,6 +29,14 @@ export default function Services() {
   }, [expandedSection]);
 
   return (
+    <>
+      <SEO
+        title="Consultoria e Conferências em Liderança Ética | Ernesto Tages"
+        description="Programas individuais e seminários que unem rigor intelectual, gestão emocional e ação ética."
+        ogTitle="Serviços de Consultoria e Conferências em Ética e Liderança"
+        ogDescription="Apoio estratégico para líderes que enfrentam dilemas complexos e procuram decidir com integridade."
+        ogImage="/og-image.png"
+      />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-[#F4F4F4]">
@@ -303,6 +312,7 @@ export default function Services() {
           </div>
         </section>
       )}
-    </div>
+      </div>
+    </>
   );
 }

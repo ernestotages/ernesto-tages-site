@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { FileText, Download, BookOpen, Video } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Resources() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -31,6 +32,14 @@ export default function Resources() {
   }, [expandedSection]);
 
   return (
+    <>
+      <SEO
+        title="Recursos de Reflexão e Liderança Ética | Ernesto Tages"
+        description="Ensaios, artigos e ferramentas para cultivar clareza, consciência e liderança ética."
+        ogTitle="Recursos para Líderes Éticos"
+        ogDescription="Textos e reflexões que transformam complexidade em clareza e energia para agir."
+        ogImage="/og-image.png"
+      />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-[#F4F4F4]">
@@ -321,6 +330,7 @@ export default function Resources() {
           </div>
         </section>
       )}
-    </div>
+      </div>
+    </>
   );
 }

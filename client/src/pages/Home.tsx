@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { Target, Lightbulb, Scale } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -17,7 +18,15 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SEO
+        title="Liderança Ética e Clareza Decisional | Ernesto Tages"
+        description="Um espaço onde rigor e reflexão se transformam em clareza e energia para a ação ética."
+        ogTitle="Liderança Ética e Clareza Decisional"
+        ogDescription="Rigor, reflexão e integridade ao serviço de líderes que decidem com consciência."
+        ogImage="/og-image.png"
+      />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,6 +122,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
