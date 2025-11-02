@@ -147,3 +147,8 @@
 
 ## About Page - Three Pillars Section
 - [x] Move "The Three Pillars of My Approach" title inside the gray section with the three pillars
+
+## About Page - Blockquote Design
+- [x] Add decorative typographic quotation marks (not too large) - REVERTED
+- [x] Reduce line spacing between quote lines for more compact appearance
+- [x] Remove typographic quotation marks and keep only reduced line spacing

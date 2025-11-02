@@ -140,14 +140,16 @@ export default function About() {
                 {t("about.approach.distinctiveText")}
               </p>
 
-              {/* Blockquote with Vertical Magenta Line */}
-              <blockquote className="border-l-4 border-[#D9307E] pl-8 my-12 space-y-4">
-                <p className="text-xl text-[#121212] leading-relaxed italic">
-                  {t("about.approach.blockquote1")}
-                </p>
-                <p className="text-xl text-[#121212] leading-relaxed italic">
-                  {t("about.approach.blockquote2")}
-                </p>
+              {/* Blockquote with Reduced Line Spacing */}
+              <blockquote className="border-l-4 border-[#D9307E] pl-8 my-12">
+                <div className="space-y-2">
+                  <p className="text-xl text-[#121212] leading-snug italic">
+                    {t("about.approach.blockquote1")}
+                  </p>
+                  <p className="text-xl text-[#121212] leading-snug italic">
+                    {t("about.approach.blockquote2")}
+                  </p>
+                </div>
               </blockquote>
 
               <p className="text-lg text-[#777777] leading-relaxed">
