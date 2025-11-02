@@ -158,3 +158,7 @@
 - [x] Add discrete "Explore" button in bottom-right corner of each service block
 - [x] Use outline style (magenta border and text, transparent background) like newsletter button
 - [x] Improve discoverability of click-to-expand functionality
+
+## Services Page - Adjust Explore Buttons
+- [x] Move Explore buttons from bottom-right to bottom-left for consistency with expanded section buttons
+- [x] Add more spacing above Explore button in conferences block to prevent text crowding
