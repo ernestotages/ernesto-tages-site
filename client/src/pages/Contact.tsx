@@ -15,22 +15,26 @@ export default function Contact() {
     honeypot: "", // Anti-robot honeypot field
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
   const { t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors([]);
+    setIsSubmitting(true);
 
     // Check honeypot - if filled, it's a bot
     if (formData.honeypot) {
       console.log("Bot detected via honeypot");
+      setIsSubmitting(false);
       return;
     }
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       setErrors([t("contact.form.error")]);
+      setIsSubmitting(false);
       return;
     }
 
@@ -38,20 +42,52 @@ export default function Contact() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setErrors(["Please enter a valid email address."]);
+      setIsSubmitting(false);
       return;
     }
 
-    // Show success message
-    setShowSuccess(true);
-    setFormData({ name: "", email: "", subject: "", message: "", honeypot: "" });
+    try {
+      // Send email via Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "f13a29e8-61ee-475d-8cb2-6738a6f9779f",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: "Ernesto Tages Website",
+          to_email: "info@ernestotages.com",
+        }),
+      });
 
-    // Scroll to top to show success message
-    window.scrollTo({ top: 0, behavior: "smooth" });
+      const result = await response.json();
 
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+      if (result.success) {
+        // Show success message
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", subject: "", message: "", honeypot: "" });
+
+        // Scroll to top to show success message
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 5000);
+      } else {
+        setErrors(["Failed to send message. Please try again."]);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setErrors(["Failed to send message. Please try again."]);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -96,22 +132,13 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border-t-4 border-[#D9307E]">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+                {/* Web3Forms Access Key */}
+                <input type="hidden" name="access_key" value="f13a29e8-61ee-475d-8cb2-6738a6f9779f" />
+                <input type="hidden" name="from_name" value="Ernesto Tages Website" />
+                
                 {/* Honeypot field - hidden from users, visible to bots */}
-                <div className="absolute left-[-9999px]" aria-hidden="true">
-                  <label htmlFor="website">Website</label>
-                  <input
-                    type="text"
-                    id="website"
-                    name="website"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    value={formData.honeypot}
-                    onChange={(e) =>
-                      setFormData({ ...formData, honeypot: e.target.value })
-                    }
-                  />
-                </div>
+                <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
 
                 <div>
                   <label
@@ -122,6 +149,7 @@ export default function Contact() {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) =>
@@ -141,6 +169,7 @@ export default function Contact() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) =>
@@ -160,6 +189,7 @@ export default function Contact() {
                   </label>
                   <Input
                     id="subject"
+                    name="subject"
                     type="text"
                     value={formData.subject}
                     onChange={(e) =>
@@ -177,14 +207,14 @@ export default function Contact() {
                   >
                     {t("contact.form.message")}
                   </label>
-                  <Textarea
+                          <Textarea
                     id="message"
-                    rows={6}
+                    name="message"
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full"
+                    className="w-full min-h-[150px]"
                     required
                   />
                 </div>
@@ -203,9 +233,10 @@ export default function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-[#D9307E] hover:bg-[#b82567] text-white text-lg py-6 transition-all"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#D9307E] hover:bg-[#b82567] text-white text-lg py-6 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t("contact.form.send")}
+                  {isSubmitting ? t("contact.form.sending") || "Sending..." : t("contact.form.send")}
                 </Button>
               </form>
             </div>
