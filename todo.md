@@ -237,6 +237,11 @@
 
 ## Google Search Console Verification
 - [x] Add Google verification meta tag to index.html
-- [ ] Deploy updated build to Netlify
-- [ ] Test verification in Google Search Console
+- [x] Deploy updated build to Netlify
+- [x] Test verification in Google Search Console
 - [ ] Request re-indexing of all pages
+
+## Sitemap.xml Creation and Submission
+- [x] Create sitemap.xml with all site pages
+- [ ] Deploy sitemap.xml to Netlify
+- [ ] Submit sitemap to Google Search Console
