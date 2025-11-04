@@ -20,6 +20,11 @@ export default function SEO({
   const fullTitle = `${title} | Ernesto Tages`;
   const finalOgTitle = ogTitle || title;
   const finalOgDescription = ogDescription || description;
+  
+  // Ensure og:image is an absolute URL
+  const absoluteOgImage = ogImage.startsWith('http') 
+    ? ogImage 
+    : `https://ernestotages.com${ogImage}`;
 
   return (
     <Helmet>
@@ -27,17 +32,20 @@ export default function SEO({
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       
+      {/* Google Search Console Verification */}
+      <meta name="google-site-verification" content="V8ZhuVZRfPrsT74vQZ4rSpXVKo-KhmKnGJwJqY9CLko" />
+      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={finalOgTitle} />
       <meta property="og:description" content={finalOgDescription} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={absoluteOgImage} />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:title" content={finalOgTitle} />
       <meta property="twitter:description" content={finalOgDescription} />
-      <meta property="twitter:image" content={ogImage} />
+      <meta property="twitter:image" content={absoluteOgImage} />
     </Helmet>
   );
 }

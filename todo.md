@@ -221,3 +221,22 @@
 - [x] Integrate Web3Forms API for email sending
 - [x] Configure form to send to info@ernestotages.com
 - [x] Test email delivery
+
+## Fix og:image Missing in Netlify Deploy
+- [x] Verify og-image.png is in correct location
+- [x] Generate new production build
+- [x] Update Netlify deployment
+- [ ] Test og:image accessibility
+- [ ] Clear WhatsApp cache for link preview
+
+## Search Engine Cache Update
+- [ ] Request Google to re-index site using Google Search Console
+- [ ] Request Bing to re-index site using Bing Webmaster Tools
+- [ ] Update DuckDuckGo cache by requesting re-crawl
+- [ ] Verify updated meta tags appear in search results
+
+## Google Search Console Verification
+- [x] Add Google verification meta tag to index.html
+- [ ] Deploy updated build to Netlify
+- [ ] Test verification in Google Search Console
+- [ ] Request re-indexing of all pages
