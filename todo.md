@@ -243,5 +243,28 @@
 
 ## Sitemap.xml Creation and Submission
 - [x] Create sitemap.xml with all site pages
-- [ ] Deploy sitemap.xml to Netlify
-- [ ] Submit sitemap to Google Search Console
+- [x] Deploy sitemap.xml to Netlify
+- [x] Submit sitemap to Google Search Console
+
+## Email Configuration
+- [x] Identify email service provider (Proton Mail Mail Essentials)
+- [x] Verify domain ernestotages.com configured in Proton Mail
+- [x] Confirm Proton Mail Bridge installed
+- [x] Enable Split Mode in Bridge
+- [x] Configure info@ernestotages.com in Outlook Mac
+- [ ] Fix email sending issue (emails not reaching destination)
+- [ ] Test email sending and receiving
+
+## Google Search Console Indexing Issues
+- [ ] Analyze "Alternative page with proper canonical tag" warnings
+- [ ] Analyze "Not found (404)" warnings
+- [ ] Analyze "Page with redirect" warnings
+- [ ] Analyze "Blocked due to other 4xx issue" warnings
+- [ ] Fix critical indexing issues if any
+
+## Google Analytics 4 Setup
+- [x] Create Google Analytics 4 account and property
+- [x] Obtain GA4 Measurement ID (G-BL2GRBTZ37)
+- [x] Add GA4 tracking code to site
+- [ ] Deploy updated site to Netlify
+- [ ] Test and verify GA4 is collecting data
