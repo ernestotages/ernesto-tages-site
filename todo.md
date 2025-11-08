@@ -299,3 +299,9 @@
 - [x] Ensure og:image uses absolute URL (https://ernestotages.com/og-image.png)
 - [x] Include image dimensions (1200x630) and type (PNG)
 - [x] Ready for Facebook Debugger validation after publish
+
+## Add Static Meta Description for SEO
+- [x] Add static meta name="description" to index.html
+- [x] Ensure description matches og:description for consistency
+- [x] Change all meta tags to English for international reach
+- [x] Ready for Google/DuckDuckGo indexing after publish
