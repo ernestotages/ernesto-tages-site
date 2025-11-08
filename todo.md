@@ -292,3 +292,10 @@
 - [x] Optimize image size for social media (1200x630px, 91KB)
 - [x] Update og:image references in all pages
 - [x] Ready for social media sharing (WhatsApp, Facebook, LinkedIn)
+
+## Fix og:image Facebook Warning
+- [x] Fix "Inferred Property" warning from Facebook Debugger
+- [x] Add static Open Graph meta tags to index.html
+- [x] Ensure og:image uses absolute URL (https://ernestotages.com/og-image.png)
+- [x] Include image dimensions (1200x630) and type (PNG)
+- [x] Ready for Facebook Debugger validation after publish
