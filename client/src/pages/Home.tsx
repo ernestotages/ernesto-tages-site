@@ -1,3 +1,4 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { Target, Lightbulb, Scale } from "lucide-react";
@@ -5,6 +6,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const { t } = useLanguage();
   const [, navigate] = useLocation();
 

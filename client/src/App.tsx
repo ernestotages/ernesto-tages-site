@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <>
       <ScrollToTop />

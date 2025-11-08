@@ -3,17 +3,33 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Loader2 } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const { t } = useLanguage();
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      toast.success(t("footer.newsletter.success"));
+  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
+    onSuccess: (data) => {
+      if (data.message === "already_subscribed") {
+        toast.info(t("footer.newsletter.already_subscribed"));
+      } else {
+        toast.success(t("footer.newsletter.success"));
+      }
       setEmail("");
-    }
+    },
+    onError: (error) => {
+      console.error("Newsletter subscription error:", error);
+      toast.error(t("footer.newsletter.error"));
+    },
+  });
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    subscribeMutation.mutate({ email });
   };
 
   return (
@@ -53,9 +69,17 @@ export default function Footer() {
               <Button
                 type="submit"
                 variant="outline"
-                className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors"
+                disabled={subscribeMutation.isPending}
+                className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors disabled:opacity-50"
               >
-                {t("footer.newsletter.button")}
+                {subscribeMutation.isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    {t("footer.newsletter.submitting")}
+                  </>
+                ) : (
+                  t("footer.newsletter.button")
+                )}
               </Button>
             </form>
           </div>

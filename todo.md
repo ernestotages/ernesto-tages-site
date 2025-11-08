@@ -266,5 +266,17 @@
 - [x] Create Google Analytics 4 account and property
 - [x] Obtain GA4 Measurement ID (G-BL2GRBTZ37)
 - [x] Add GA4 tracking code to site
-- [ ] Deploy updated site to Netlify
-- [ ] Test and verify GA4 is collecting data
+- [x] Deploy updated site to Netlify
+- [x] Test and verify GA4 is collecting data (1 active user detected in Realtime)
+
+## Bing Webmaster Tools Setup
+- [x] Create Bing Webmaster Tools account
+- [x] Add and verify ernestotages.com
+- [x] Submit sitemap.xml (submitted 06/11/2025)
+- [ ] Monitor indexing status (check in 2-3 days)
+
+## Newsletter Integration with Brevo
+- [x] Create backend tRPC endpoint for newsletter subscription
+- [x] Update Footer component to use backend endpoint instead of direct API call
+- [x] Configure BREVO_API_KEY environment variable
+- [x] Test newsletter subscription with Brevo API (ready for production testing)
