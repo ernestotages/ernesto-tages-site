@@ -305,3 +305,10 @@
 - [x] Ensure description matches og:description for consistency
 - [x] Change all meta tags to English for international reach
 - [x] Ready for Google/DuckDuckGo indexing after publish
+
+## Fix Meta Tags Not Appearing in Production
+- [x] Investigate why index.html meta tags are not deployed to production
+- [x] Verify meta tags are correct in local build (dist/public/index.html)
+- [x] Confirm og-image.png is accessible in production
+- [x] Add build marker to force new deployment
+- [ ] User needs to publish again and validate with Facebook Debugger
