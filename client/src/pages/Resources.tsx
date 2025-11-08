@@ -35,9 +35,9 @@ export default function Resources() {
     <>
       <SEO
         title="Recursos de Reflexão e Liderança Ética | Ernesto Tages"
-        description="Ensaios, artigos e ferramentas para cultivar clareza, consciência e liderança ética."
-        ogTitle="Recursos para Líderes Éticos"
-        ogDescription="Textos e reflexões que transformam complexidade em clareza e energia para agir."
+        description="Artigos, ensaios e ferramentas práticas sobre liderança ética, gestão emocional e clareza decisional. Recursos gratuitos para executivos que procuram decidir com integridade."
+        ogTitle="Recursos Gratuitos: Artigos e Ferramentas de Liderança Ética"
+        ogDescription="Biblioteca de conteúdos sobre dilemas éticos, gestão de emoções e tomada de decisão consciente. Para líderes que valorizam rigor e integridade."
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

@@ -11,9 +11,9 @@ export default function About() {
     <>
       <SEO
         title="Sobre Ernesto Tages | Mentor de Líderes Éticos"
-        description="Autor e mentor dedicado a formar líderes que decidem com rigor, reflexão e integridade."
-        ogTitle="Conhece Ernesto Tages, Mentor de Líderes Éticos"
-        ogDescription="Mais de 25 anos a apoiar executivos na construção de clareza decisional e liderança ética."
+        description="Filósofo e consultor com 25+ anos de experiência em liderança ética. Apoio executivos do setor público, privado e social a transformar dilemas complexos em decisões claras e éticas."
+        ogTitle="Ernesto Tages - Perfil e Experiência"
+        ogDescription="Especialista em gestão emocional e clareza decisional. Autor, conferencista e mentor de líderes que enfrentam dilemas éticos complexos."
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">

@@ -94,9 +94,9 @@ export default function Contact() {
     <>
       <SEO
         title="Contacta Ernesto Tages | Consultoria em Liderança Ética"
-        description="Entra em contacto para explorar programas de decisão ética e liderança consciente."
-        ogTitle="Fala com Ernesto Tages"
-        ogDescription="Cria um espaço de rigor e reflexão para decisões com integridade e clareza."
+        description="Entre em contacto para agendar uma sessão de consultoria em liderança ética. Apoio personalizado para executivos que enfrentam dilemas complexos e procuram clareza decisional."
+        ogTitle="Contacto - Agende uma Sessão de Consultoria"
+        ogDescription="Marque uma conversa para explorar como transformar dilemas de liderança em decisões éticas e estratégicas. Consultoria individual e programas corporativos disponíveis."
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

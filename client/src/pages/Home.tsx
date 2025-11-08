@@ -26,9 +26,9 @@ export default function Home() {
     <>
       <SEO
         title="Liderança Ética e Clareza Decisional | Ernesto Tages"
-        description="Um espaço onde rigor e reflexão se transformam em clareza e energia para a ação ética."
-        ogTitle="Liderança Ética e Clareza Decisional"
-        ogDescription="Rigor, reflexão e integridade ao serviço de líderes que decidem com consciência."
+        description="Consultoria especializada em liderança ética para executivos. Apoio estratégico na gestão de dilemas complexos, clareza decisional e integridade organizacional."
+        ogTitle="Ernesto Tages - Consultoria em Liderança Ética"
+        ogDescription="Transformo dilemas de liderança em decisões éticas e estratégicas. Rigor intelectual, gestão emocional e integridade para líderes do setor público, privado e social."
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">

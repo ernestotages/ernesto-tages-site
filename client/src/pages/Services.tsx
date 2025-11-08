@@ -32,9 +32,9 @@ export default function Services() {
     <>
       <SEO
         title="Consultoria e Conferências em Liderança Ética | Ernesto Tages"
-        description="Programas individuais e seminários que unem rigor intelectual, gestão emocional e ação ética."
-        ogTitle="Serviços de Consultoria e Conferências em Ética e Liderança"
-        ogDescription="Apoio estratégico para líderes que enfrentam dilemas complexos e procuram decidir com integridade."
+        description="Consultoria individual e programas corporativos em liderança ética. Sessões estratégicas, conferências e seminários que integram rigor intelectual, gestão emocional e integridade."
+        ogTitle="Serviços: Consultoria Individual e Programas Corporativos"
+        ogDescription="Apoio personalizado para executivos e equipas que enfrentam dilemas éticos complexos. Clareza decisional e liderança consciente."
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">
