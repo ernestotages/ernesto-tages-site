@@ -286,3 +286,9 @@
 - [x] Update Open Graph tags for better social media sharing
 - [x] Update meta tags for About, Services, Resources, and Contact pages
 - [x] Optimize descriptions for search engines (Google, DuckDuckGo)
+
+## Open Graph Image Update
+- [x] Create new og-image.png with methodology logo on white background
+- [x] Optimize image size for social media (1200x630px, 91KB)
+- [x] Update og:image references in all pages
+- [x] Ready for social media sharing (WhatsApp, Facebook, LinkedIn)
