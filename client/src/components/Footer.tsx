@@ -4,32 +4,46 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
-import { trpc } from "@/lib/trpc";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useLanguage();
-
-  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
-    onSuccess: (data) => {
-      if (data.message === "already_subscribed") {
-        toast.info(t("footer.newsletter.already_subscribed"));
-      } else {
-        toast.success(t("footer.newsletter.success"));
-      }
-      setEmail("");
-    },
-    onError: (error) => {
-      console.error("Newsletter subscription error:", error);
-      toast.error(t("footer.newsletter.error"));
-    },
-  });
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || isSubmitting) return;
 
-    subscribeMutation.mutate({ email });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/.netlify/functions/newsletter-subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (data.alreadySubscribed) {
+          toast.info(t("footer.newsletter.already_subscribed"));
+        } else {
+          toast.success(t("footer.newsletter.success"));
+        }
+        setEmail("");
+      } else {
+        console.error("Newsletter subscription error:", data);
+        toast.error(t("footer.newsletter.error"));
+      }
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+      toast.error(t("footer.newsletter.error"));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -69,10 +83,10 @@ export default function Footer() {
               <Button
                 type="submit"
                 variant="outline"
-                disabled={subscribeMutation.isPending}
+                disabled={isSubmitting}
                 className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors disabled:opacity-50"
               >
-                {subscribeMutation.isPending ? (
+                {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     {t("footer.newsletter.submitting")}

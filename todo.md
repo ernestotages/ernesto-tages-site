@@ -312,3 +312,11 @@
 - [x] Confirm og-image.png is accessible in production
 - [x] Add build marker to force new deployment
 - [ ] User needs to publish again and validate with Facebook Debugger
+
+## Adapt Newsletter for Netlify
+- [x] Create Netlify Function to handle Brevo API calls
+- [x] Update Footer component to use Netlify Function endpoint
+- [x] Configure netlify.toml for serverless functions
+- [x] Package updated version for Netlify deployment
+- [ ] User needs to configure BREVO_API_KEY in Netlify UI
+- [ ] User needs to test newsletter after deployment
