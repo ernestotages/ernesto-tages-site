@@ -323,5 +323,6 @@
 
 ## Newsletter Subscription Fix
 - [x] Fix Netlify Function to add contacts to Brevo list ID 2
+- [x] Add netlify-specific build script (build:netlify) to fix deploy
 - [ ] Test newsletter subscription flow end-to-end
 - [ ] Verify welcome email automation triggers correctly
