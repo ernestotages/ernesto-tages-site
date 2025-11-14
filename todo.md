@@ -320,3 +320,8 @@
 - [x] Package updated version for Netlify deployment
 - [ ] User needs to configure BREVO_API_KEY in Netlify UI
 - [ ] User needs to test newsletter after deployment
+
+## Newsletter Subscription Fix
+- [x] Fix Netlify Function to add contacts to Brevo list ID 2
+- [ ] Test newsletter subscription flow end-to-end
+- [ ] Verify welcome email automation triggers correctly

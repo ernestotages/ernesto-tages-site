@@ -41,6 +41,7 @@ exports.handler = async (event, context) => {
       },
       body: JSON.stringify({
         email: email,
+        listIds: [2], // Add to "Newsletter ET Site - #2" list
         updateEnabled: false // Don't update if contact already exists
       })
     });

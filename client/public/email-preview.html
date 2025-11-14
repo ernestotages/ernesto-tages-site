@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to The Clarity Compass</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* Reset styles */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            display: block;
+        }
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #000000 !important;
+        }
+        
+        /* Prevent Gmail and iOS font size adjustments */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Force white background on email container */
+        .email-container {
+            background-color: #FFFFFF !important;
+        }
+        
+        /* Button styles */
+        .button {
+            background-color: #D9307E;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 14px 40px;
+            display: inline-block;
+            border-radius: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .button:hover {
+            background-color: #b82567;
+        }
+        
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .logo-desktop {
+                display: none !important;
+            }
+            .logo-mobile {
+                display: block !important;
+                max-width: 120px !important;
+            }
+            .content-padding {
+                padding: 20px 15px !important;
+            }
+            h1 {
+                font-size: 22px !important;
+                line-height: 30px !important;
+            }
+            p {
+                font-size: 15px !important;
+                line-height: 24px !important;
+            }
+            .button {
+                padding: 12px 30px !important;
+                font-size: 15px !important;
+            }
+        }
+        
+        /* Desktop logo */
+        .logo-desktop {
+            display: block;
+            max-width: 200px;
+        }
+        
+        /* Mobile logo - hidden by default */
+        .logo-mobile {
+            display: none;
+            max-width: 120px;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #000000;">
+    <!-- Wrapper table for email clients -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main email container with white background -->
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="email-container" style="background-color: #FFFFFF; max-width: 600px;">
+                    
+                    <!-- Logo Section -->
+                    <tr>
+                        <td align="center" style="padding: 40px 20px 30px 20px; background-color: #FFFFFF;">
+                            <!-- Desktop Logo -->
+                            <img src="https://ernestotages.com/logo_ENG.jpg" alt="Ernesto Tages" class="logo-desktop" style="display: block; max-width: 200px; height: auto; margin: 0 auto;">
+                            <!-- Mobile Logo -->
+                            <img src="https://ernestotages.com/logo_ENG.jpg" alt="Ernesto Tages" class="logo-mobile" style="display: none; max-width: 120px; height: auto; margin: 0 auto;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Main Content Section -->
+                    <tr>
+                        <td class="content-padding" style="padding: 30px 40px; background-color: #FFFFFF;">
+                            <h1 style="margin: 0 0 30px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; line-height: 34px; color: #121212; font-weight: normal; font-style: italic;">
+                                Welcome to <em>The Clarity Compass</em> — your first moment of reflection.
+                            </h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Photo Section -->
+                    <tr>
+                        <td align="center" style="padding: 0; background-color: #FFFFFF;">
+                            <img src="https://ernestotages.com/ETWelcome.jpeg" alt="Ernesto Tages" style="display: block; width: 100%; max-width: 600px; height: auto;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Text Content Section -->
+                    <tr>
+                        <td class="content-padding" style="padding: 30px 40px; background-color: #FFFFFF;">
+                            <p style="margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                Dear {{ contact.FIRSTNAME }},
+                            </p>
+                            
+                            <p style="margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                Welcome — and thank you for joining <em>The Clarity Compass</em>, a space where reflection becomes renewed clarity and calm for decisive leadership.
+                            </p>
+                            
+                            <p style="margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                Each month, you'll receive a brief letter — not noise, not news, but a pause. In it, I explore the emotional and ethical tensions behind leadership decisions: where clarity is costly, and integrity demands courage.
+                            </p>
+                            
+                            <p style="margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                My hope is that each reflection helps you navigate complexity with greater calm, coherence, and conviction.
+                            </p>
+                            
+                            <p style="margin: 0 0 30px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                Until then, take a moment to notice where your own compass is pointing today.
+                            </p>
+                            
+                            <p style="margin: 0 0 30px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #777777;">
+                                With appreciation,<br>
+                                <strong style="color: #121212;">Ernesto Tages</strong>
+                            </p>
+                            
+                            <!-- Button -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 10px 0 20px 0;">
+                                        <a href="https://ernestotages.com/resources" class="button" style="background-color: #D9307E; color: #FFFFFF; text-decoration: none; padding: 14px 40px; display: inline-block; border-radius: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600;">
+                                            Read previous letters
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 40px; background-color: #FFFFFF;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="border-top: 1px solid #E0E0E0; padding: 0;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer Section -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #F4F4F4; text-align: center;">
+                            <p style="margin: 0 0 25px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22px; color: #777777;">
+                                If a thought or question arises, simply reply — I read every message.
+                            </p>
+                            
+                            <!-- Methodology Logo -->
+                            <img src="https://ernestotages.com/logo-methodology.png" alt="Methodology" style="display: block; max-width: 120px; height: auto; margin: 0 auto 15px auto;">
+                            
+                            <!-- Tagline -->
+                            <p style="margin: 0 0 25px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 24px; color: #777777; font-style: italic; font-weight: 300;">
+                                Clarity for the decisions that matter.
+                            </p>
+                            
+                            <!-- Footer info -->
+                            <p style="margin: 0 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color: #999999;">
+                                This email was sent to {{ contact.EMAIL }}.
+                            </p>
+                            
+                            <p style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color: #999999;">
+                                You're receiving it because you subscribed to <em>The Clarity Compass</em> — a monthly letter on ethical leadership.
+                            </p>
+                            
+                            <!-- Unsubscribe link -->
+                            <p style="margin: 20px 0 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color: #999999;">
+                                <a href="{{ unsubscribe }}" style="color: #999999; text-decoration: underline;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
