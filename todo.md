@@ -331,3 +331,8 @@
 - [x] Remove OAuth dependencies from const.ts
 - [x] Make site work without VITE_OAUTH_PORTAL_URL and VITE_APP_ID
 - [x] Hardcode APP_TITLE and APP_LOGO values for static site
+
+## Simplify Newsletter Implementation
+- [x] Create complete deployment package with Functions included
+- [x] Write clear deployment instructions
+- [x] Package everything for simple drag-and-drop deploy
