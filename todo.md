@@ -326,3 +326,8 @@
 - [x] Add netlify-specific build script (build:netlify) to fix deploy
 - [ ] Test newsletter subscription flow end-to-end
 - [ ] Verify welcome email automation triggers correctly
+
+## Fix Netlify Site Crash
+- [x] Remove OAuth dependencies from const.ts
+- [x] Make site work without VITE_OAUTH_PORTAL_URL and VITE_APP_ID
+- [x] Hardcode APP_TITLE and APP_LOGO values for static site
