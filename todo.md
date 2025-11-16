@@ -373,3 +373,6 @@
 
 ## Newsletter Form Placeholder Update
 - [x] Change email input placeholder from "EMAIL" to "*E-mail"
+
+## Newsletter Placeholder Spacing Fix
+- [x] Add space between asterisk and E in placeholder ("*E-mail" to "* E-mail")
