@@ -6,6 +6,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 
+// Declare grecaptcha on window
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
+const RECAPTCHA_SITE_KEY = "6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5IRcnCFHL1_3";
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const { t } = useLanguage();
@@ -25,7 +37,23 @@ export default function Footer() {
     e.preventDefault();
     if (!email || subscribeMutation.isPending) return;
     
-    subscribeMutation.mutate({ email });
+    try {
+      // Generate reCAPTCHA token
+      await window.grecaptcha.ready(async () => {
+        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+          action: 'newsletter_subscribe'
+        });
+        
+        // Submit with reCAPTCHA token
+        subscribeMutation.mutate({ 
+          email,
+          recaptchaToken: token 
+        });
+      });
+    } catch (error) {
+      console.error("reCAPTCHA error:", error);
+      toast.error("Verification failed. Please try again.");
+    }
   };
 
   return (
@@ -82,6 +110,17 @@ export default function Footer() {
                 )}
               </Button>
             </form>
+            <p className="text-[10px] text-gray-600 max-w-md text-left md:text-right">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
+                Terms of Service
+              </a>{" "}
+              apply.
+            </p>
           </div>
         </div>
 

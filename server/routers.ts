@@ -23,13 +23,40 @@ export const appRouter = router({
       .input(
         z.object({
           email: z.string().email(),
+          recaptchaToken: z.string(),
         })
       )
       .mutation(async ({ input }) => {
         const BREVO_API_KEY = process.env.BREVO_API_KEY;
+        const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
         
         if (!BREVO_API_KEY) {
           throw new Error("Brevo API key not configured");
+        }
+        
+        if (!RECAPTCHA_SECRET_KEY) {
+          throw new Error("reCAPTCHA secret key not configured");
+        }
+        
+        // Verify reCAPTCHA token
+        const recaptchaResponse = await fetch(
+          `https://www.google.com/recaptcha/api/siteverify`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `secret=${RECAPTCHA_SECRET_KEY}&response=${input.recaptchaToken}`,
+          }
+        );
+        
+        const recaptchaData = await recaptchaResponse.json();
+        console.log("reCAPTCHA verification result:", recaptchaData);
+        
+        // Check if verification was successful and score is acceptable
+        if (!recaptchaData.success || (recaptchaData.score && recaptchaData.score < 0.5)) {
+          console.error("reCAPTCHA verification failed:", recaptchaData);
+          throw new Error("reCAPTCHA verification failed. Please try again.");
         }
 
         try {

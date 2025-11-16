@@ -351,3 +351,11 @@
 - [x] Integrate with tRPC backend endpoint for Brevo API
 - [x] Test form submission and styling
 - [x] Verify form works correctly with elegant design
+
+## reCAPTCHA v3 Anti-Spam Protection
+- [x] Add reCAPTCHA v3 script to index.html
+- [x] Integrate reCAPTCHA token generation in newsletter form
+- [x] Add RECAPTCHA_SECRET_KEY environment variable
+- [x] Implement reCAPTCHA validation in backend tRPC endpoint
+- [x] Test spam protection with different score thresholds
+- [x] Verify legitimate users can subscribe without issues
