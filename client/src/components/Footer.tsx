@@ -110,7 +110,17 @@ export default function Footer() {
                 )}
               </Button>
             </form>
-            <p className="text-[10px] text-gray-600 max-w-md text-left md:text-right">
+          </div>
+        </div>
+
+        {/* Bottom - Copyright and reCAPTCHA Notice */}
+        <div className="border-t border-gray-700 pt-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+            <p className="text-sm text-gray-600 opacity-50">
+              {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
+            </p>
+            <span className="hidden sm:inline text-gray-700">•</span>
+            <p className="text-[10px] text-gray-600 opacity-50">
               This site is protected by reCAPTCHA and the Google{" "}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
                 Privacy Policy
@@ -122,13 +132,6 @@ export default function Footer() {
               apply.
             </p>
           </div>
-        </div>
-
-        {/* Bottom - Copyright */}
-        <div className="border-t border-gray-700 pt-6 text-center">
-          <p className="text-sm text-gray-600 opacity-50">
-            {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
-          </p>
         </div>
       </div>
     </footer>

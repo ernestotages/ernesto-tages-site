@@ -359,3 +359,8 @@
 - [x] Implement reCAPTCHA validation in backend tRPC endpoint
 - [x] Test spam protection with different score thresholds
 - [x] Verify legitimate users can subscribe without issues
+
+## Footer Layout Adjustment
+- [x] Move reCAPTCHA notice from newsletter section to copyright section
+- [x] Place reCAPTCHA text next to copyright text below divider line
+- [x] Test responsive layout on mobile and desktop
