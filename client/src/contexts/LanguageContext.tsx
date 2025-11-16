@@ -65,7 +65,7 @@ const translations: Record<Language, any> = {
         intro2:
           "With an approach that integrates science, ethics, and emotional management, I provide spaces for critical reflection and strategic guidance for those who exercise power responsibly.",
         block1: {
-          title: "Reducing emotional noise",
+          title: "Emotional Noise Filtering",
           description:
             "I help identify and manage emotions that interfere with judgment, allowing for calmer, more accurate, and bias-free decisions.",
         },

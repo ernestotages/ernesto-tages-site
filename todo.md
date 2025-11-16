@@ -364,3 +364,6 @@
 - [x] Move reCAPTCHA notice from newsletter section to copyright section
 - [x] Place reCAPTCHA text next to copyright text below divider line
 - [x] Test responsive layout on mobile and desktop
+
+## Homepage Content Update
+- [x] Change "Reducing emotional noise" to "Emotional Noise Filtering" in How I Help section
