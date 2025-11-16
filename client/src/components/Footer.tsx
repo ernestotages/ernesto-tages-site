@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom - Copyright and reCAPTCHA Notice */}
-        <div className="border-t border-gray-600 pt-6">
+        <div className="border-t border-gray-600/50 pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
             <p className="text-[10px] text-gray-600 opacity-50">
               {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
