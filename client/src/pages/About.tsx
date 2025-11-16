@@ -96,9 +96,6 @@ export default function About() {
                 {t("about.approach.phase1")}
               </p>
               <p className="text-lg text-[#777777] leading-relaxed">
-                {t("about.approach.phase2")}
-              </p>
-              <p className="text-lg text-[#777777] leading-relaxed">
                 {t("about.approach.phase3")}
               </p>
               <p className="text-lg text-[#777777] leading-relaxed">

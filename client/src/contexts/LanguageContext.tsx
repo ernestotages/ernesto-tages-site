@@ -98,9 +98,9 @@ const translations: Record<Language, any> = {
         intro:
           "What follows is the philosophy that gives structure to my work — a disciplined yet human approach to helping leaders act with integrity amid complexity.",
         phase1:
-          "My journey began when I noticed a recurring pattern in leadership challenges across the private, public, and social sectors. The problem was never intelligence, nor information.",
+          "My journey began when I noticed a recurring pattern in leadership challenges across the private, public, and social sectors. The problem was never intelligence, nor information; it was the suffocating intersection where rational analysis collides with emotional pressure — where ethical principles blur under urgency, and power amplifies every blind spot.",
         phase2:
-          "It was the suffocating intersection where rational analysis collides with emotional pressure — where ethical principles blur under urgency, and power amplifies every blind spot.",
+          "",
         phase3:
           "I realized that leaders don't need more data. They need clarity. Not the clarity that comes from simplification, but the kind that emerges when complexity is faced with discipline, honesty, and structure.",
         phase4:
@@ -362,9 +362,9 @@ const translations: Record<Language, any> = {
         intro:
           "Lo que sigue es la filosofía que da estructura a mi trabajo — un enfoque disciplinado pero humano para ayudar a los líderes a actuar con integridad en medio de la complejidad.",
         phase1:
-          "Mi viaje comenzó cuando noté un patrón recurrente en los desafíos de liderazgo en los sectores privado, público y social. El problema nunca fue la inteligencia, ni la información.",
+          "Mi viaje comenzó cuando noté un patrón recurrente en los desafíos de liderazgo en los sectores privado, público y social. El problema nunca fue la inteligencia, ni la información; era la intersección asfixiante donde el análisis racional choca con la presión emocional — donde los principios éticos se desdibujan bajo la urgencia, y el poder amplifica cada punto ciego.",
         phase2:
-          "Era la intersección asfixiante donde el análisis racional choca con la presión emocional — donde los principios éticos se desdibujan bajo la urgencia, y el poder amplifica cada punto ciego.",
+          "",
         phase3:
           "Me di cuenta de que los líderes no necesitan más datos. Necesitan claridad. No la claridad que viene de la simplificación, sino el tipo que emerge cuando la complejidad se enfrenta con disciplina, honestidad y estructura.",
         phase4:
@@ -630,9 +630,9 @@ const translations: Record<Language, any> = {
         intro:
           "O que se segue é a filosofia que dá estrutura ao meu trabalho — uma abordagem disciplinada mas humana para ajudar líderes a agir com integridade em meio à complexidade.",
         phase1:
-          "A minha jornada começou quando notei um padrão recorrente nos desafios de liderança nos setores privado, público e social. O problema nunca foi inteligência, nem informação.",
+          "A minha jornada começou quando notei um padrão recorrente nos desafios de liderança nos setores privado, público e social. O problema nunca foi inteligência, nem informação; era a interseção sufocante onde a análise racional colide com a pressão emocional — onde os princípios éticos se desfocam sob urgência, e o poder amplifica cada ponto cego.",
         phase2:
-          "Era a interseção sufocante onde a análise racional colide com a pressão emocional — onde os princípios éticos se desfocam sob urgência, e o poder amplifica cada ponto cego.",
+          "",
         phase3:
           "Percebi que os líderes não precisam de mais dados. Precisam de clareza. Não a clareza que vem da simplificação, mas o tipo que emerge quando a complexidade é enfrentada com disciplina, honestidade e estrutura.",
         phase4:

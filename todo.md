@@ -367,3 +367,6 @@
 
 ## Homepage Content Update
 - [x] Change "Reducing emotional noise" to "Emotional Noise Filtering" in How I Help section
+
+## About Page Punctuation Fix
+- [x] Join third sentence ("It was the suffocating…") to previous sentence ("...nor information.") with semicolon or comma instead of period
