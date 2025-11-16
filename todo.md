@@ -370,3 +370,6 @@
 
 ## About Page Punctuation Fix
 - [x] Join third sentence ("It was the suffocating…") to previous sentence ("...nor information.") with semicolon or comma instead of period
+
+## Newsletter Form Placeholder Update
+- [x] Change email input placeholder from "EMAIL" to "*E-mail"

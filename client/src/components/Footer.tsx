@@ -87,7 +87,7 @@ export default function Footer() {
             >
               <Input
                 type="email"
-                placeholder="EMAIL"
+                placeholder="*E-mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
