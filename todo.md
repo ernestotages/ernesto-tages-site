@@ -376,3 +376,25 @@
 
 ## Newsletter Placeholder Spacing Fix
 - [x] Add space between asterisk and E in placeholder ("*E-mail" to "* E-mail")
+
+## Publication Preparation
+- [x] Review all pages for broken links and missing images
+- [x] Test contact form submission
+- [x] Test newsletter subscription form
+- [x] Verify responsive design on mobile, tablet, and desktop
+- [x] Check all navigation links work correctly
+- [x] Verify smooth scrolling and animations
+- [x] Test language switching functionality
+- [x] Validate all images are optimized and loading correctly
+- [x] Check footer links (Privacy Policy, Terms of Service)
+- [x] Verify Google Analytics is tracking correctly
+- [x] Test reCAPTCHA on newsletter form
+
+## Resources Section Content
+- [ ] Add content to Insights section (PENDING - user will provide real content)
+- [ ] Add content to Frameworks section (PENDING - user will provide real content)
+- [x] Verify Resources page layout and functionality (placeholders working correctly)
+
+## Remove Resources Section (Placeholder Content)
+- [ ] NOT NEEDED - keeping placeholders until real content is ready
+- [ ] User will add real content later
