@@ -315,7 +315,10 @@
 
 ## Adapt Newsletter for Netlify
 - [x] Create Netlify Function to handle Brevo API calls
-- [x] Update Footer component to use Netlify Function endpoint
+- [x] Update Footer component to use Netlify Function
+- [x] Replace Netlify Function with Brevo native iframe form (works with drag & drop)
+- [x] Test Brevo iframe form integration
+- [x] Verify form displays correctly in footerlify Function endpoint
 - [x] Configure netlify.toml for serverless functions
 - [x] Package updated version for Netlify deployment
 - [ ] User needs to configure BREVO_API_KEY in Netlify UI
@@ -336,3 +339,8 @@
 - [x] Create complete deployment package with Functions included
 - [x] Write clear deployment instructions
 - [x] Package everything for simple drag-and-drop deploy
+
+## Fix Newsletter Without Netlify Functions
+- [ ] Implement alternative method that works with drag-and-drop deploy
+- [ ] Test newsletter subscription end-to-end
+- [ ] Verify emails appear in Brevo and automation triggers
