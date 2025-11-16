@@ -344,3 +344,10 @@
 - [ ] Implement alternative method that works with drag-and-drop deploy
 - [ ] Test newsletter subscription end-to-end
 - [ ] Verify emails appear in Brevo and automation triggers
+
+## Custom Newsletter Form Design
+- [x] Replace Brevo iframe with custom-styled form matching site aesthetics
+- [x] Use site typography (Cormorant Garamond) and colors (magenta #D9307E)
+- [x] Integrate with tRPC backend endpoint for Brevo API
+- [x] Test form submission and styling
+- [x] Verify form works correctly with elegant design

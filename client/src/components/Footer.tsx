@@ -1,7 +1,32 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Loader2 } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
   const { t } = useLanguage();
+  
+  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
+    onSuccess: () => {
+      toast.success("Thank you for subscribing!");
+      setEmail("");
+    },
+    onError: (error) => {
+      console.error("Newsletter subscription error:", error);
+      toast.error("Subscription failed. Please try again.");
+    },
+  });
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || subscribeMutation.isPending) return;
+    
+    subscribeMutation.mutate({ email });
+  };
 
   return (
     <footer className="bg-[#121212] text-white py-12">
@@ -19,23 +44,44 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Column - Brevo Newsletter Form (iframe) */}
-          <div className="flex flex-col items-start md:items-end">
-            <iframe
-              width="540"
-              height="305"
-              src="https://cff690b1.sibforms.com/serve/MUIFAJroweZhwoolfAJSmgVXMtRG-2koeCn8-yjzf_Gpl_aABPW3N5GD-kuowXZoqnkNu_Zyx3dseDzM60EikS0cOdzGkWULzCG3KgDF1aImBdqdc9NNSdLxYxjxYLQ8xtcsRAkpHjmKlZ5bzHOvrda00hSc2Twdr9if2Bkn5GK8vIAxVW6rckewQvj5a8eIrQHMWPpFKzUHbxY3jA=="
-              frameBorder="0"
-              scrolling="auto"
-              allowFullScreen
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: '0',
-                maxWidth: '100%',
-              }}
-              title="Newsletter Subscription Form"
-            />
+          {/* Right Column - Newsletter Subscription */}
+          <div className="flex flex-col items-start md:items-end space-y-4">
+            <h3 className="text-2xl font-light text-white">The Clarity Compass</h3>
+            <p className="text-sm text-gray-300 max-w-md text-left md:text-right font-light">
+              Thoughtful reflections for leaders seeking clarity, integrity and calm in complexity.
+            </p>
+            <p className="text-xs text-gray-500 italic max-w-md text-left md:text-right">
+              Available in English only.
+            </p>
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex flex-col sm:flex-row gap-2 w-full md:justify-end"
+            >
+              <Input
+                type="email"
+                placeholder="EMAIL"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={subscribeMutation.isPending}
+                className="bg-white text-[#121212] border-none w-full sm:max-w-xs placeholder:text-gray-400"
+              />
+              <Button
+                type="submit"
+                variant="outline"
+                disabled={subscribeMutation.isPending}
+                className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors disabled:opacity-50 font-light"
+              >
+                {subscribeMutation.isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  "Subscribe"
+                )}
+              </Button>
+            </form>
           </div>
         </div>
 
