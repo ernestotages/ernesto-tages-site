@@ -406,3 +406,15 @@
 ## Contact Form Validation Language Issue
 - [x] Replace HTML5 native validation with custom validation that respects site language
 - [x] Add translated error messages for required fields in all languages (EN/ES/PT)
+
+## Newsletter reCAPTCHA Verification Error
+- [ ] Investigate "verification failed. try again" error after user added domains to Google reCAPTCHA
+- [ ] Check server logs for reCAPTCHA verification response
+- [ ] Fix reCAPTCHA verification issue
+
+## Adapt Backend for Netlify Functions
+- [x] Convert tRPC backend to Netlify Functions
+- [x] Create newsletter subscription function
+- [ ] Create contact form submission function (not needed - using Web3Forms)
+- [ ] Test newsletter function works correctly after deployment
+- [x] Create new production build for Netlify

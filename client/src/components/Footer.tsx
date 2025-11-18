@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
-import { trpc } from "@/lib/trpc";
+// import { trpc } from "@/lib/trpc";
 
 // Declare grecaptcha on window
 declare global {
@@ -22,20 +22,13 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const { t } = useLanguage();
   
-  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
-    onSuccess: () => {
-      toast.success("Thank you for subscribing!");
-      setEmail("");
-    },
-    onError: (error) => {
-      console.error("Newsletter subscription error:", error);
-      toast.error("Subscription failed. Please try again.");
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || subscribeMutation.isPending) return;
+    if (!email || isSubmitting) return;
+    
+    setIsSubmitting(true);
     
     try {
       // Check if reCAPTCHA is loaded
@@ -64,18 +57,30 @@ export default function Footer() {
       
       const token = await Promise.race([recaptchaPromise, timeoutPromise]) as string;
       
-      // Submit with reCAPTCHA token
-      subscribeMutation.mutate({ 
-        email,
-        recaptchaToken: token 
+      // Submit with reCAPTCHA token to Netlify Function
+      const response = await fetch('/.netlify/functions/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, recaptchaToken: token })
       });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Subscription failed');
+      }
+      
+      toast.success("Thank you for subscribing!");
+      setEmail("");
+      setIsSubmitting(false);
     } catch (error) {
-      console.error("reCAPTCHA error:", error);
+      console.error("Newsletter subscription error:", error);
       if (error instanceof Error && error.message === 'reCAPTCHA timeout') {
         toast.error("Please disable your ad blocker to subscribe to the newsletter.");
       } else {
         toast.error("Verification failed. Please try again.");
       }
+      setIsSubmitting(false);
     }
   };
 
@@ -114,16 +119,16 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                disabled={subscribeMutation.isPending}
+                disabled={isSubmitting}
                 className="bg-white text-[#121212] border-none w-full sm:max-w-xs placeholder:text-gray-400"
               />
               <Button
                 type="submit"
                 variant="outline"
-                disabled={subscribeMutation.isPending}
+                disabled={isSubmitting}
                 className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors disabled:opacity-50 font-light"
               >
-                {subscribeMutation.isPending ? (
+                {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     Subscribing...
