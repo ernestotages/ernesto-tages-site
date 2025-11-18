@@ -442,3 +442,11 @@
 - [x] Verify site works correctly in Manus development environment
 - [x] Create final checkpoint for publication
 - [ ] Publish via Manus platform (user action)
+
+## Deployment Issue - Custom Domain Cache
+- [x] Identified issue: ernestotages.com loading old cached JavaScript files (index-D_k6thi6.js)
+- [x] Verified site works correctly on Manus development URL
+- [x] Updated build marker in index.html to force cache invalidation
+- [x] Create new checkpoint with cache-busting changes
+- [ ] User publishes new version via Manus
+- [ ] Verify site loads correctly on ernestotages.com after new publish
