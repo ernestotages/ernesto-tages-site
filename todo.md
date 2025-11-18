@@ -398,3 +398,11 @@
 ## Remove Resources Section (Placeholder Content)
 - [ ] NOT NEEDED - keeping placeholders until real content is ready
 - [ ] User will add real content later
+
+## Newsletter Subscription Issue
+- [x] Add fallback detection for blocked reCAPTCHA with warning message
+- [ ] Test newsletter subscription works correctly when reCAPTCHA is active (PENDING - user needs to add domains to Google reCAPTCHA)
+
+## Contact Form Validation Language Issue
+- [x] Replace HTML5 native validation with custom validation that respects site language
+- [x] Add translated error messages for required fields in all languages (EN/ES/PT)

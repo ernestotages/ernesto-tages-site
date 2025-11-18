@@ -38,21 +38,44 @@ export default function Footer() {
     if (!email || subscribeMutation.isPending) return;
     
     try {
-      // Generate reCAPTCHA token
-      await window.grecaptcha.ready(async () => {
-        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
-          action: 'newsletter_subscribe'
+      // Check if reCAPTCHA is loaded
+      if (typeof window.grecaptcha === 'undefined') {
+        toast.error("Please disable your ad blocker to subscribe to the newsletter.");
+        return;
+      }
+      
+      // Generate reCAPTCHA token with timeout
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('reCAPTCHA timeout')), 10000)
+      );
+      
+      const recaptchaPromise = new Promise<string>((resolve, reject) => {
+        window.grecaptcha.ready(async () => {
+          try {
+            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+              action: 'newsletter_subscribe'
+            });
+            resolve(token);
+          } catch (error) {
+            reject(error);
+          }
         });
-        
-        // Submit with reCAPTCHA token
-        subscribeMutation.mutate({ 
-          email,
-          recaptchaToken: token 
-        });
+      });
+      
+      const token = await Promise.race([recaptchaPromise, timeoutPromise]) as string;
+      
+      // Submit with reCAPTCHA token
+      subscribeMutation.mutate({ 
+        email,
+        recaptchaToken: token 
       });
     } catch (error) {
       console.error("reCAPTCHA error:", error);
-      toast.error("Verification failed. Please try again.");
+      if (error instanceof Error && error.message === 'reCAPTCHA timeout') {
+        toast.error("Please disable your ad blocker to subscribe to the newsletter.");
+      } else {
+        toast.error("Verification failed. Please try again.");
+      }
     }
   };
 

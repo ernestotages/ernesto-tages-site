@@ -132,7 +132,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border-t-4 border-[#D9307E]">
-              <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Web3Forms Access Key */}
                 <input type="hidden" name="access_key" value="f13a29e8-61ee-475d-8cb2-6738a6f9779f" />
                 <input type="hidden" name="from_name" value="Ernesto Tages Website" />
@@ -156,7 +156,6 @@ export default function Contact() {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="w-full"
-                    required
                   />
                 </div>
 
@@ -176,7 +175,6 @@ export default function Contact() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     className="w-full"
-                    required
                   />
                 </div>
 
@@ -196,7 +194,6 @@ export default function Contact() {
                       setFormData({ ...formData, subject: e.target.value })
                     }
                     className="w-full"
-                    required
                   />
                 </div>
 
@@ -215,7 +212,6 @@ export default function Contact() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     className="w-full min-h-[150px]"
-                    required
                   />
                 </div>
 
