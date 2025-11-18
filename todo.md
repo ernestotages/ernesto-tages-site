@@ -418,3 +418,27 @@
 - [ ] Create contact form submission function (not needed - using Web3Forms)
 - [ ] Test newsletter function works correctly after deployment
 - [x] Create new production build for Netlify
+
+## Fix JavaScript Error on Published Site
+- [x] Identify cause of "An unexpected error occurred" on ernestotages.com
+- [x] Fix JavaScript build errors
+- [x] Create clean production build
+- [x] Test build locally before deploying
+
+## Fix "Invalid URL" Error on Netlify
+- [ ] Add all required VITE_ environment variables to Netlify
+- [ ] Verify variables are correctly set
+- [ ] Trigger redeploy after adding variables
+
+## Revert to Manus Deployment
+- [ ] Remove Netlify Functions code
+- [ ] Restore original tRPC backend
+- [ ] Create checkpoint for Manus deployment
+- [ ] Publish through Manus instead of Netlify
+
+## Final Deployment via Manus Platform
+- [x] Remove Netlify-specific files (netlify.toml, netlify/ folder)
+- [x] Restore tRPC newsletter integration (replacing Netlify Functions)
+- [x] Verify site works correctly in Manus development environment
+- [x] Create final checkpoint for publication
+- [ ] Publish via Manus platform (user action)
