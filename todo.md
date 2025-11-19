@@ -450,3 +450,28 @@
 - [x] Create new checkpoint with cache-busting changes
 - [ ] User publishes new version via Manus
 - [ ] Verify site loads correctly on ernestotages.com after new publish
+
+## Newsletter Testing Without reCAPTCHA
+- [ ] Temporarily remove reCAPTCHA from Footer component
+- [ ] Test newsletter subscription with Brevo API only
+- [ ] Verify email appears in Brevo contact list
+- [ ] Verify welcome email automation triggers
+- [ ] Restore reCAPTCHA after confirming Brevo works
+- [ ] Wait for Google reCAPTCHA propagation (30 minutes)
+- [ ] Final test with reCAPTCHA enabled
+
+## reCAPTCHA Verification Issue on Live Site
+- [ ] Diagnose why reCAPTCHA verification fails on ernestotages.com
+- [ ] Fix reCAPTCHA configuration or implementation
+- [ ] Test newsletter subscription successfully on live site
+- [ ] Confirm welcome email from Brevo is received
+
+## reCAPTCHA Enterprise Integration
+- [x] Configure Google Cloud Project with billing
+- [x] Create reCAPTCHA Enterprise key
+- [x] Add domains to allowed list
+- [x] Create and configure API Key with reCAPTCHA Enterprise API access
+- [x] Integrate reCAPTCHA Enterprise in frontend (newsletter form)
+- [x] Integrate reCAPTCHA Enterprise verification in backend
+- [x] Test and verify reCAPTCHA Enterprise is working correctly
+- [x] Remove debug logging from production code

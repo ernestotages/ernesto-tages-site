@@ -10,13 +10,15 @@ import { trpc } from "@/lib/trpc";
 declare global {
   interface Window {
     grecaptcha: {
-      ready: (callback: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      enterprise: {
+        ready: (callback: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      };
     };
   }
 }
 
-const RECAPTCHA_SITE_KEY = "6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5IRcnCFHL1_3";
+const RECAPTCHA_SITE_KEY = "6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -50,9 +52,9 @@ export default function Footer() {
       );
       
       const recaptchaPromise = new Promise<string>((resolve, reject) => {
-        window.grecaptcha.ready(async () => {
+        window.grecaptcha.enterprise.ready(async () => {
           try {
-            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+            const token = await window.grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, {
               action: 'newsletter_subscribe'
             });
             resolve(token);
@@ -63,6 +65,8 @@ export default function Footer() {
       });
       
       const token = await Promise.race([recaptchaPromise, timeoutPromise]) as string;
+      
+
       
       // Submit with reCAPTCHA token
       subscribeMutation.mutate({ email, recaptchaToken: token });
