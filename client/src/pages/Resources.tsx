@@ -9,8 +9,12 @@ export default function Resources() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const { t } = useLanguage();
 
-  const handleDownload = (title: string) => {
-    toast.info(`"${title}" will be available soon. Stay tuned!`);
+  const handleDownload = (title: string, url?: string) => {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      toast.info(`"${title}" will be available soon. Stay tuned!`);
+    }
   };
 
   const toggleSection = (section: string) => {
@@ -120,6 +124,26 @@ export default function Resources() {
               </h2>
 
               <div className="space-y-6">
+                {/* White Paper - Ibero-American Ethical Leadership */}
+                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
+                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                    El liderazgo ético en Iberoamérica
+                  </h3>
+                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    A comprehensive exploration of how emotion, responsibility, and power shape ethical leadership in Ibero-America. This white paper offers seven movements that outline a moral compass for contemporary leadership.
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
+                    onClick={() =>
+                      handleDownload("El liderazgo ético en Iberoamérica", "/whitepaper-iberoamerican-ethical-leadership.pdf")
+                    }
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {t("resources.insightsDetails.download")}
+                  </Button>
+                </div>
+
                 {/* Essay 1 */}
                 <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
                   <h3 className="text-2xl font-semibold text-[#121212] mb-3">

@@ -475,3 +475,8 @@
 - [x] Integrate reCAPTCHA Enterprise verification in backend
 - [x] Test and verify reCAPTCHA Enterprise is working correctly
 - [x] Remove debug logging from production code
+
+## White Paper Publication
+- [x] Upload white paper "El liderazgo ético en Iberoamérica" to S3 storage
+- [x] Add white paper to Resources page with download functionality
+- [x] Test download functionality
