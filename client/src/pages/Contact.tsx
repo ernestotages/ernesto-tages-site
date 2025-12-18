@@ -93,10 +93,10 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contacta Ernesto Tages | Consultoria em Liderança Ética"
-        description="Entre em contacto para agendar uma sessão de consultoria em liderança ética. Apoio personalizado para executivos que enfrentam dilemas complexos e procuram clareza decisional."
-        ogTitle="Contacto - Agende uma Sessão de Consultoria"
-        ogDescription="Marque uma conversa para explorar como transformar dilemas de liderança em decisões éticas e estratégicas. Consultoria individual e programas corporativos disponíveis."
+        title="Contact Ernesto Tages | Ethical Leadership Consultancy"
+        description="Get in touch to schedule an ethical leadership consultancy session. Personalized support for executives facing complex dilemmas and seeking decisional clarity."
+        ogTitle="Contact - Schedule a Consultancy Session"
+        ogDescription="Book a conversation to explore how to transform leadership dilemmas into ethical and strategic decisions. Individual consultancy and corporate programs available."
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

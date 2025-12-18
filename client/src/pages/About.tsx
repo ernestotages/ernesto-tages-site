@@ -10,10 +10,10 @@ export default function About() {
   return (
     <>
       <SEO
-        title="Sobre Ernesto Tages | Mentor de Líderes Éticos"
-        description="Filósofo e consultor com 25+ anos de experiência em liderança ética. Apoio executivos do setor público, privado e social a transformar dilemas complexos em decisões claras e éticas."
-        ogTitle="Ernesto Tages - Perfil e Experiência"
-        ogDescription="Especialista em gestão emocional e clareza decisional. Autor, conferencista e mentor de líderes que enfrentam dilemas éticos complexos."
+        title="About Ernesto Tages | Ethical Leadership Mentor"
+        description="Philosopher and consultant with 25+ years of experience in ethical leadership. Supporting executives from public, private, and social sectors to transform complex dilemmas into clear, ethical decisions."
+        ogTitle="Ernesto Tages - Profile and Experience"
+        ogDescription="Expert in emotional management and decisional clarity. Author, speaker, and mentor for leaders facing complex ethical dilemmas."
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">
