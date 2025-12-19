@@ -480,3 +480,10 @@
 - [x] Upload white paper "El liderazgo ético en Iberoamérica" to S3 storage
 - [x] Add white paper to Resources page with download functionality
 - [x] Test download functionality
+
+## White Papers and Frameworks Update
+- [x] Add "The Cost of Clarity" white paper as first item in Insights & Essays
+- [x] Remove placeholder white papers ("Inner Compass", "Emotional Mastery")
+- [x] Remove 3 placeholder frameworks from Frameworks & Tools section
+- [ ] Reserve space for "The Strategic Advantage of Emotional Excellence" (2nd position)
+- [ ] Prepare for future Clarity Matrix™ dedicated page

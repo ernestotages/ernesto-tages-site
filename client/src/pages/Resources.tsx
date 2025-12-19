@@ -124,7 +124,27 @@ export default function Resources() {
               </h2>
 
               <div className="space-y-6">
-                {/* White Paper - Ibero-American Ethical Leadership */}
+                {/* White Paper 1 - The Cost of Clarity */}
+                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
+                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                    The Cost of Clarity
+                  </h3>
+                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
+                    onClick={() =>
+                      handleDownload("The Cost of Clarity", "/whitepaper-cost-of-clarity.pdf")
+                    }
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {t("resources.insightsDetails.download")}
+                  </Button>
+                </div>
+
+                {/* White Paper 3 - Ibero-American Ethical Leadership */}
                 <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
                   <h3 className="text-2xl font-semibold text-[#121212] mb-3">
                     El liderazgo ético en Iberoamérica
@@ -137,64 +157,6 @@ export default function Resources() {
                     className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
                     onClick={() =>
                       handleDownload("El liderazgo ético en Iberoamérica", "/whitepaper-iberoamerican-ethical-leadership.pdf")
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
-
-                {/* Essay 1 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.insightsDetails.essay1.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.insightsDetails.essay1.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.insightsDetails.essay1.title"))
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
-
-                {/* Essay 2 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.insightsDetails.essay2.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.insightsDetails.essay2.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() => handleDownload(t("resources.insightsDetails.essay2.title"))}
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
-
-                {/* Essay 3 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.insightsDetails.essay3.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.insightsDetails.essay3.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.insightsDetails.essay3.title"))
                     }
                   >
                     <Download className="w-4 h-4 mr-2" />
@@ -215,66 +177,13 @@ export default function Resources() {
                 {t("resources.frameworksDetails.title")}
               </h2>
 
-              <div className="space-y-6">
-                {/* Framework 1 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.frameworksDetails.framework1.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.frameworksDetails.framework1.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.frameworksDetails.framework1.title"))
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.frameworksDetails.download")}
-                  </Button>
-                </div>
-
-                {/* Framework 2 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.frameworksDetails.framework2.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.frameworksDetails.framework2.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.frameworksDetails.framework2.title"))
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.frameworksDetails.download")}
-                  </Button>
-                </div>
-
-                {/* Framework 3 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.frameworksDetails.framework3.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.frameworksDetails.framework3.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.frameworksDetails.framework3.title"))
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.frameworksDetails.download")}
-                  </Button>
-                </div>
+              <div className="text-center py-12">
+                <p className="text-xl text-[#777777] mb-4">
+                  New frameworks coming soon.
+                </p>
+                <p className="text-lg text-[#777777]">
+                  Practical tools for ethical decision-making in complex leadership scenarios.
+                </p>
               </div>
             </div>
           </div>
