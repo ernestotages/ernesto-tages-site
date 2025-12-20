@@ -19,6 +19,7 @@ export default function IberoamericanEthicalLeadership() {
         description="Una exploración integral de cómo la emoción, la responsabilidad y el poder moldean el liderazgo ético en Iberoamérica. Siete movimientos que trazan una brújula moral para el liderazgo contemporáneo."
         ogTitle="El liderazgo ético en Iberoamérica | Ernesto Tages"
         ogDescription="Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica."
+        lang="es"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">

@@ -7,6 +7,7 @@ interface SEOProps {
   ogDescription?: string;
   ogImage?: string;
   ogType?: string;
+  lang?: string;
 }
 
 export default function SEO({
@@ -16,6 +17,7 @@ export default function SEO({
   ogDescription,
   ogImage = "/logo-methodology.png",
   ogType = "website",
+  lang = "en",
 }: SEOProps) {
   const fullTitle = `${title} | Ernesto Tages`;
   const finalOgTitle = ogTitle || title;
@@ -28,6 +30,7 @@ export default function SEO({
 
   return (
     <Helmet>
+      <html lang={lang} />
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />

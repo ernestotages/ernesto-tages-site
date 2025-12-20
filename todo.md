@@ -498,3 +498,4 @@
 - [x] Fix broken logo image on white paper dedicated pages
 - [x] Fix logo path in IberoamericanEthicalLeadership page
 - [x] Add text justification to all three white paper pages
+- [x] Verify and fix lang attributes and meta tags to match content language on white paper pages
