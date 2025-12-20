@@ -488,3 +488,10 @@
 - [ ] Reserve space for "The Strategic Advantage of Emotional Excellence" (2nd position)
 - [ ] Prepare for future Clarity Matrix™ dedicated page
 - [x] Add "The Strategic Advantage of Emotional Excellence" white paper as 2nd item
+
+## Dedicated White Paper Pages (SEO Optimization)
+- [x] Create /cost-of-clarity page with H1/H2 structure and SEO meta tags
+- [x] Create /emotional-excellence page with H1/H2 structure and SEO meta tags
+- [x] Create /iberoamerican-ethical-leadership page with H1/H2 structure and SEO meta tags
+- [x] Update Resources page cards to link to dedicated pages instead of direct PDF download
+- [x] Add routes for all three white paper pages in App.tsx

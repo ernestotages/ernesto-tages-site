@@ -13,6 +13,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import CostOfClarity from "./pages/CostOfClarity";
+import EmotionalExcellence from "./pages/EmotionalExcellence";
+import IberoamericanEthicalLeadership from "./pages/IberoamericanEthicalLeadership";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
@@ -27,6 +30,9 @@ function Router() {
         <Route path="/services" component={Services} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
+        <Route path="/cost-of-clarity" component={CostOfClarity} />
+        <Route path="/emotional-excellence" component={EmotionalExcellence} />
+        <Route path="/iberoamerican-ethical-leadership" component={IberoamericanEthicalLeadership} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

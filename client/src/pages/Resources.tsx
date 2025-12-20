@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { FileText, Download, BookOpen, Video } from "lucide-react";
+import { FileText, Download, BookOpen, Video, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 
@@ -125,64 +126,52 @@ export default function Resources() {
 
               <div className="space-y-6">
                 {/* White Paper 1 - The Cost of Clarity */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    The Cost of Clarity
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload("The Cost of Clarity", "/whitepaper-cost-of-clarity.pdf")
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
+                <Link href="/cost-of-clarity">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
+                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                      The Cost of Clarity
+                    </h3>
+                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                      An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
+                    </p>
+                    <div className="flex items-center text-[#D9307E] font-medium">
+                      <span>Read more</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
 
                 {/* White Paper 2 - Emotional Excellence */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    Emotional Excellence
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    Why coherence of emotion, thought, and action has become a strategic advantage for leaders. This white paper explores how emotional excellence transforms leadership effectiveness in complex organizational environments.
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload("Emotional Excellence", "/whitepaper-emotional-excellence.pdf")
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
+                <Link href="/emotional-excellence">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
+                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                      Emotional Excellence
+                    </h3>
+                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                      Why coherence of emotion, thought, and action has become a strategic advantage for leaders. This white paper explores how emotional excellence transforms leadership effectiveness in complex organizational environments.
+                    </p>
+                    <div className="flex items-center text-[#D9307E] font-medium">
+                      <span>Read more</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
 
                 {/* White Paper 3 - Ibero-American Ethical Leadership */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    El liderazgo ético en Iberoamérica
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    A comprehensive exploration of how emotion, responsibility, and power shape ethical leadership in Ibero-America. This white paper offers seven movements that outline a moral compass for contemporary leadership.
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload("El liderazgo ético en Iberoamérica", "/whitepaper-iberoamerican-ethical-leadership.pdf")
-                    }
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t("resources.insightsDetails.download")}
-                  </Button>
-                </div>
+                <Link href="/iberoamerican-ethical-leadership">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
+                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                      El liderazgo ético en Iberoamérica
+                    </h3>
+                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                      A comprehensive exploration of how emotion, responsibility, and power shape ethical leadership in Ibero-America. This white paper offers seven movements that outline a moral compass for contemporary leadership.
+                    </p>
+                    <div className="flex items-center text-[#D9307E] font-medium">
+                      <span>Read more</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
