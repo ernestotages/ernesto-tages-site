@@ -1,6 +1,8 @@
-import { Download } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
+import { Download } from "lucide-react";
 
 export default function IberoamericanEthicalLeadership() {
   const handleDownload = () => {
@@ -21,6 +23,30 @@ export default function IberoamericanEthicalLeadership() {
         ogDescription="Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica."
         lang="es"
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Report",
+            "name": "El liderazgo ético en Iberoamérica",
+            "headline": "Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica",
+            "description": "Una exploración integral de cómo la emoción, la responsabilidad y el poder moldean el liderazgo ético en Iberoamérica. Este white paper ofrece siete movimientos que trazan una brújula moral para el liderazgo contemporáneo.",
+            "author": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "datePublished": "2025-10-01",
+            "inLanguage": "es",
+            "url": "https://ernestotages.com/iberoamerican-ethical-leadership"
+          })}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
         {/* Header */}

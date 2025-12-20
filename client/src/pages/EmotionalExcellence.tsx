@@ -1,6 +1,8 @@
-import { Download } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
+import { Download } from "lucide-react";
 
 export default function EmotionalExcellence() {
   const handleDownload = () => {
@@ -20,6 +22,30 @@ export default function EmotionalExcellence() {
         ogTitle="The Strategic Advantage of Emotional Excellence | Ernesto Tages"
         ogDescription="Why coherence of emotion, thought, and action has become a strategic advantage for leaders."
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Report",
+            "name": "Emotional Excellence",
+            "headline": "Why coherence of emotion, thought, and action has become a strategic advantage for leaders",
+            "description": "In an era where technical competence is table stakes, emotional excellence has emerged as the defining characteristic of exceptional leadership. This white paper explores how the coherence of emotion, thought, and action creates a strategic advantage in complex organizational environments.",
+            "author": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "datePublished": "2025-12-01",
+            "inLanguage": "en",
+            "url": "https://ernestotages.com/emotional-excellence"
+          })}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
         {/* Header */}

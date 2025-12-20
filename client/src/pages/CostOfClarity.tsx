@@ -1,6 +1,8 @@
-import { Download } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
+import { Download } from "lucide-react";
 
 export default function CostOfClarity() {
   const handleDownload = () => {
@@ -20,6 +22,30 @@ export default function CostOfClarity() {
         ogTitle="The Cost of Clarity | Ernesto Tages"
         ogDescription="An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them."
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Report",
+            "name": "The Cost of Clarity",
+            "headline": "How Ethical Leaders Transform Tension into Trust Across Complex Systems",
+            "description": "An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.",
+            "author": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Ernesto Tages",
+              "url": "https://ernestotages.com"
+            },
+            "datePublished": "2025-12-01",
+            "inLanguage": "en",
+            "url": "https://ernestotages.com/cost-of-clarity"
+          })}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
         {/* Header */}

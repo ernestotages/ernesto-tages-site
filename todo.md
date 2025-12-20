@@ -499,3 +499,8 @@
 - [x] Fix logo path in IberoamericanEthicalLeadership page
 - [x] Add text justification to all three white paper pages
 - [x] Verify and fix lang attributes and meta tags to match content language on white paper pages
+
+## Schema Markup
+- [x] Add JSON-LD schema markup (Article/Report) to Cost of Clarity page
+- [x] Add JSON-LD schema markup (Article/Report) to Emotional Excellence page
+- [x] Add JSON-LD schema markup (Article/Report) to Iberoamerican Ethical Leadership page
