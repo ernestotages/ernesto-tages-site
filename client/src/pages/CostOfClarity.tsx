@@ -27,9 +27,9 @@ export default function CostOfClarity() {
           <div className="container mx-auto px-4 py-4">
             <a href="/" className="inline-block">
               <img
-                src="/logo.svg"
+                src="/logo_ET.jpg"
                 alt="Ernesto Tages"
-                className="h-8"
+                className="h-12 w-auto"
               />
             </a>
           </div>
@@ -75,15 +75,15 @@ export default function CostOfClarity() {
         <section className="py-16 px-4 bg-white">
           <div className="container max-w-4xl">
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-[#555555] leading-relaxed mb-8">
+              <p className="text-xl text-[#555555] leading-relaxed mb-8 text-justify">
                 An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8">
+              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
                 In complex organizational environments, leaders face decisions where every option carries a cost. The temptation is to delay, delegate, or disguise these costs. But ethical leadership demands something different: the courage to name costs clearly, distribute them fairly, and own them publicly.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12">
+              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
                 This white paper explores how clarity—when practiced with rigor and emotional coherence—becomes a strategic advantage. It examines real-world scenarios where leaders must choose between competing goods, navigate stakeholder tensions, and maintain institutional integrity while acknowledging the human cost of their decisions.
               </p>
 

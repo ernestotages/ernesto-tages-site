@@ -27,9 +27,9 @@ export default function IberoamericanEthicalLeadership() {
           <div className="container mx-auto px-4 py-4">
             <a href="/" className="inline-block">
               <img
-                src="/logo.svg"
+                src="/logo_ET.jpg"
                 alt="Ernesto Tages"
-                className="h-8"
+                className="h-12 w-auto"
               />
             </a>
           </div>
@@ -75,15 +75,15 @@ export default function IberoamericanEthicalLeadership() {
         <section className="py-16 px-4 bg-white">
           <div className="container max-w-4xl">
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-[#555555] leading-relaxed mb-8">
+              <p className="text-xl text-[#555555] leading-relaxed mb-8 text-justify">
                 Una exploración integral de cómo la emoción, la responsabilidad y el poder moldean el liderazgo ético en Iberoamérica. Este white paper ofrece siete movimientos que trazan una brújula moral para el liderazgo contemporáneo.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8">
+              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
                 El liderazgo ético en Iberoamérica no puede ser importado de otras tradiciones sin adaptación. Surge de una historia particular de tensiones entre lo individual y lo colectivo, entre la autoridad formal y la legitimidad moral, entre las instituciones heredadas y las aspiraciones democráticas.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12">
+              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
                 Este white paper examina cómo los líderes iberoamericanos navegan dilemas éticos específicos de la región: el peso de las jerarquías informales, la gestión de lealtades cruzadas, la construcción de confianza en contextos de alta incertidumbre, y la práctica del poder con responsabilidad en sistemas donde las reglas formales coexisten con normas culturales profundas.
               </p>
 

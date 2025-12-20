@@ -27,9 +27,9 @@ export default function EmotionalExcellence() {
           <div className="container mx-auto px-4 py-4">
             <a href="/" className="inline-block">
               <img
-                src="/logo.svg"
+                src="/logo_ET.jpg"
                 alt="Ernesto Tages"
-                className="h-8"
+                className="h-12 w-auto"
               />
             </a>
           </div>
@@ -75,15 +75,15 @@ export default function EmotionalExcellence() {
         <section className="py-16 px-4 bg-white">
           <div className="container max-w-4xl">
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-[#555555] leading-relaxed mb-8">
+              <p className="text-xl text-[#555555] leading-relaxed mb-8 text-justify">
                 In an era where technical competence is table stakes, emotional excellence has emerged as the defining characteristic of exceptional leadership. This white paper explores how the coherence of emotion, thought, and action creates a strategic advantage in complex organizational environments.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8">
+              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
                 Leaders who master emotional excellence don't suppress or ignore emotions—they integrate them intelligently into decision-making. They recognize that emotions carry information, that feelings signal values, and that the gap between what we feel and what we do creates organizational friction that undermines trust and effectiveness.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12">
+              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
                 This white paper examines the practice of emotional excellence: how leaders develop the capacity to feel clearly, think rigorously, and act coherently even under pressure. It explores the neuroscience of emotional regulation, the organizational cost of emotional incoherence, and the practical disciplines that transform emotional intelligence from a soft skill into a strategic capability.
               </p>
 

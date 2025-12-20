@@ -495,3 +495,6 @@
 - [x] Create /iberoamerican-ethical-leadership page with H1/H2 structure and SEO meta tags
 - [x] Update Resources page cards to link to dedicated pages instead of direct PDF download
 - [x] Add routes for all three white paper pages in App.tsx
+- [x] Fix broken logo image on white paper dedicated pages
+- [x] Fix logo path in IberoamericanEthicalLeadership page
+- [x] Add text justification to all three white paper pages
