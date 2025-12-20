@@ -487,3 +487,4 @@
 - [x] Remove 3 placeholder frameworks from Frameworks & Tools section
 - [ ] Reserve space for "The Strategic Advantage of Emotional Excellence" (2nd position)
 - [ ] Prepare for future Clarity Matrix™ dedicated page
+- [x] Add "The Strategic Advantage of Emotional Excellence" white paper as 2nd item

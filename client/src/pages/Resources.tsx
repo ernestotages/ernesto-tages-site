@@ -144,6 +144,26 @@ export default function Resources() {
                   </Button>
                 </div>
 
+                {/* White Paper 2 - Emotional Excellence */}
+                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
+                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                    Emotional Excellence
+                  </h3>
+                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    Why coherence of emotion, thought, and action has become a strategic advantage for leaders. This white paper explores how emotional excellence transforms leadership effectiveness in complex organizational environments.
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
+                    onClick={() =>
+                      handleDownload("Emotional Excellence", "/whitepaper-emotional-excellence.pdf")
+                    }
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {t("resources.insightsDetails.download")}
+                  </Button>
+                </div>
+
                 {/* White Paper 3 - Ibero-American Ethical Leadership */}
                 <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
                   <h3 className="text-2xl font-semibold text-[#121212] mb-3">
