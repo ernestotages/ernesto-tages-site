@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { Helmet } from "react-helmet-async";
-import { Download } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 
 export default function CostOfClarity() {
   const handleDownload = () => {
@@ -139,25 +139,33 @@ export default function CostOfClarity() {
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href="/emotional-excellence"
-                className="p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D9307E] hover:shadow-md transition-all"
+                className="p-6 bg-white rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all"
               >
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   Emotional Excellence
                 </h4>
-                <p className="text-[#777777]">
+                <p className="text-[#777777] mb-4">
                   Why coherence of emotion, thought, and action has become a strategic advantage for leaders.
                 </p>
+                <div className="flex items-center text-[#D9307E] font-medium">
+                  <span>Read more</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
               </a>
               <a
                 href="/iberoamerican-ethical-leadership"
-                className="p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D9307E] hover:shadow-md transition-all"
+                className="p-6 bg-white rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all"
               >
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   El liderazgo ético en Iberoamérica
                 </h4>
-                <p className="text-[#777777]">
+                <p className="text-[#777777] mb-4">
                   How emotion, responsibility, and power shape ethical leadership in Ibero-America.
                 </p>
+                <div className="flex items-center text-[#D9307E] font-medium">
+                  <span>Read more</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
               </a>
             </div>
           </div>

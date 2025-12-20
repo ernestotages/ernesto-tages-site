@@ -504,3 +504,4 @@
 - [x] Add JSON-LD schema markup (Article/Report) to Cost of Clarity page
 - [x] Add JSON-LD schema markup (Article/Report) to Emotional Excellence page
 - [x] Add JSON-LD schema markup (Article/Report) to Iberoamerican Ethical Leadership page
+- [x] Update Related Resources styling in all white paper pages to match Insights - [ ] Update Related Resources styling in all white paper pages to match Insights & Essays aesthetic (magenta vertical line + "Read more" link) Essays aesthetic (magenta vertical line + "Read more" link)
