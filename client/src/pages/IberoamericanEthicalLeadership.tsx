@@ -46,19 +46,66 @@ export default function IberoamericanEthicalLeadership() {
             "url": "https://ernestotages.com/iberoamerican-ethical-leadership"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ernestotages.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Resources",
+                "item": "https://ernestotages.com/resources"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "El liderazgo ético en Iberoamérica",
+                "item": "https://ernestotages.com/iberoamerican-ethical-leadership"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        {/* Header */}
+        {/* Header with Breadcrumb */}
         <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-4 py-4">
-            <a href="/" className="inline-block">
-              <img
-                src="/logo_ET.jpg"
-                alt="Ernesto Tages"
-                className="h-12 w-auto"
-              />
-            </a>
+          <div className="container mx-auto px-4">
+            <div className="py-4">
+              <a href="/" className="inline-block">
+                <img
+                  src="/logo_ET.jpg"
+                  alt="Ernesto Tages"
+                  className="h-12 w-auto"
+                />
+              </a>
+            </div>
+            <nav className="pb-3">
+              <ol className="flex items-center gap-2 text-sm text-[#999999]">
+                <li>
+                  <a href="/" className="hover:text-[#D9307E] transition-colors">
+                    Home
+                  </a>
+                </li>
+                <li>›</li>
+                <li>
+                  <a href="/resources" className="hover:text-[#D9307E] transition-colors">
+                    Resources
+                  </a>
+                </li>
+                <li>›</li>
+                <li className="text-[#666666]">
+                  El liderazgo ético en Iberoamérica
+                </li>
+              </ol>
+            </nav>
           </div>
         </header>
 

@@ -505,3 +505,5 @@
 - [x] Add JSON-LD schema markup (Article/Report) to Emotional Excellence page
 - [x] Add JSON-LD schema markup (Article/Report) to Iberoamerican Ethical Leadership page
 - [x] Update Related Resources styling in all white paper pages to match Insights - [ ] Update Related Resources styling in all white paper pages to match Insights & Essays aesthetic (magenta vertical line + "Read more" link) Essays aesthetic (magenta vertical line + "Read more" link)
+- [x] Add discreet breadcrumbs (visual + JSON-LD schema) to all white paper pages below header and above H1
+- [x] Remove duplicate logo from breadcrumb section in white paper pages
