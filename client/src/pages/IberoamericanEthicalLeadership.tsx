@@ -19,8 +19,8 @@ export default function IberoamericanEthicalLeadership() {
       <SEO
         title="Liderazgo Ético en Iberoamérica | Ernesto Tages"
         description="How emotion, responsibility, and power shape ethical leadership in Ibero-America. Seven movements that outline a moral compass for contemporary leadership."
-        ogTitle="El liderazgo ético en Iberoamérica | Ernesto Tages"
-        ogDescription="Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica."
+        ogTitle="Liderazgo Ético en Iberoamérica — Poder, Emoción y Responsabilidad"
+        ogDescription="Una reflexión sobre cómo emoción, responsabilidad y poder configuran el liderazgo ético en Iberoamérica, a través de siete movimientos orientadores."
         lang="es"
       />
       <Helmet>

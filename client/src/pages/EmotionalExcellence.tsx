@@ -19,8 +19,8 @@ export default function EmotionalExcellence() {
       <SEO
         title="Emotional Excellence in Leadership | Ernesto Tages"
         description="Why coherence of emotion, thought, and action has become a strategic advantage for leaders operating under complexity and pressure."
-        ogTitle="The Strategic Advantage of Emotional Excellence | Ernesto Tages"
-        ogDescription="Why coherence of emotion, thought, and action has become a strategic advantage for leaders."
+        ogTitle="Emotional Excellence — Coherence as a Strategic Capacity"
+        ogDescription="An examination of how coherence between emotion, thought, and action has become a decisive capacity for leaders operating under complexity and pressure."
       />
       <Helmet>
         <script type="application/ld+json">

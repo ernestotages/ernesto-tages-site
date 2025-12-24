@@ -18,8 +18,8 @@ export default function ClarityMatrix() {
       <SEO
         title="The Clarity Matrix™: Ethical Clarity in Decision-Making"
         description="A framework for ethical clarity under pressure. It helps leaders navigate decisions where tension exists between internal coherence and external action."
-        ogTitle="The Clarity Matrix™ | A Framework for Ethical Leadership"
-        ogDescription="Navigate complex decisions through integration and responsible agency."
+        ogTitle="The Clarity Matrix™ — Ethical Clarity Under Pressure"
+        ogDescription="A reflective framework offering orientation for leaders navigating ethical tension, power, and responsibility in conditions of uncertainty and pressure."
       />
       <Helmet>
         <script type="application/ld+json">
