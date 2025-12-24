@@ -507,3 +507,9 @@
 - [x] Update Related Resources styling in all white paper pages to match Insights - [ ] Update Related Resources styling in all white paper pages to match Insights & Essays aesthetic (magenta vertical line + "Read more" link) Essays aesthetic (magenta vertical line + "Read more" link)
 - [x] Add discreet breadcrumbs (visual + JSON-LD schema) to all white paper pages below header and above H1
 - [x] Remove duplicate logo from breadcrumb section in white paper pages
+- [ ] Fix duplicate logo ET in white paper pages - keep only header logo with breadcrumb below
+- [x] Create ClarityMatrix.tsx dedicated page component
+- [x] Add /clarity-matrix route to App.tsx
+- [x] Copy Clarity Matrix PNG and PDF to public folder
+- [x] Add Clarity Matrix to Resources page Tools & Frameworks section
+- [x] Test Clarity Matrix page and download functionality

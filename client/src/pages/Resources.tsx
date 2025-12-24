@@ -186,13 +186,22 @@ export default function Resources() {
                 {t("resources.frameworksDetails.title")}
               </h2>
 
-              <div className="text-center py-12">
-                <p className="text-xl text-[#777777] mb-4">
-                  New frameworks coming soon.
-                </p>
-                <p className="text-lg text-[#777777]">
-                  Practical tools for ethical decision-making in complex leadership scenarios.
-                </p>
+              <div className="space-y-6">
+                {/* Clarity Matrix */}
+                <Link href="/clarity-matrix">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer">
+                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                      The Clarity Matrix™
+                    </h3>
+                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                      A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.
+                    </p>
+                    <div className="flex items-center text-[#D9307E] font-medium">
+                      <span>Explore framework</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
