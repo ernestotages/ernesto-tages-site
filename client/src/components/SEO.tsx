@@ -21,7 +21,7 @@ export default function SEO({
   ogType = "website",
   lang = "en",
 }: SEOProps) {
-  const fullTitle = `${title} | Ernesto Tages`;
+  const fullTitle = title;
   const finalOgTitle = ogTitle || title;
   const finalOgDescription = ogDescription || description;
   
