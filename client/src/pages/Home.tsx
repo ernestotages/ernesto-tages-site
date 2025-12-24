@@ -27,6 +27,7 @@ export default function Home() {
       <SEO
         title="Ernesto Tages - Ethical Leadership Consultancy"
         description="Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity."
+        keywords="ethical leadership, leadership consultancy, decision-making, emotional mastery, executive advisory, moral clarity, ethical decision-making"
         ogTitle="Ernesto Tages - Ethical Leadership Consultancy"
         ogDescription="Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity."
         ogImage="/og-image.png"

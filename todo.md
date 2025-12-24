@@ -513,3 +513,5 @@
 - [x] Copy Clarity Matrix PNG and PDF to public folder
 - [x] Add Clarity Matrix to Resources page Tools & Frameworks section
 - [x] Test Clarity Matrix page and download functionality
+- [x] Update homepage SEO title to "Ernesto Tages - Ethical Leadership Consultancy"
+- [x] Add meta keywords to homepage (ethical leadership, leadership consultancy, decision-making, emotional mastery, executive advisory, moral clarity, ethical decision-making)

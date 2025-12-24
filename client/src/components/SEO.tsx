@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 interface SEOProps {
   title: string;
   description: string;
+  keywords?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -13,6 +14,7 @@ interface SEOProps {
 export default function SEO({
   title,
   description,
+  keywords,
   ogTitle,
   ogDescription,
   ogImage = "/logo-methodology.png",
@@ -34,6 +36,7 @@ export default function SEO({
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       
       {/* Google Search Console Verification */}
       <meta name="google-site-verification" content="V8ZhuVZRfPrsT74vQZ4rSpXVKo-KhmKnGJwJqY9CLko" />
