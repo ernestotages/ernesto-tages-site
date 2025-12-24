@@ -18,7 +18,7 @@ export default function CostOfClarity() {
     <>
       <SEO
         title="The Cost of Clarity | Ernesto Tages"
-        description="An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. Learn how leaders can transform tension into trust through coherent decision-making."
+        description="An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. For leaders navigating stakeholder tensions."
         ogTitle="The Cost of Clarity | Ernesto Tages"
         ogDescription="An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them."
       />

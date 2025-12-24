@@ -522,3 +522,4 @@
 - [x] Add visual anchors between major sections (horizontal lines or spacing)
 - [x] Add closing section "An Invitation to Further Reflection" before footer
 - [x] Fix duplicate footer in Clarity Matrix page (remove extra footer)
+- [x] Create personalized meta descriptions for white papers and Clarity Matrix (150-160 chars, calm tone)
