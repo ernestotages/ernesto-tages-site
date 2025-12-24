@@ -516,3 +516,9 @@
 - [x] Update homepage SEO title to "Ernesto Tages - Ethical Leadership Consultancy"
 - [x] Add meta keywords to homepage (ethical leadership, leadership consultancy, decision-making, emotional mastery, executive advisory, moral clarity, ethical decision-making)
 - [x] Remove automatic '| Ernesto Tages' suffix from SEO component title
+- [x] Fix duplicate logo ET in white paper dedicated pages (remove second logo and horizontal space)
+- [x] Move Clarity Matrix diagram before "The Four States" section
+- [x] Fix State I nomenclature: "Ethical Drift" → "Entropic Drift"
+- [x] Add visual anchors between major sections (horizontal lines or spacing)
+- [x] Add closing section "An Invitation to Further Reflection" before footer
+- [x] Fix duplicate footer in Clarity Matrix page (remove extra footer)

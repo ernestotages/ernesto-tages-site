@@ -4,6 +4,15 @@ import { Download } from "lucide-react";
 import SEO from "@/components/SEO";
 
 export default function ClarityMatrix() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/clarity-matrix-framework.pdf";
+    link.download = "The-Clarity-Matrix-Framework-Ernesto-Tages.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <SEO
@@ -64,19 +73,10 @@ export default function ClarityMatrix() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        {/* Header with Breadcrumb */}
-        <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-4">
-            <div className="py-4">
-              <a href="/" className="inline-block">
-                <img
-                  src="/logo_ET.jpg"
-                  alt="Ernesto Tages"
-                  className="h-12 w-auto"
-                />
-              </a>
-            </div>
-            <nav className="pb-3">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-4">
+            <nav>
               <ol className="flex items-center gap-2 text-sm text-[#999999]">
                 <li>
                   <a href="/" className="hover:text-[#D9307E] transition-colors">
@@ -90,13 +90,11 @@ export default function ClarityMatrix() {
                   </a>
                 </li>
                 <li>›</li>
-                <li className="text-[#666666]">
-                  The Clarity Matrix™
-                </li>
+                <li className="text-[#666666]">The Clarity Matrix™</li>
               </ol>
             </nav>
           </div>
-        </header>
+        </div>
 
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -130,57 +128,66 @@ export default function ClarityMatrix() {
           </div>
         </section>
 
-        {/* The Problem Section */}
-        <section className="py-16 px-4 bg-white">
+        {/* Section I: The Problem */}
+        <section className="py-16 px-4 bg-white border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <h3 className="text-3xl font-serif text-[#121212] mb-6">
-              The Problem It Addresses
-            </h3>
-            <div className="prose prose-lg max-w-none text-[#555555]">
-              <p>
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-5xl font-serif text-[#D9307E]/20">I</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                The Problem It Addresses
+              </h3>
+            </div>
+            <div className="prose prose-lg max-w-none text-[#555555] space-y-4">
+              <p className="leading-relaxed">
                 In contexts of power, uncertainty, and ethical consequence, leaders face decisions where every option carries weight. The pressure to act can fragment internal coherence. Values become abstract, emotion becomes noise, and action becomes reactive.
               </p>
-              <p>
+              <p className="leading-relaxed">
                 The question is not whether we act — but from where action emerges: whether it is sustained by internal coherence or driven by unresolved tension.
               </p>
             </div>
           </div>
         </section>
 
-        {/* The Matrix Visualization */}
-        <section className="py-20 px-4">
+        {/* Section II: The Matrix Visualization */}
+        <section className="py-20 px-4 border-t-2 border-gray-100">
           <div className="container max-w-5xl">
-            <h3 className="text-3xl font-serif text-[#121212] mb-12 text-center">
-              The Framework
-            </h3>
+            <div className="flex items-center gap-4 mb-12">
+              <span className="text-5xl font-serif text-[#D9307E]/20">II</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                The Framework
+              </h3>
+            </div>
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
               <img
                 src="/clarity-matrix-diagram.png"
-                alt="The Clarity Matrix™ - Four quadrants showing Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity"
+                alt="The Clarity Matrix™ - Four quadrants showing Entropic Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity"
                 className="w-full h-auto"
               />
             </div>
           </div>
         </section>
 
-        {/* Four States */}
-        <section className="py-16 px-4 bg-white">
+        {/* Section III: Four States */}
+        <section className="py-16 px-4 bg-white border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <h3 className="text-3xl font-serif text-[#121212] mb-12">
-              The Four States
-            </h3>
+            <div className="flex items-center gap-4 mb-12">
+              <span className="text-5xl font-serif text-[#D9307E]/20">III</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                The Four States
+              </h3>
+            </div>
 
-            <div className="space-y-12">
-              {/* State I */}
+            <div className="space-y-16">
+              {/* State I - Entropic Drift */}
               <div className="border-l-4 border-[#D9307E] pl-6">
                 <h4 className="text-2xl font-serif text-[#121212] mb-3">
-                  State I — Ethical Drift
+                  State I — Entropic Drift
                 </h4>
                 <p className="text-sm text-[#999999] italic mb-4">
                   Fragmentation + Reactivity
                 </p>
                 <p className="text-[#555555] leading-relaxed mb-4">
-                  Ethical Drift occurs when internal coherence erodes under sustained pressure. Values become abstract, emotion becomes noise, and action becomes reactive.
+                  Entropic Drift occurs when internal coherence erodes under sustained pressure. Values become abstract, emotion becomes noise, and action becomes reactive.
                 </p>
                 <p className="text-[#555555] leading-relaxed mb-4">
                   The leader operates without clear internal reference. Decisions are made under urgency, fatigue, or ambiguity — but without sufficient integration between what is felt, what is believed, and what is done.
@@ -188,9 +195,9 @@ export default function ClarityMatrix() {
                 <p className="text-[#555555] leading-relaxed font-medium">
                   This is not moral failure. It is disorientation.
                 </p>
-                <div className="mt-4 space-y-2">
-                  <p className="text-sm font-medium text-[#121212]">Orienting questions:</p>
-                  <ul className="text-sm text-[#555555] space-y-1 list-disc list-inside">
+                <div className="mt-6 space-y-2 bg-gray-50 p-4 rounded">
+                  <p className="text-sm font-semibold text-[#121212]">Orienting questions:</p>
+                  <ul className="text-sm text-[#555555] space-y-2 list-disc list-inside">
                     <li>Where am I losing coherence between emotion, value, and action?</li>
                     <li>What pressure is fragmenting my internal clarity?</li>
                     <li>What decision am I deferring because I cannot yet name what matters?</li>
@@ -198,7 +205,7 @@ export default function ClarityMatrix() {
                 </div>
               </div>
 
-              {/* State II */}
+              {/* State II - Moral Containment */}
               <div className="border-l-4 border-[#D9307E] pl-6">
                 <h4 className="text-2xl font-serif text-[#121212] mb-3">
                   State II — Moral Containment
@@ -218,9 +225,9 @@ export default function ClarityMatrix() {
                 <p className="text-[#555555] leading-relaxed font-medium">
                   Moral Containment preserves values, but at the price of frustration, stagnation, or quiet withdrawal.
                 </p>
-                <div className="mt-4 space-y-2">
-                  <p className="text-sm font-medium text-[#121212]">Orienting questions:</p>
-                  <ul className="text-sm text-[#555555] space-y-1 list-disc list-inside">
+                <div className="mt-6 space-y-2 bg-gray-50 p-4 rounded">
+                  <p className="text-sm font-semibold text-[#121212]">Orienting questions:</p>
+                  <ul className="text-sm text-[#555555] space-y-2 list-disc list-inside">
                     <li>What am I preserving at the cost of action?</li>
                     <li>Which fear is defining the limits of my agency?</li>
                     <li>What responsibility am I holding internally but not enacting?</li>
@@ -228,7 +235,7 @@ export default function ClarityMatrix() {
                 </div>
               </div>
 
-              {/* State III */}
+              {/* State III - Strategic Dislocation */}
               <div className="border-l-4 border-[#D9307E] pl-6">
                 <h4 className="text-2xl font-serif text-[#121212] mb-3">
                   State III — Strategic Dislocation
@@ -248,17 +255,17 @@ export default function ClarityMatrix() {
                 <p className="text-[#555555] leading-relaxed font-medium">
                   This is a particularly dangerous state, not because of weakness, but because of effectiveness without integration. Ethical risk here is not passivity, but unintended harm and long-term erosion of trust.
                 </p>
-                <div className="mt-4 space-y-2">
-                  <p className="text-sm font-medium text-[#121212]">Orienting questions:</p>
-                  <ul className="text-sm text-[#555555] space-y-1 list-disc list-inside">
-                    <li>What am I avoiding naming internally?</li>
-                    <li>Which value is being used rather than lived?</li>
-                    <li>What cost am I externalizing through my effectiveness?</li>
+                <div className="mt-6 space-y-2 bg-gray-50 p-4 rounded">
+                  <p className="text-sm font-semibold text-[#121212]">Orienting questions:</p>
+                  <ul className="text-sm text-[#555555] space-y-2 list-disc list-inside">
+                    <li>Where am I acting without sufficient internal coherence?</li>
+                    <li>What unresolved tension is shaping my decisions without my full awareness?</li>
+                    <li>What cost am I externalizing because I have not yet integrated it internally?</li>
                   </ul>
                 </div>
               </div>
 
-              {/* State IV */}
+              {/* State IV - Ethical Clarity */}
               <div className="border-l-4 border-[#D9307E] pl-6">
                 <h4 className="text-2xl font-serif text-[#121212] mb-3">
                   State IV — Ethical Clarity
@@ -267,23 +274,20 @@ export default function ClarityMatrix() {
                   Integration + Responsible Agency
                 </p>
                 <p className="text-[#555555] leading-relaxed mb-4">
-                  Ethical Clarity is not the absence of tension, doubt, or risk. It is the capacity to act while remaining internally coherent.
+                  This is the state where internal coherence and external action align. Values are not abstract — they are felt, embodied, and enacted. Emotion is not noise — it is information. Power is not reactive — it is deliberate.
                 </p>
                 <p className="text-[#555555] leading-relaxed mb-4">
-                  In this state, emotion, values, and reasoning are sufficiently integrated to sustain responsibility under pressure. Action is intentional, contextual, and ethically grounded without rigidity.
+                  Ethical Clarity does not eliminate tension. It transforms it. The leader acts from a place of integration: aware of cost, clear about values, and capable of sustaining coherence under pressure.
                 </p>
-                <p className="text-[#555555] leading-relaxed font-medium mb-4">
-                  Ethical Clarity does not guarantee correct outcomes. It guarantees ownership.
+                <p className="text-[#555555] leading-relaxed font-medium">
+                  This is not perfection. It is orientation.
                 </p>
-                <p className="text-[#555555] leading-relaxed">
-                  This state allows leaders to assume the consequences of their decisions without disintegration or denial.
-                </p>
-                <div className="mt-4 space-y-2">
-                  <p className="text-sm font-medium text-[#121212]">Orienting questions:</p>
-                  <ul className="text-sm text-[#555555] space-y-1 list-disc list-inside">
-                    <li>What am I fully taking responsibility for?</li>
-                    <li>What tension am I willing to hold rather than resolve prematurely?</li>
-                    <li>From where, internally, is this action emerging?</li>
+                <div className="mt-6 space-y-2 bg-gray-50 p-4 rounded">
+                  <p className="text-sm font-semibold text-[#121212]">Orienting questions:</p>
+                  <ul className="text-sm text-[#555555] space-y-2 list-disc list-inside">
+                    <li>Where do I feel coherence between what I value, what I feel, and what I do?</li>
+                    <li>What decision reflects both internal integration and responsible agency?</li>
+                    <li>How can I sustain this clarity when pressure returns?</li>
                   </ul>
                 </div>
               </div>
@@ -291,140 +295,120 @@ export default function ClarityMatrix() {
           </div>
         </section>
 
-        {/* How to Use */}
-        <section className="py-16 px-4">
+        {/* Section IV: How to Use */}
+        <section className="py-16 px-4 border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <h3 className="text-3xl font-serif text-[#121212] mb-6">
-              How to Use the Clarity Matrix™
-            </h3>
-            <div className="prose prose-lg max-w-none text-[#555555]">
-              <p>
-                The Clarity Matrix™ is designed for <strong>orientation</strong>, not evaluation.
-              </p>
-              <p>It can be used:</p>
-              <ul>
-                <li>as a reflective framework for individual leaders,</li>
-                <li>as a qualitative diagnostic lens in advisory contexts,</li>
-                <li>as a structuring tool for executive workshops and strategic conversations.</li>
-              </ul>
-              <p>
-                Its value lies not in locating oneself permanently, but in recognizing movement between states — and understanding what is required to regain coherence when clarity is compromised.
-              </p>
-              <p className="font-medium text-[#121212]">
-                There is no ideal permanence within the matrix. Only responsible navigation.
-              </p>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-5xl font-serif text-[#D9307E]/20">IV</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                How to Use This Framework
+              </h3>
+            </div>
+            <div className="prose prose-lg max-w-none text-[#555555] space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold text-[#121212] mb-3">Individual Reflection</h4>
+                <p className="leading-relaxed">
+                  Use the Clarity Matrix™ as a diagnostic tool for self-assessment. When facing a complex decision, locate yourself within the matrix. Ask: where is my coherence breaking down? What state am I operating from?
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-[#121212] mb-3">Advisory & Consultancy</h4>
+                <p className="leading-relaxed">
+                  In one-on-one advisory sessions, the matrix provides a shared language for exploring ethical tension. It allows leaders to name disorientation without judgment and to identify pathways toward greater integration.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-[#121212] mb-3">Workshops & Executive Sessions</h4>
+                <p className="leading-relaxed">
+                  In group settings, the framework facilitates collective reflection on organizational dynamics. Teams can map shared challenges, identify systemic patterns, and develop strategies for sustaining ethical clarity under pressure.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* For Whom */}
-        <section className="py-16 px-4 bg-white">
+        {/* Section V: For Whom */}
+        <section className="py-16 px-4 bg-white border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <h3 className="text-3xl font-serif text-[#121212] mb-6">
-              For Whom
-            </h3>
-            <p className="text-lg text-[#555555] leading-relaxed">
-              The Clarity Matrix™ is designed for senior executives, public leaders, board members, and founders who operate in contexts where decisions carry ethical weight and systemic consequence.
-            </p>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-5xl font-serif text-[#D9307E]/20">V</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                For Whom
+              </h3>
+            </div>
+            <div className="prose prose-lg max-w-none text-[#555555]">
+              <p className="leading-relaxed mb-6">
+                The Clarity Matrix™ is designed for leaders who operate in contexts where ethical consequence is real, where power carries weight, and where decisions shape systems and lives.
+              </p>
+              <ul className="space-y-3 text-[#555555]">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#D9307E] mt-1">•</span>
+                  <span><strong>Senior executives</strong> navigating strategic decisions with competing stakeholder demands</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#D9307E] mt-1">•</span>
+                  <span><strong>Public leaders</strong> managing institutional integrity under political and social pressure</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#D9307E] mt-1">•</span>
+                  <span><strong>Board members and advisors</strong> seeking clarity on governance and ethical oversight</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#D9307E] mt-1">•</span>
+                  <span><strong>Founders and entrepreneurs</strong> building organizations aligned with their values</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
         {/* Download Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <div className="bg-gradient-to-br from-[#D9307E]/5 to-[#D9307E]/10 rounded-2xl p-8 md:p-12">
+            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 text-center">
               <h3 className="text-2xl font-serif text-[#121212] mb-4">
                 Download the Framework
               </h3>
-              <p className="text-[#555555] mb-6">
-                Access the complete Clarity Matrix™ framework with detailed explanations of all four states and orienting questions.
+              <p className="text-[#555555] mb-8 max-w-2xl mx-auto">
+                Access the complete Clarity Matrix™ framework document, including detailed descriptions, orienting questions, and guidance for practical application.
               </p>
-              <a href="/clarity-matrix-framework.pdf" download>
-                <Button className="bg-[#D9307E] hover:bg-[#B8256A] text-white px-8 py-6 text-lg">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Framework (PDF)
-                </Button>
-              </a>
-              <p className="text-sm text-[#777777] mt-4">
-                Free download • 12 pages • PDF format
+              <Button
+                size="lg"
+                className="bg-[#D9307E] hover:bg-[#B82567] text-white px-8 py-6 text-lg"
+                onClick={handleDownload}
+              >
+                <Download className="w-5 h-5 mr-3" />
+                Download Framework (PDF)
+              </Button>
+              <p className="text-sm text-[#999999] mt-4">
+                Free download • PDF format
               </p>
             </div>
           </div>
         </section>
 
-        {/* Closing Note */}
-        <section className="py-16 px-4 bg-white border-t">
+        {/* Closing Section: An Invitation to Further Reflection */}
+        <section className="py-20 px-4 bg-white border-t-2 border-gray-100">
           <div className="container max-w-4xl">
-            <div className="prose prose-lg max-w-none text-[#555555]">
-              <p className="text-xl font-medium text-[#121212] mb-4">
-                Clarity does not eliminate risk. It makes responsibility assumable.
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-5xl font-serif text-[#D9307E]/20">VI</span>
+              <h3 className="text-3xl font-serif text-[#121212]">
+                An Invitation to Further Reflection
+              </h3>
+            </div>
+            <div className="prose prose-lg max-w-none text-[#555555] space-y-4">
+              <p className="leading-relaxed">
+                The Clarity Matrix™ is not a solution. It is a map. It does not resolve complexity, but it makes orientation possible.
               </p>
-              <p>
-                In contexts of power, uncertainty, and ethical consequence, the question is not whether we act — but from where action emerges: whether it is sustained by internal coherence or driven by unresolved tension.
+              <p className="leading-relaxed">
+                Its purpose is not to reduce complexity, but to restore orientation within it.
               </p>
-              <p>
-                The Clarity Matrix™ offers no solutions. It offers orientation — and the demand to decide from it.
-              </p>
-              <p className="text-sm text-[#777777] italic">
-                Drawing on ethical philosophy, moral psychology, and leadership studies, the Clarity Matrix™ is not reducible to any single discipline, nor to any procedural logic. Its purpose is not to resolve complexity, but to restore orientation within it.
+              <p className="leading-relaxed font-medium">
+                If this framework resonates with your work, I invite you to explore it further — whether through individual reflection, advisory engagement, or organizational application.
               </p>
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-[#121212] text-white py-16 px-4">
-          <div className="container max-w-6xl">
-            <div className="grid md:grid-cols-3 gap-12">
-              <div>
-                <img
-                  src="/logo_ET.jpg"
-                  alt="Ernesto Tages"
-                  className="h-12 w-auto mb-4 brightness-0 invert"
-                />
-                <p className="text-gray-400 text-sm">
-                  Ethical leadership consultancy and advisory services.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>
-                    <a href="/" className="hover:text-white transition-colors">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/resources" className="hover:text-white transition-colors">
-                      Resources
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-4">Legal</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>
-                    <a href="/privacy" className="hover:text-white transition-colors">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/terms" className="hover:text-white transition-colors">
-                      Terms of Service
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
-              <p>© {new Date().getFullYear()} Ernesto Tages. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

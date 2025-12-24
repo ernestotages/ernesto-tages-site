@@ -75,19 +75,10 @@ export default function IberoamericanEthicalLeadership() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        {/* Header with Breadcrumb */}
-        <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-4">
-            <div className="py-4">
-              <a href="/" className="inline-block">
-                <img
-                  src="/logo_ET.jpg"
-                  alt="Ernesto Tages"
-                  className="h-12 w-auto"
-                />
-              </a>
-            </div>
-            <nav className="pb-3">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-4">
+            <nav>
               <ol className="flex items-center gap-2 text-sm text-[#999999]">
                 <li>
                   <a href="/" className="hover:text-[#D9307E] transition-colors">
@@ -101,13 +92,11 @@ export default function IberoamericanEthicalLeadership() {
                   </a>
                 </li>
                 <li>›</li>
-                <li className="text-[#666666]">
-                  El liderazgo ético en Iberoamérica
-                </li>
+                <li className="text-[#666666]">El liderazgo ético en Iberoamérica</li>
               </ol>
             </nav>
           </div>
-        </header>
+        </div>
 
         {/* Hero Section */}
         <section className="py-20 px-4">
