@@ -16,8 +16,8 @@ export default function ClarityMatrix() {
   return (
     <>
       <SEO
-        title="The Clarity Matrix™ | Ernesto Tages"
-        description="A framework for ethical clarity under pressure. Helps leaders navigate decisions where tension exists between internal coherence and external action."
+        title="The Clarity Matrix™: Ethical Clarity in Decision-Making"
+        description="A framework for ethical clarity under pressure. It helps leaders navigate decisions where tension exists between internal coherence and external action."
         ogTitle="The Clarity Matrix™ | A Framework for Ethical Leadership"
         ogDescription="Navigate complex decisions through integration and responsible agency."
       />
