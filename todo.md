@@ -572,3 +572,9 @@
 - [x] Add discreet Previous/Next text links at bottom of CaseStudyB (before final quote)
 - [x] Add discreet Previous/Next text links at bottom of CaseStudyC (before final quote)
 - [x] Test navigation flow between all three case studies
+
+## Case Studies Block Height Fix
+- [x] Investigate Resources page block grid layout
+- [x] Ensure all 4 blocks have equal height regardless of text length
+- [x] Test in English, Spanish, and Portuguese
+- [ ] Save checkpoint after fix

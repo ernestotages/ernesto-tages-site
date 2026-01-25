@@ -66,7 +66,7 @@ export default function Resources() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {/* Block 1: Insights & Essays */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow h-full flex flex-col"
               onClick={() => toggleSection("insights")}
             >
               <div className="flex justify-center mb-4">
@@ -82,7 +82,7 @@ export default function Resources() {
 
             {/* Block 2: Frameworks & Tools */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow h-full flex flex-col"
               onClick={() => toggleSection("frameworks")}
             >
               <div className="flex justify-center mb-4">
@@ -98,7 +98,7 @@ export default function Resources() {
 
             {/* Block 3: Talks & Conversations */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
+              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow h-full flex flex-col"
               onClick={() => toggleSection("talks")}
             >
               <div className="flex justify-center mb-4">
@@ -113,8 +113,8 @@ export default function Resources() {
             </div>
 
             {/* Block 4: Case Studies */}
-            <Link href="/resources/case-studies">
-              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 hover:shadow-xl transition-shadow">
+            <Link href="/resources/case-studies" className="h-full">
+              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 hover:shadow-xl transition-shadow h-full flex flex-col">
                 <div className="flex justify-center mb-4">
                   <BookOpen className="w-16 h-16 text-[#D9307E]" />
                 </div>
