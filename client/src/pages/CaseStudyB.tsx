@@ -42,15 +42,8 @@ export default function CaseStudyB() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto space-y-6">
-                {/* Back Navigation Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <Link
-                    href="/resources"
-                    className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
-                  >
-                    ← Back to Resources
-                  </Link>
-                  <span className="hidden sm:inline text-[#777777]">|</span>
+                {/* Back Navigation Button */}
+                <div className="mb-6">
                   <Link
                     href="/resources/case-studies"
                     className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
@@ -187,6 +180,16 @@ export default function CaseStudyB() {
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     Authority erodes not through error, but through decisions that cannot be fully assumed.
                   </p>
+                </div>
+
+                {/* Discreet Previous/Next Navigation */}
+                <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-200 text-sm text-[#777777]">
+                  <Link href="/resources/case-studies/case-a" className="hover:text-[#D9307E] transition-colors">
+                    ← Previous: When Every Option Has a Cost
+                  </Link>
+                  <Link href="/resources/case-studies/case-c" className="hover:text-[#D9307E] transition-colors">
+                    Next: When the Right Decision Costs →
+                  </Link>
                 </div>
 
               </div>

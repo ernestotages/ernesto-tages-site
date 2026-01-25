@@ -42,15 +42,8 @@ export default function CaseStudyA() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto space-y-6">
-                {/* Back Navigation Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <Link
-                    href="/resources"
-                    className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
-                  >
-                    ← Back to Resources
-                  </Link>
-                  <span className="hidden sm:inline text-[#777777]">|</span>
+                {/* Back Navigation Button */}
+                <div className="mb-6">
                   <Link
                     href="/resources/case-studies"
                     className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
@@ -276,6 +269,16 @@ export default function CaseStudyA() {
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     A decision becomes ethical not when it is harmless, but when it can be carried without self-division.
                   </p>
+                </div>
+
+                {/* Discreet Previous/Next Navigation */}
+                <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-200 text-sm text-[#777777]">
+                  <div className="invisible">
+                    {/* Placeholder for alignment */}
+                  </div>
+                  <Link href="/resources/case-studies/case-b" className="hover:text-[#D9307E] transition-colors">
+                    Next: When Decisions No Longer Settle →
+                  </Link>
                 </div>
 
               </div>

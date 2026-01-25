@@ -563,3 +563,12 @@
 - [x] Hide C2 content by default, show only after clicking "Continue with the extended reflection →"
 - [ ] Test navigation buttons functionality
 - [ ] Test Extended Reflection expand/collapse behavior
+
+## Case Studies Navigation Refinement
+- [x] Remove "← Back to Resources" button from CaseStudyA.tsx
+- [x] Remove "← Back to Resources" button from CaseStudyB.tsx
+- [x] Remove "← Back to Resources" button from CaseStudyC.tsx
+- [x] Add discreet Previous/Next text links at bottom of CaseStudyA (before final quote)
+- [x] Add discreet Previous/Next text links at bottom of CaseStudyB (before final quote)
+- [x] Add discreet Previous/Next text links at bottom of CaseStudyC (before final quote)
+- [x] Test navigation flow between all three case studies
