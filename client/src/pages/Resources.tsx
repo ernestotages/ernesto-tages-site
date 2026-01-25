@@ -97,20 +97,19 @@ export default function Resources() {
             </div>
 
             {/* Block 3: Talks & Conversations */}
-            <div
-              className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow h-full flex flex-col"
-              onClick={() => toggleSection("talks")}
-            >
-              <div className="flex justify-center mb-4">
-                <Video className="w-16 h-16 text-[#D9307E]" />
+            <Link href="/resources/talks" className="h-full">
+              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="flex justify-center mb-4">
+                  <Video className="w-16 h-16 text-[#D9307E]" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#121212]">
+                  {t("resources.blocks.talks.title")}
+                </h3>
+                <p className="text-lg text-[#777777] leading-relaxed">
+                  {t("resources.blocks.talks.description")}
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold text-[#121212]">
-                {t("resources.blocks.talks.title")}
-              </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
-                {t("resources.blocks.talks.description")}
-              </p>
-            </div>
+            </Link>
 
             {/* Block 4: Case Studies */}
             <Link href="/resources/case-studies" className="h-full">
@@ -225,79 +224,7 @@ export default function Resources() {
         </section>
       )}
 
-      {expandedSection === "talks" && (
-        <section id="talks-details" className="py-20 bg-[#F4F4F4]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#121212] mb-8 text-center">
-                {t("resources.talksDetails.title")}
-              </h2>
 
-              <div className="space-y-6">
-                {/* Talk 1 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.talksDetails.talk1.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.talksDetails.talk1.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.talksDetails.talk1.title"))
-                    }
-                  >
-                    <Video className="w-4 h-4 mr-2" />
-                    {t("resources.talksDetails.watch")}
-                  </Button>
-                </div>
-
-                {/* Talk 2 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.talksDetails.talk2.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.talksDetails.talk2.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.talksDetails.talk2.title"))
-                    }
-                  >
-                    <Video className="w-4 h-4 mr-2" />
-                    {t("resources.talksDetails.watch")}
-                  </Button>
-                </div>
-
-                {/* Talk 3 */}
-                <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow">
-                  <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                    {t("resources.talksDetails.talk3.title")}
-                  </h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    {t("resources.talksDetails.talk3.description")}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-all"
-                    onClick={() =>
-                      handleDownload(t("resources.talksDetails.talk3.title"))
-                    }
-                  >
-                    <Video className="w-4 h-4 mr-2" />
-                    {t("resources.talksDetails.watch")}
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
       </div>
     </>
   );

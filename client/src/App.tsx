@@ -21,6 +21,7 @@ import CaseStudies from "./pages/CaseStudies";
 import CaseStudyA from "./pages/CaseStudyA";
 import CaseStudyB from "./pages/CaseStudyB";
 import CaseStudyC from "./pages/CaseStudyC";
+import Talks from "./pages/Talks";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
@@ -39,6 +40,7 @@ function Router() {
         <Route path="/emotional-excellence" component={EmotionalExcellence} />
         <Route path="/iberoamerican-ethical-leadership" component={IberoamericanEthicalLeadership} />
         <Route path="/clarity-matrix" component={ClarityMatrix} />
+        <Route path="/resources/talks" component={Talks} />
         <Route path="/resources/case-studies" component={CaseStudies} />
         <Route path="/resources/case-studies/case-a" component={CaseStudyA} />
         <Route path="/resources/case-studies/case-b" component={CaseStudyB} />

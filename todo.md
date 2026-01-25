@@ -578,3 +578,11 @@
 - [x] Ensure all 4 blocks have equal height regardless of text length
 - [x] Test in English, Spanish, and Portuguese
 - [ ] Save checkpoint after fix
+
+## Talks & Conversations Section Cleanup
+- [x] Remove expanded section with placeholder cards from Resources page
+- [x] Create simple /resources/talks page with editorial description only
+- [x] Update Resources page to link to /resources/talks
+- [x] Add route for /resources/talks in App.tsx
+- [x] Test navigation and visual consistency
+- [ ] Save checkpoint after cleanup
