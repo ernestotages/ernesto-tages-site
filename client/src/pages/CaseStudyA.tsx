@@ -20,15 +20,15 @@ export default function CaseStudyA() {
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center text-sm text-[#777777]">
-              <Link href="/" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 Home
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources" className="hover:text-[#D9307E] transition-colors">
                 Resources
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources/case-studies" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources/case-studies" className="hover:text-[#D9307E] transition-colors">
                 Case Studies
               </Link>
               <span className="mx-2">›</span>
@@ -120,7 +120,7 @@ export default function CaseStudyA() {
                 </div>
 
                 {/* Quote between C1 and C2 */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     Integrity is not choosing the best outcome. It is choosing the decision whose cost you are willing to carry without distortion.
                   </p>
@@ -130,7 +130,7 @@ export default function CaseStudyA() {
                 <div className="text-center py-8">
                   <a 
                     href="#extended-reflection"
-                    className="text-lg text-[#777777] hover:text-[#D946EF] transition-colors italic"
+                    className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
                   >
                     Continue with the extended reflection →
                   </a>
@@ -255,7 +255,7 @@ export default function CaseStudyA() {
                 </div>
 
                 {/* Final Quote */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     A decision becomes ethical not when it is harmless, but when it can be carried without self-division.
                   </p>

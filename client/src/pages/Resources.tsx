@@ -60,10 +60,10 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Three Resource Blocks */}
+      {/* Four Resource Blocks */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {/* Block 1: Insights & Essays */}
             <div
               className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
@@ -111,6 +111,21 @@ export default function Resources() {
                 {t("resources.blocks.talks.description")}
               </p>
             </div>
+
+            {/* Block 4: Case Studies */}
+            <Link href="/resources/case-studies">
+              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <BookOpen className="w-16 h-16 text-[#D9307E]" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#121212]">
+                  Case Studies
+                </h3>
+                <p className="text-lg text-[#777777] leading-relaxed">
+                  Situations where decision, authority, and integrity are tested under real pressure.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -203,21 +218,7 @@ export default function Resources() {
                   </div>
                 </Link>
 
-                {/* Case Studies */}
-                <Link href="/resources/case-studies">
-                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer">
-                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                      Case Studies
-                    </h3>
-                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                      Situations where decision, authority, and integrity are tested under real pressure.
-                    </p>
-                    <div className="flex items-center text-[#D9307E] font-medium">
-                      <span>View case studies</span>
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </div>
-                  </div>
-                </Link>
+
               </div>
             </div>
           </div>

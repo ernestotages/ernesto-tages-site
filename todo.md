@@ -541,3 +541,15 @@
 - [x] Implement quote styling (between C1-C2 and at end of C2)
 - [ ] Test navigation flow: Resources → Case Studies → Individual Cases
 - [x] Verify visual consistency with Clarity Matrix page (same sobriety level)
+
+## Case Studies Corrections
+- [x] Reposition Case Studies as independent 4th block in Resources page (not inside Frameworks - [ ] Reposition Case Studies as independent 4th block in Resources page (not inside Frameworks & Tools) Tools)
+- [x] Update Case Study A description to 2-line version from marketing
+- [x] Update Case Study B description to 2-line version from marketing
+- [x] Update Case Study C description to 2-line version from marketing
+- [x] Change all purple (#D946EF) to institutional magenta (#D9307E) in Case Studies pages
+- [x] Change quote border colors to magenta in all three case study pages
+- [x] Change button/link colors to magenta in Case Studies index page
+- [ ] Test Resources page layout with 4 horizontal blocks
+- [ ] Verify all case descriptions display correctly (max 2 lines)
+- [ ] Verify color consistency across all Case Studies pages

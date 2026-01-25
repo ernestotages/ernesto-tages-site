@@ -20,11 +20,11 @@ export default function CaseStudies() {
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center text-sm text-[#777777]">
-              <Link href="/" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 Home
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources" className="hover:text-[#D9307E] transition-colors">
                 Resources
               </Link>
               <span className="mx-2">›</span>
@@ -54,7 +54,7 @@ export default function CaseStudies() {
               <div className="max-w-4xl mx-auto space-y-12">
                 
                 {/* Case Study A */}
-                <div className="bg-white border-l-4 border-[#D946EF] pl-6 py-6 hover:shadow-md transition-shadow">
+                <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     When Every Option Has a Cost
                   </h2>
@@ -62,11 +62,11 @@ export default function CaseStudies() {
                     Integrity under systemic pressure.
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A senior executive faces mounting pressure to approve a decision that is legally defensible and economically rational, but that would impose significant costs on people whose trust had been essential to his authority. The question is not whether someone would be disappointed — that was inevitable — but whether the decision could be made without requiring self-deception to sustain it.
+                    A senior executive faces sustained pressure to approve a decision that is legally defensible and economically rational, yet difficult to assume without internal cost. The situation is formally correct — and deeply testing.
                   </p>
                   <Link 
                     href="/resources/case-studies/case-a"
-                    className="text-[#D946EF] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
+                    className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
                     Read case study
                     <span>→</span>
@@ -74,7 +74,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Case Study B */}
-                <div className="bg-white border-l-4 border-[#D946EF] pl-6 py-6 hover:shadow-md transition-shadow">
+                <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     When Decisions No Longer Settle
                   </h2>
@@ -82,11 +82,11 @@ export default function CaseStudies() {
                     Discernment under ultimate authority.
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A decision is clearly identified, well within the range of situations handled many times before. Yet it does not close. It returns repeatedly, without new information, without disagreement, without any obvious obstacle. The persistence is not dramatic or disruptive, but it is unmistakable — and increasingly uncomfortable.
+                    A decision is clearly identified and well within familiar territory. Yet it does not close. It returns repeatedly, without new information or disagreement, resisting completion.
                   </p>
                   <Link 
                     href="/resources/case-studies/case-b"
-                    className="text-[#D946EF] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
+                    className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
                     Read case study
                     <span>→</span>
@@ -94,7 +94,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Case Study C */}
-                <div className="bg-white border-l-4 border-[#D946EF] pl-6 py-6 hover:shadow-md transition-shadow">
+                <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     When the Right Decision Costs
                   </h2>
@@ -102,11 +102,11 @@ export default function CaseStudies() {
                     Authority after the cost of integrity.
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A leader with final authority had made a decision that was necessary, defensible, and correct. The decision was taken knowing it would carry costs: relationships strained, support withdrawn, interpretations that would not be charitable. What was not anticipated was how those consequences would continue to accumulate long after the decision had been executed.
+                    A leader with final authority makes a decision that is necessary, defensible, and correct. The costs are known. What follows is not reversal, but the challenge of sustaining authority after the impact.
                   </p>
                   <Link 
                     href="/resources/case-studies/case-c"
-                    className="text-[#D946EF] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
+                    className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
                     Read case study
                     <span>→</span>

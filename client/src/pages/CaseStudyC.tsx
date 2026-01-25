@@ -20,15 +20,15 @@ export default function CaseStudyC() {
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center text-sm text-[#777777]">
-              <Link href="/" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 Home
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources" className="hover:text-[#D9307E] transition-colors">
                 Resources
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources/case-studies" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources/case-studies" className="hover:text-[#D9307E] transition-colors">
                 Case Studies
               </Link>
               <span className="mx-2">›</span>
@@ -133,7 +133,7 @@ export default function CaseStudyC() {
                 </div>
 
                 {/* Quote between C1 and C2 */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     Authority is not sustained by avoiding cost. It is sustained by absorbing cost without undoing the decision, endlessly defending it, or withdrawing from authority itself.
                   </p>
@@ -143,7 +143,7 @@ export default function CaseStudyC() {
                 <div className="text-center py-8">
                   <a 
                     href="#extended-reflection"
-                    className="text-lg text-[#777777] hover:text-[#D946EF] transition-colors italic"
+                    className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
                   >
                     For those who wish to explore the ethical depth of this situation →
                   </a>
@@ -243,7 +243,7 @@ export default function CaseStudyC() {
                 </div>
 
                 {/* Final Quote */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     Authority is not measured by the decisions it makes, but by the form it maintains after those decisions have been made — especially when those decisions were correct but costly.
                   </p>

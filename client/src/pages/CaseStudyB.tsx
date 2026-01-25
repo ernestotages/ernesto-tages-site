@@ -20,15 +20,15 @@ export default function CaseStudyB() {
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center text-sm text-[#777777]">
-              <Link href="/" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 Home
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources" className="hover:text-[#D9307E] transition-colors">
                 Resources
               </Link>
               <span className="mx-2">›</span>
-              <Link href="/resources/case-studies" className="hover:text-[#D946EF] transition-colors">
+              <Link href="/resources/case-studies" className="hover:text-[#D9307E] transition-colors">
                 Case Studies
               </Link>
               <span className="mx-2">›</span>
@@ -112,7 +112,7 @@ export default function CaseStudyB() {
                 </div>
 
                 {/* Quote between C1 and C2 */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     A decision concludes not when it is justified, but when it no longer leaves residue behind.
                   </p>
@@ -122,7 +122,7 @@ export default function CaseStudyB() {
                 <div className="text-center py-8">
                   <a 
                     href="#extended-reflection"
-                    className="text-lg text-[#777777] hover:text-[#D946EF] transition-colors italic"
+                    className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
                   >
                     Continue with the extended reflection →
                   </a>
@@ -166,7 +166,7 @@ export default function CaseStudyB() {
                 </div>
 
                 {/* Final Quote */}
-                <div className="my-16 py-8 border-l-4 border-[#D946EF] pl-6">
+                <div className="my-16 py-8 border-l-4 border-[#D9307E] pl-6">
                   <p className="text-xl text-[#121212] italic leading-relaxed">
                     Authority erodes not through error, but through decisions that cannot be fully assumed.
                   </p>
