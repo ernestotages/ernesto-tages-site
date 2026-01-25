@@ -1,43 +1,44 @@
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Talks() {
+  const { t } = useLanguage();
+
   return (
     <>
       <SEO
-        title="Talks & Conversations | Ernesto Tages"
-        description="Public conversations, conferences, and dialogues where ethical clarity is exercised in real time."
-        ogTitle="Talks & Conversations"
-        ogDescription="Moments where reflection is not prepared in advance, but tested under live conditions."
+        title={`${t("resources.talksPage.title")} | Ernesto Tages`}
+        description={t("resources.talksPage.description1")}
+        ogTitle={t("resources.talksPage.title")}
+        ogDescription={t("resources.talksPage.description2")}
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="py-32 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              {/* Back to Resources */}
+        <section className="py-20 bg-white">
+          <div className="container max-w-4xl">
+            <div className="mb-6">
               <Link href="/resources">
-                <button className="mb-8 text-[#D9307E] hover:text-[#b82567] transition-colors flex items-center gap-2">
-                  <span>←</span>
-                  <span>Back to Resources</span>
-                </button>
+                <a className="text-[#D9307E] hover:underline inline-flex items-center gap-2">
+                  ← {t("resources.talksPage.backToResources")}
+                </a>
               </Link>
+            </div>
 
+            <div className="space-y-6">
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#121212] mb-12 leading-tight">
-                Talks & Conversations
+              <h1 className="text-5xl md:text-6xl font-serif text-[#121212] leading-tight">
+                {t("resources.talksPage.title")}
               </h1>
 
               {/* Editorial Description */}
-              <div className="space-y-6">
-                <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
-                  Public conversations, conferences, and dialogues where ethical clarity is exercised in real time.
-                </p>
-                <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
-                  This section documents moments where reflection is not prepared in advance, but tested under live conditions.
-                </p>
-              </div>
+              <p className="text-lg text-[#555555] leading-relaxed">
+                {t("resources.talksPage.description1")}
+              </p>
+              <p className="text-lg text-[#555555] leading-relaxed">
+                {t("resources.talksPage.description2")}
+              </p>
             </div>
           </div>
         </section>

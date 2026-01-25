@@ -272,6 +272,14 @@ const translations: Record<Language, any> = {
         },
         watch: "Watch video",
       },
+      talksPage: {
+        title: "Talks & Conversations",
+        description1:
+          "Public conversations, conferences, and dialogues where ethical clarity is exercised in real time.",
+        description2:
+          "This section documents moments where reflection is not prepared in advance, but tested under live conditions.",
+        backToResources: "Back to Resources",
+      },
     },
     contact: {
       hero: {
@@ -540,6 +548,14 @@ const translations: Record<Language, any> = {
         },
         watch: "Ver video",
       },
+      talksPage: {
+        title: "Charlas y Conversaciones",
+        description1:
+          "Conversaciones públicas, conferencias y diálogos donde la claridad ética se ejerce en tiempo real.",
+        description2:
+          "Esta sección documenta momentos donde la reflexión no se prepara con anticipación, sino que se pone a prueba en condiciones en vivo.",
+        backToResources: "Volver a Recursos",
+      },
     },
     contact: {
       hero: {
@@ -807,6 +823,14 @@ const translations: Record<Language, any> = {
             "Um diálogo sobre como os líderes podem manter a clareza e a integridade em momentos de crise.",
         },
         watch: "Ver vídeo",
+      },
+      talksPage: {
+        title: "Palestras e Conversas",
+        description1:
+          "Conversas públicas, conferências e diálogos onde a clareza ética é exercida em tempo real.",
+        description2:
+          "Esta secção documenta momentos onde a reflexão não é preparada com antecedência, mas testada em condições ao vivo.",
+        backToResources: "Voltar a Recursos",
       },
     },
     contact: {

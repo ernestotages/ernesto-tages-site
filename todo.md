@@ -586,3 +586,11 @@
 - [x] Add route for /resources/talks in App.tsx
 - [x] Test navigation and visual consistency
 - [ ] Save checkpoint after cleanup
+
+## Talks Page Translations and Font Size
+- [x] Add Talks page translations to LanguageContext (EN, ES, PT)
+- [x] Update Talks.tsx to use t() function instead of hardcoded text
+- [x] Adjust font sizes in Talks.tsx to match Clarity Matrix and Case Studies
+- [x] Test translations in all three languages
+- [x] Test visual consistency with other pages
+- [x] Save checkpoint after corrections
