@@ -529,3 +529,15 @@
 - [x] Add personalized Open Graph titles and descriptions for all white paper pages
 - [x] Add personalized Open Graph title and description for Clarity Matrix page
 - [x] Test Open Graph tags for LinkedIn sharing optimization
+
+## Case Studies Section Implementation
+- [x] Create Case Studies index page at /resources/case-studies with three case cards
+- [x] Create Case Study A page: "When Every Option Has a Cost"
+- [x] Create Case Study B page: "When Decisions No Longer Settle"
+- [x] Create Case Study C page: "When the Right Decision Costs"
+- [x] Add Case Studies block to Resources page with austere text and CTA
+- [x] Add breadcrumb navigation to all Case Studies pages
+- [x] Add JSON-LD schema markup to all Case Studies pages
+- [x] Implement quote styling (between C1-C2 and at end of C2)
+- [ ] Test navigation flow: Resources → Case Studies → Individual Cases
+- [x] Verify visual consistency with Clarity Matrix page (same sobriety level)

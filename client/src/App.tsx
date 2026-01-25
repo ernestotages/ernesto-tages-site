@@ -17,6 +17,10 @@ import CostOfClarity from "./pages/CostOfClarity";
 import EmotionalExcellence from "./pages/EmotionalExcellence";
 import IberoamericanEthicalLeadership from "./pages/IberoamericanEthicalLeadership";
 import ClarityMatrix from "./pages/ClarityMatrix";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudyA from "./pages/CaseStudyA";
+import CaseStudyB from "./pages/CaseStudyB";
+import CaseStudyC from "./pages/CaseStudyC";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
@@ -35,6 +39,10 @@ function Router() {
         <Route path="/emotional-excellence" component={EmotionalExcellence} />
         <Route path="/iberoamerican-ethical-leadership" component={IberoamericanEthicalLeadership} />
         <Route path="/clarity-matrix" component={ClarityMatrix} />
+        <Route path="/resources/case-studies" component={CaseStudies} />
+        <Route path="/resources/case-studies/case-a" component={CaseStudyA} />
+        <Route path="/resources/case-studies/case-b" component={CaseStudyB} />
+        <Route path="/resources/case-studies/case-c" component={CaseStudyC} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

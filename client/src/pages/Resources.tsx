@@ -202,6 +202,22 @@ export default function Resources() {
                     </div>
                   </div>
                 </Link>
+
+                {/* Case Studies */}
+                <Link href="/resources/case-studies">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer">
+                    <h3 className="text-2xl font-semibold text-[#121212] mb-3">
+                      Case Studies
+                    </h3>
+                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                      Situations where decision, authority, and integrity are tested under real pressure.
+                    </p>
+                    <div className="flex items-center text-[#D9307E] font-medium">
+                      <span>View case studies</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
