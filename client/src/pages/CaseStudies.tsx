@@ -1,6 +1,4 @@
 import { Link } from "wouter";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 export default function CaseStudies() {
@@ -14,7 +12,6 @@ export default function CaseStudies() {
         ogDescription="Three situations where clarity, discernment, and authority are tested under real pressure — and restored through ethical work."
       />
       <div className="min-h-screen bg-white flex flex-col">
-        <Header />
         
         {/* Breadcrumb Navigation */}
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
@@ -118,7 +115,6 @@ export default function CaseStudies() {
           </section>
         </main>
 
-        <Footer />
       </div>
 
       {/* JSON-LD Schema for BreadcrumbList */}

@@ -553,3 +553,13 @@
 - [ ] Test Resources page layout with 4 horizontal blocks
 - [ ] Verify all case descriptions display correctly (max 2 lines)
 - [ ] Verify color consistency across all Case Studies pages
+
+## Case Studies Pages Fixes
+- [x] Remove duplicate Header component from Case Study pages (A, B, C)
+- [x] Remove duplicate Footer component from Case Study pages (A, B, C)
+- [x] Add "← Back to Resources" button like in Clarity Matrix page
+- [x] Add "← Back to Case Studies" button like in Clarity Matrix page
+- [x] Implement collapsible Extended Reflection section (C2)
+- [x] Hide C2 content by default, show only after clicking "Continue with the extended reflection →"
+- [ ] Test navigation buttons functionality
+- [ ] Test Extended Reflection expand/collapse behavior

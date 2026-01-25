@@ -1,9 +1,10 @@
 import { Link } from "wouter";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { useState } from "react";
 import SEO from "@/components/SEO";
 
 export default function CaseStudyB() {
+  const [showExtendedReflection, setShowExtendedReflection] = useState(false);
+
   return (
     <>
       <SEO
@@ -14,7 +15,6 @@ export default function CaseStudyB() {
         ogDescription="Discernment under ultimate authority. A reflective case study on restoring the capacity for decisions to conclude."
       />
       <div className="min-h-screen bg-white flex flex-col">
-        <Header />
         
         {/* Breadcrumb Navigation */}
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
@@ -41,7 +41,23 @@ export default function CaseStudyB() {
           {/* Header */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto space-y-4">
+              <div className="max-w-4xl mx-auto space-y-6">
+                {/* Back Navigation Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                  <Link
+                    href="/resources"
+                    className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
+                  >
+                    ← Back to Resources
+                  </Link>
+                  <span className="hidden sm:inline text-[#777777]">|</span>
+                  <Link
+                    href="/resources/case-studies"
+                    className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
+                  >
+                    ← Back to Case Studies
+                  </Link>
+                </div>
                 <h1 className="text-4xl md:text-5xl text-[#121212] font-light">
                   When Decisions No Longer Settle
                 </h1>
@@ -118,21 +134,22 @@ export default function CaseStudyB() {
                   </p>
                 </div>
 
-                {/* Link to C2 */}
-                <div className="text-center py-8">
-                  <a 
-                    href="#extended-reflection"
-                    className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
-                  >
-                    Continue with the extended reflection →
-                  </a>
-                </div>
-
               </div>
             </div>
           </section>
 
+          {/* Link to C2 */}
+          <div className="text-center py-8 bg-white">
+            <button
+              onClick={() => setShowExtendedReflection(!showExtendedReflection)}
+              className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
+            >
+              {showExtendedReflection ? "Hide extended reflection ↑" : "Continue with the extended reflection →"}
+            </button>
+          </div>
+
           {/* C2 - Extended Reflection */}
+          {showExtendedReflection && (
           <section id="extended-reflection" className="py-12 bg-[#F4F4F4]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto space-y-12">
@@ -175,9 +192,9 @@ export default function CaseStudyB() {
               </div>
             </div>
           </section>
+          )}
         </main>
 
-        <Footer />
       </div>
 
       {/* JSON-LD Schema */}
