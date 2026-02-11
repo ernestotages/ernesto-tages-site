@@ -1,31 +1,34 @@
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudies() {
+  const { t, language } = useLanguage();
+
   return (
     <>
       <SEO
-        title="Case Studies | Ernesto Tages"
-        description="Three situations where clarity, discernment, and authority are tested under real pressure — and restored through ethical work."
-        lang="en"
-        ogTitle="Case Studies — Ethical Leadership in Practice"
-        ogDescription="Three situations where clarity, discernment, and authority are tested under real pressure — and restored through ethical work."
+        title={`${t("resources.caseStudiesPage.title")} | Ernesto Tages`}
+        description={t("resources.caseStudiesPage.subtitle")}
+        lang={language}
+        ogTitle={t("resources.caseStudiesPage.title")}
+        ogDescription={t("resources.caseStudiesPage.subtitle")}
       />
       <div className="min-h-screen bg-white flex flex-col">
-        
+
         {/* Breadcrumb Navigation */}
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center text-sm text-[#777777]">
               <Link href="/" className="hover:text-[#D9307E] transition-colors">
-                Home
+                {t("resources.caseStudiesPage.breadcrumbHome")}
               </Link>
               <span className="mx-2">›</span>
               <Link href="/resources" className="hover:text-[#D9307E] transition-colors">
-                Resources
+                {t("resources.caseStudiesPage.breadcrumbResources")}
               </Link>
               <span className="mx-2">›</span>
-              <span className="text-[#121212]">Case Studies</span>
+              <span className="text-[#121212]">{t("resources.caseStudiesPage.breadcrumbCaseStudies")}</span>
             </div>
           </div>
         </nav>
@@ -36,10 +39,10 @@ export default function CaseStudies() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto text-center space-y-4">
                 <h1 className="text-4xl md:text-5xl text-[#121212] font-light">
-                  Case Studies
+                  {t("resources.caseStudiesPage.title")}
                 </h1>
                 <p className="text-xl text-[#777777] leading-relaxed">
-                  Three situations where clarity, discernment, and authority are tested — and restored.
+                  {t("resources.caseStudiesPage.subtitle")}
                 </p>
               </div>
             </div>
@@ -49,23 +52,23 @@ export default function CaseStudies() {
           <section className="py-12 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto space-y-12">
-                
+
                 {/* Case Study A */}
                 <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
-                    When Every Option Has a Cost
+                    {t("resources.caseStudiesPage.caseA.title")}
                   </h2>
                   <p className="text-lg text-[#777777] italic mb-4">
-                    Integrity under systemic pressure.
+                    {t("resources.caseStudiesPage.caseA.tagline")}
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A senior executive faces sustained pressure to approve a decision that is legally defensible and economically rational, yet difficult to assume without internal cost. The situation is formally correct — and deeply testing.
+                    {t("resources.caseStudiesPage.caseA.summary")}
                   </p>
-                  <Link 
+                  <Link
                     href="/resources/case-studies/case-a"
                     className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
-                    Read case study
+                    {t("resources.caseStudiesPage.readCaseStudy")}
                     <span>→</span>
                   </Link>
                 </div>
@@ -73,19 +76,19 @@ export default function CaseStudies() {
                 {/* Case Study B */}
                 <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
-                    When Decisions No Longer Settle
+                    {t("resources.caseStudiesPage.caseB.title")}
                   </h2>
                   <p className="text-lg text-[#777777] italic mb-4">
-                    Discernment under ultimate authority.
+                    {t("resources.caseStudiesPage.caseB.tagline")}
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A decision is clearly identified and well within familiar territory. Yet it does not close. It returns repeatedly, without new information or disagreement, resisting completion.
+                    {t("resources.caseStudiesPage.caseB.summary")}
                   </p>
-                  <Link 
+                  <Link
                     href="/resources/case-studies/case-b"
                     className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
-                    Read case study
+                    {t("resources.caseStudiesPage.readCaseStudy")}
                     <span>→</span>
                   </Link>
                 </div>
@@ -93,19 +96,19 @@ export default function CaseStudies() {
                 {/* Case Study C */}
                 <div className="bg-white border-l-4 border-[#D9307E] pl-6 py-6 hover:shadow-md transition-shadow">
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
-                    When the Right Decision Costs
+                    {t("resources.caseStudiesPage.caseC.title")}
                   </h2>
                   <p className="text-lg text-[#777777] italic mb-4">
-                    Authority after the cost of integrity.
+                    {t("resources.caseStudiesPage.caseC.tagline")}
                   </p>
                   <p className="text-base text-[#777777] leading-relaxed mb-4">
-                    A leader with final authority makes a decision that is necessary, defensible, and correct. The costs are known. What follows is not reversal, but the challenge of sustaining authority after the impact.
+                    {t("resources.caseStudiesPage.caseC.summary")}
                   </p>
-                  <Link 
+                  <Link
                     href="/resources/case-studies/case-c"
                     className="text-[#D9307E] hover:text-[#b82567] transition-colors inline-flex items-center gap-2"
                   >
-                    Read case study
+                    {t("resources.caseStudiesPage.readCaseStudy")}
                     <span>→</span>
                   </Link>
                 </div>
