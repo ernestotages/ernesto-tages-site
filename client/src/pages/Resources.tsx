@@ -118,10 +118,10 @@ export default function Resources() {
                   <BookOpen className="w-16 h-16 text-[#D9307E]" />
                 </div>
                 <h3 className="text-2xl font-semibold text-[#121212]">
-                  Case Studies
+                  {t("resources.blocks.caseStudies.title")}
                 </h3>
                 <p className="text-lg text-[#777777] leading-relaxed">
-                  Situations where decision, authority, and integrity are tested under real pressure.
+                  {t("resources.blocks.caseStudies.description")}
                 </p>
               </div>
             </Link>
