@@ -49,7 +49,7 @@ export const appRouter = router({
             body: JSON.stringify({
               event: {
                 token: input.recaptchaToken,
-                siteKey: "6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3",
+                siteKey: "6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn",
                 expectedAction: "newsletter_subscribe"
               }
             }),

@@ -22,7 +22,7 @@ describe('reCAPTCHA Enterprise Configuration', () => {
         body: JSON.stringify({
           event: {
             token: 'dummy-token-for-testing',
-            siteKey: '6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3',
+            siteKey: '6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn',
             expectedAction: 'test'
           }
         }),
