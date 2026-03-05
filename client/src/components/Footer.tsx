@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-const RECAPTCHA_SITE_KEY = "6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3";
+const RECAPTCHA_SITE_KEY = "6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn";
 
 export default function Footer() {
   const [email, setEmail] = useState("");

@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 const PROJECT_ID = 'my-project-3816-1763290820100';
-const SITE_KEY = '6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3';
+const SITE_KEY = '6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn';
 
 console.log('Testing reCAPTCHA Enterprise verification...');
 console.log('Project ID:', PROJECT_ID);

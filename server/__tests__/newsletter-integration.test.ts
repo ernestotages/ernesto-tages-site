@@ -4,7 +4,7 @@ describe("Newsletter Integration Test", () => {
   it("should verify reCAPTCHA Enterprise is working", async () => {
     const PROJECT_ID = 'my-project-3816-1763290820100';
     const API_KEY = process.env.RECAPTCHA_SECRET_KEY;
-    const SITE_KEY = '6Le0Zg4sAAAAAG0UQJJtvpSuOJ7I5lRcnCFHL1_3';
+    const SITE_KEY = '6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn';
     
     expect(API_KEY).toBeDefined();
     
