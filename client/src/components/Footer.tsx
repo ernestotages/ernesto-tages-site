@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
 import { trpc } from "@/lib/trpc";
+import { loadRecaptcha, RECAPTCHA_SITE_KEY } from "@/lib/recaptcha";
 
 // Declare grecaptcha on window
 declare global {
@@ -18,7 +19,6 @@ declare global {
   }
 }
 
-const RECAPTCHA_SITE_KEY = "6LeeFWgsAAAAANwitFcBtNCVUMXdMo-MXan-o5fn";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -40,7 +40,12 @@ export default function Footer() {
     if (!email || subscribeMutation.isPending) return;
     
     try {
-      // Check if reCAPTCHA is loaded
+      // Load reCAPTCHA on demand (usually already started on input focus)
+      try {
+        await loadRecaptcha();
+      } catch {
+        // handled by the check below
+      }
       if (typeof window.grecaptcha === 'undefined') {
         toast.error("Please disable your ad blocker to subscribe to the newsletter.");
         return;
@@ -87,8 +92,12 @@ export default function Footer() {
           {/* Left Column - Logo and Tagline */}
           <div className="flex flex-col items-start justify-end space-y-3">
             <img
-              src="/logo-methodology.png"
+              src="/logo-methodology-64.webp"
+              srcSet="/logo-methodology-64.webp 1x, /logo-methodology-128.webp 2x"
               alt="Methodology Logo"
+              width={64}
+              height={64}
+              loading="lazy"
               className="h-16 w-16"
             />
             <p className="text-lg font-light italic text-gray-300">
@@ -114,6 +123,9 @@ export default function Footer() {
                 placeholder="* E-mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onFocus={() => {
+                  loadRecaptcha().catch(() => {});
+                }}
                 required
                 disabled={subscribeMutation.isPending}
                 className="bg-white text-[#121212] border-none w-full sm:max-w-xs placeholder:text-gray-400"

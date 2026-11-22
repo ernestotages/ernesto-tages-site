@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudyB() {
@@ -12,6 +13,7 @@ export default function CaseStudyB() {
   return (
     <>
       <SEO
+        ogType="article"
         title={`${t(`${c}.title`)} | ${t(`${p}.breadcrumbCaseStudies`)}`}
         description={t(`${c}.seoDescription`)}
         lang={language}
@@ -211,10 +213,8 @@ export default function CaseStudyB() {
           "@type": "Article",
           "headline": "When Decisions No Longer Settle",
           "description": "A case study on discernment under ultimate authority: restoring the capacity for decisions to conclude.",
-          "author": {
-            "@type": "Person",
-            "name": "Ernesto Tages"
-          },
+          "author": personRef,
+          "datePublished": "2025-12-01",
           "publisher": {
             "@type": "Person",
             "name": "Ernesto Tages"

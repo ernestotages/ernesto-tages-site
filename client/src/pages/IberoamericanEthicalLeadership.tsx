@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { Helmet } from "react-helmet-async";
 import { Download, ArrowRight } from "lucide-react";
 
@@ -17,6 +18,7 @@ export default function IberoamericanEthicalLeadership() {
   return (
     <>
       <SEO
+        ogType="article"
         title="Liderazgo Ético en Iberoamérica | Ernesto Tages"
         description="How emotion, responsibility, and power shape ethical leadership in Ibero-America. Seven movements that outline a moral compass for contemporary leadership."
         ogTitle="Liderazgo Ético en Iberoamérica — Poder, Emoción y Responsabilidad"
@@ -27,15 +29,11 @@ export default function IberoamericanEthicalLeadership() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Report",
+            "@type": "Article",
             "name": "El liderazgo ético en Iberoamérica",
             "headline": "Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica",
             "description": "Una exploración integral de cómo la emoción, la responsabilidad y el poder moldean el liderazgo ético en Iberoamérica. Este white paper ofrece siete movimientos que trazan una brújula moral para el liderazgo contemporáneo.",
-            "author": {
-              "@type": "Person",
-              "name": "Ernesto Tages",
-              "url": "https://ernestotages.com"
-            },
+            "author": personRef,
             "publisher": {
               "@type": "Person",
               "name": "Ernesto Tages",

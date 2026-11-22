@@ -1,32 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
-import { User, Users, CheckCircle } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 
 export default function Services() {
   const [, setLocation] = useLocation();
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const { t } = useLanguage();
 
-  const toggleSection = (section: string) => {
-    const newSection = expandedSection === section ? null : section;
-    setExpandedSection(newSection);
+  // The whole card stays clickable as before; the "Explore" link inside it is
+  // the crawlable <a href>, so clicks on it are left to the link itself.
+  const openCard = (path: string) => (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest("a")) return;
+    setLocation(path);
   };
-
-  useEffect(() => {
-    if (expandedSection) {
-      setTimeout(() => {
-        const element = document.getElementById(`${expandedSection}-details`);
-        if (element) {
-          const yOffset = -80;
-          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      }, 100);
-    }
-  }, [expandedSection]);
 
   return (
     <>
@@ -66,12 +52,15 @@ export default function Services() {
             {/* Individual Consultancy */}
             <div
               className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
-              onClick={() => toggleSection("individual")}
+              onClick={openCard("/services/individual-consultancy")}
             >
               <div className="flex justify-center mb-4">
                 <img
                   src="/consultancy.webp"
                   alt="Individual Consultancy"
+                  width={937}
+                  height={812}
+                  loading="lazy"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
@@ -85,21 +74,24 @@ export default function Services() {
                 {t("services.twoLines.individual.description")}
               </p>
               <div className="mt-6">
-                <button className="px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
+                <Link href="/services/individual-consultancy" className="inline-block px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
                   {t("services.explore")}
-                </button>
+                </Link>
               </div>
             </div>
 
             {/* Professional Conferences and Seminars */}
             <div
               className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#D9307E] text-center space-y-4 cursor-pointer hover:shadow-xl transition-shadow"
-              onClick={() => toggleSection("conferences")}
+              onClick={openCard("/services/conferences-seminars")}
             >
               <div className="flex justify-center mb-4">
                 <img
                   src="/conferences.webp"
                   alt="Professional Conferences and Seminars"
+                  width={937}
+                  height={812}
+                  loading="lazy"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
@@ -113,9 +105,9 @@ export default function Services() {
                 {t("services.twoLines.conferences.description")}
               </p>
               <div className="mt-6">
-                <button className="px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
+                <Link href="/services/conferences-seminars" className="inline-block px-4 py-2 border border-[#D9307E] text-[#D9307E] rounded hover:bg-[#D9307E] hover:text-white transition-colors text-sm">
                   {t("services.explore")}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -123,195 +115,25 @@ export default function Services() {
           <p className="text-lg text-[#777777] text-center mt-12 max-w-4xl mx-auto leading-relaxed">
             {t("services.twoLines.closing")}
           </p>
+
+          {/* Clarity Matrix card */}
+          <div className="max-w-3xl mx-auto mt-12">
+            <Link href="/clarity-matrix" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer text-left">
+                <h3 className="text-2xl text-[#121212] mb-3">The Clarity Matrix™</h3>
+                <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                  A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.
+                </p>
+                <div className="flex items-center text-[#D9307E] font-medium">
+                  <span>Explore framework</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Individual Consultancy Details - Expanded */}
-      {expandedSection === "individual" && (
-        <section id="individual-details" className="py-20 bg-[#F4F4F4]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl text-[#121212] mb-8">
-                {t("services.individualDetails.title")}
-              </h2>
-
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.individualDetails.objectives")}
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.obj1")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.obj2")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.obj3")}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.individualDetails.modalities")}
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.mod1")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.mod2")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.mod3")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.individualDetails.mod4")}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.individualDetails.outcome")}
-                  </h3>
-                  <p className="text-lg text-[#777777] leading-relaxed">
-                    {t("services.individualDetails.outcomeText")}
-                  </p>
-                </div>
-
-                <div className="pt-6">
-                  <Button
-                    size="lg"
-                    className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
-                    onClick={() => setLocation("/contact")}
-                  >
-                    {t("services.individualDetails.cta")}
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Professional Conferences and Seminars Details - Expanded */}
-      {expandedSection === "conferences" && (
-        <section id="conferences-details" className="py-20 bg-[#F4F4F4]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl text-[#121212] mb-8">
-                {t("services.conferencesDetails.title")}
-              </h2>
-
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.conferencesDetails.topics")}
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.topic1")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.topic2")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.topic3")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.topic4")}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.conferencesDetails.approach")}
-                  </h3>
-                  <p className="text-lg text-[#777777] leading-relaxed mb-3">
-                    {t("services.conferencesDetails.approachText1")}
-                  </p>
-                  <p className="text-lg text-[#777777] leading-relaxed">
-                    {t("services.conferencesDetails.approachText2")}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl text-[#121212] mb-4">
-                    {t("services.conferencesDetails.formats")}
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.format1")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.format2")}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
-                        {t("services.conferencesDetails.format3")}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="pt-6">
-                  <Button
-                    size="lg"
-                    className="bg-[#D9307E] hover:bg-[#b82567] text-white text-lg px-8 py-6 transition-all"
-                    onClick={() => setLocation("/contact")}
-                  >
-                    {t("services.conferencesDetails.cta")}
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
       </div>
     </>
   );

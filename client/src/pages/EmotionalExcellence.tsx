@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { Helmet } from "react-helmet-async";
 import { Download, ArrowRight } from "lucide-react";
 
@@ -17,6 +18,7 @@ export default function EmotionalExcellence() {
   return (
     <>
       <SEO
+        ogType="article"
         title="Emotional Excellence in Leadership | Ernesto Tages"
         description="Why coherence of emotion, thought, and action has become a strategic advantage for leaders operating under complexity and pressure."
         ogTitle="Emotional Excellence — Coherence as a Strategic Capacity"
@@ -26,15 +28,11 @@ export default function EmotionalExcellence() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Report",
+            "@type": "Article",
             "name": "Emotional Excellence",
             "headline": "Why coherence of emotion, thought, and action has become a strategic advantage for leaders",
             "description": "In an era where technical competence is table stakes, emotional excellence has emerged as the defining characteristic of exceptional leadership. This white paper explores how the coherence of emotion, thought, and action creates a strategic advantage in complex organizational environments.",
-            "author": {
-              "@type": "Person",
-              "name": "Ernesto Tages",
-              "url": "https://ernestotages.com"
-            },
+            "author": personRef,
             "publisher": {
               "@type": "Person",
               "name": "Ernesto Tages",

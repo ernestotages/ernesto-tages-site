@@ -2,32 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ernestotages.com/</loc>
-    <lastmod>2025-11-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/about</loc>
-    <lastmod>2025-11-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/services</loc>
-    <lastmod>2025-11-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ernestotages.com/services/individual-consultancy</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/services/conferences-seminars</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ernestotages.com/resources</loc>
-    <lastmod>2025-11-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/insights-essays</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/frameworks-tools</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/case-studies</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/case-studies/case-a</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/case-studies/case-b</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/resources/case-studies/case-c</loc>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/contact</loc>
-    <lastmod>2025-11-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/clarity-matrix</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/cost-of-clarity</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/emotional-excellence</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/iberoamerican-ethical-leadership</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

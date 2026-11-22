@@ -5,7 +5,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import { siteGraph } from "./lib/structuredData";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -22,6 +23,10 @@ import CaseStudyA from "./pages/CaseStudyA";
 import CaseStudyB from "./pages/CaseStudyB";
 import CaseStudyC from "./pages/CaseStudyC";
 import Talks from "./pages/Talks";
+import InsightsEssays from "./pages/InsightsEssays";
+import FrameworksTools from "./pages/FrameworksTools";
+import IndividualConsultancy from "./pages/IndividualConsultancy";
+import ConferencesSeminars from "./pages/ConferencesSeminars";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
@@ -29,17 +34,24 @@ function Router() {
   return (
     <>
       <ScrollToTop />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(siteGraph)}</script>
+      </Helmet>
       <Header />
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
+        <Route path="/services/individual-consultancy" component={IndividualConsultancy} />
+        <Route path="/services/conferences-seminars" component={ConferencesSeminars} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
         <Route path="/cost-of-clarity" component={CostOfClarity} />
         <Route path="/emotional-excellence" component={EmotionalExcellence} />
         <Route path="/iberoamerican-ethical-leadership" component={IberoamericanEthicalLeadership} />
         <Route path="/clarity-matrix" component={ClarityMatrix} />
+        <Route path="/resources/insights-essays" component={InsightsEssays} />
+        <Route path="/resources/frameworks-tools" component={FrameworksTools} />
         <Route path="/resources/talks" component={Talks} />
         <Route path="/resources/case-studies" component={CaseStudies} />
         <Route path="/resources/case-studies/case-a" component={CaseStudyA} />
