@@ -540,6 +540,8 @@ const translations: Record<Language, any> = {
         sending: "Sending...",
         invalidEmail: "Please enter a valid email address.",
         sendFailed: "Failed to send message. Please try again.",
+        // Under the submit button; followed by the footer.privacyLink link and ".".
+        privacyNotice: "Your details are used only to reply to your message. See our ",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -593,16 +595,19 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Clarity for the decisions that matter.",
-      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
-      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
-      // add the page to routes.ts, sitemap.xml and netlify.toml.
-      // privacyLink: "...",
+      // Links to /privacy and /legal, and to the Livro de Reclamações Eletrónico
+      // (name not translated).
+      privacyLink: "Privacy Policy",
+      legalLink: "Legal Information",
+      complaintsBook: "Livro de Reclamações",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
         description:
           "Thoughtful reflections for leaders seeking clarity, integrity and calm in complexity.",
         englishOnly: "Available in English only.",
+        // Under the e-mail field; followed by the privacyLink link and ".".
+        privacyNotice: "You can unsubscribe at any time. See our ",
         placeholder: "* E-mail",
         // Accessible name of the e-mail field (visually hidden).
         emailLabel: "Email address",
@@ -1075,6 +1080,8 @@ const translations: Record<Language, any> = {
         sending: "Enviando...",
         invalidEmail: "Por favor, introduzca una dirección de correo electrónico válida.",
         sendFailed: "No se ha podido enviar el mensaje. Por favor, inténtelo de nuevo.",
+        // Under the submit button; followed by the footer.privacyLink link and ".".
+        privacyNotice: "Sus datos se utilizan únicamente para responder a su mensaje. Consulte nuestra ",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -1128,16 +1135,19 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Claridad para las decisiones que importan.",
-      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
-      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
-      // add the page to routes.ts, sitemap.xml and netlify.toml.
-      // privacyLink: "...",
+      // Links to /privacy and /legal, and to the Livro de Reclamações Eletrónico
+      // (name not translated).
+      privacyLink: "Política de Privacidad",
+      legalLink: "Información Legal",
+      complaintsBook: "Livro de Reclamações",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
         description:
           "Reflexiones meditadas para líderes que buscan claridad, integridad y calma en medio de la complejidad.",
         englishOnly: "El boletín se publica únicamente en inglés.",
+        // Under the e-mail field; followed by the privacyLink link and ".".
+        privacyNotice: "Puede darse de baja en cualquier momento. Consulte nuestra ",
         placeholder: "* Correo electrónico",
         // Accessible name of the e-mail field (visually hidden).
         emailLabel: "Correo electrónico",
@@ -1610,6 +1620,8 @@ const translations: Record<Language, any> = {
         sending: "A enviar...",
         invalidEmail: "Por favor, introduza um endereço de e-mail válido.",
         sendFailed: "Não foi possível enviar a mensagem. Por favor, tente novamente.",
+        // Under the submit button; followed by the footer.privacyLink link and ".".
+        privacyNotice: "Os seus dados são usados apenas para responder à sua mensagem. Consulte a nossa ",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -1663,16 +1675,19 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Clareza para as decisões que importam.",
-      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
-      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
-      // add the page to routes.ts, sitemap.xml and netlify.toml.
-      // privacyLink: "...",
+      // Links to /privacy and /legal, and to the Livro de Reclamações Eletrónico
+      // (name not translated).
+      privacyLink: "Política de Privacidade",
+      legalLink: "Informação Legal",
+      complaintsBook: "Livro de Reclamações",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
         description:
           "Reflexões ponderadas para líderes que procuram clareza, integridade e calma no meio da complexidade.",
         englishOnly: "A newsletter é publicada apenas em inglês.",
+        // Under the e-mail field; followed by the privacyLink link and ".".
+        privacyNotice: "Pode cancelar a subscrição a qualquer momento. Consulte a nossa ",
         placeholder: "* E-mail",
         // Accessible name of the e-mail field (visually hidden).
         emailLabel: "Endereço de e-mail",

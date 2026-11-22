@@ -34,6 +34,8 @@ import InsightsEssays from "./pages/InsightsEssays";
 import FrameworksTools from "./pages/FrameworksTools";
 import IndividualConsultancy from "./pages/IndividualConsultancy";
 import ConferencesSeminars from "./pages/ConferencesSeminars";
+import Privacy from "./pages/Privacy";
+import Legal from "./pages/Legal";
 import ScrollToTop from "./components/ScrollToTop";
 
 /** Unprefixed page path -> page component. Must match PAGE_PATHS in routes.ts. */
@@ -56,6 +58,8 @@ const PAGES: [string, ComponentType<any>][] = [
   ["/resources/case-studies/case-a", CaseStudyA],
   ["/resources/case-studies/case-b", CaseStudyB],
   ["/resources/case-studies/case-c", CaseStudyC],
+  ["/privacy", Privacy],
+  ["/legal", Legal],
 ];
 
 function Router() {

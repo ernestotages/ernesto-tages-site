@@ -117,6 +117,18 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/legal"
+  to = "/legal.html"
+  status = 200
+  force = true
+
 # --- Spanish (/es/...) ---
 
 [[redirects]]
@@ -203,6 +215,18 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/es/privacy"
+  to = "/es/privacy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/legal"
+  to = "/es/legal.html"
+  status = 200
+  force = true
+
 # --- Portuguese (/pt/...) ---
 
 [[redirects]]
@@ -286,6 +310,18 @@
 [[redirects]]
   from = "/pt/contact"
   to = "/pt/contact.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/privacy"
+  to = "/pt/privacy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/legal"
+  to = "/pt/legal.html"
   status = 200
   force = true
 

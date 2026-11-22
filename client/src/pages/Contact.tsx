@@ -6,6 +6,7 @@ import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 import { postForm } from "@/lib/forms";
+import { Link } from "wouter";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -259,6 +260,13 @@ export default function Contact() {
                 >
                   {isSubmitting ? t("contact.form.sending") : t("contact.form.send")}
                 </Button>
+                <p className="text-sm text-[#707070] text-center">
+                  {t("contact.form.privacyNotice")}
+                  <Link href="/privacy" className="text-[#D9307E] hover:underline">
+                    {t("footer.privacyLink")}
+                  </Link>
+                  .
+                </p>
               </form>
             </div>
           </div>

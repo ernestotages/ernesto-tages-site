@@ -139,6 +139,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ernestotages.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/privacy"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/legal"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/legal"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/legal"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://ernestotages.com/es</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es"/>
@@ -256,6 +274,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ernestotages.com/es/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/privacy"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/legal"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/legal"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/legal"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://ernestotages.com/pt</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es"/>
@@ -371,5 +407,23 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/contact"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/privacy"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/legal"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/legal"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/legal"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>
