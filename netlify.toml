@@ -2,95 +2,116 @@
   command = "pnpm run build"
   publish = "dist/public"
 
-# SPA rewrites only for real routes. Anything else falls through to the
-# final rule and is served by the app's 404 page with HTTP status 404.
+# Every public page is pre-rendered at build time to its own HTML file
+# (scripts/prerender.mjs). Each rule below serves that page's own file.
+# "/" is served by index.html directly. The build fails if a pre-rendered
+# route is missing here.
+# Anything else falls through to the final rule: the pre-rendered
+# not-found page with HTTP status 404.
 
 [[redirects]]
   from = "/about"
-  to = "/index.html"
+  to = "/about.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/services"
-  to = "/index.html"
+  to = "/services.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/services/individual-consultancy"
-  to = "/index.html"
+  to = "/services/individual-consultancy.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/services/conferences-seminars"
-  to = "/index.html"
+  to = "/services/conferences-seminars.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources"
-  to = "/index.html"
+  to = "/resources.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/insights-essays"
-  to = "/index.html"
+  to = "/resources/insights-essays.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/frameworks-tools"
-  to = "/index.html"
+  to = "/resources/frameworks-tools.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/talks"
-  to = "/index.html"
+  to = "/resources/talks.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/case-studies"
-  to = "/index.html"
+  to = "/resources/case-studies.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/case-studies/case-a"
-  to = "/index.html"
+  to = "/resources/case-studies/case-a.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/case-studies/case-b"
-  to = "/index.html"
+  to = "/resources/case-studies/case-b.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/resources/case-studies/case-c"
-  to = "/index.html"
+  to = "/resources/case-studies/case-c.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/contact"
-  to = "/index.html"
+  to = "/contact.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/clarity-matrix"
-  to = "/index.html"
+  to = "/clarity-matrix.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/cost-of-clarity"
-  to = "/index.html"
+  to = "/cost-of-clarity.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/emotional-excellence"
-  to = "/index.html"
+  to = "/emotional-excellence.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/iberoamerican-ethical-leadership"
-  to = "/index.html"
+  to = "/iberoamerican-ethical-leadership.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/404.html"
   status = 404

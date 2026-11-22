@@ -8,7 +8,7 @@ import { defineConfig } from "vite";
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin()];
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins,
   resolve: {
     alias: {
@@ -21,8 +21,17 @@ export default defineConfig({
   root: path.resolve(import.meta.dirname, "client"),
   publicDir: path.resolve(import.meta.dirname, "client", "public"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // The SSR build is the build-time pre-renderer (scripts/prerender.mjs);
+    // it must not wipe the client build in dist/public.
+    outDir: path.resolve(
+      import.meta.dirname,
+      isSsrBuild ? "dist/server" : "dist/public"
+    ),
     emptyOutDir: true,
+  },
+  ssr: {
+    // CommonJS package without proper ESM named exports in Node.
+    noExternal: ["react-helmet-async"],
   },
   server: {
     host: true,
@@ -40,4 +49,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
