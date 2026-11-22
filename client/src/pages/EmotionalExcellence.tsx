@@ -116,11 +116,11 @@ export default function EmotionalExcellence() {
                 Emotional Excellence
               </h1>
 
-              <h2 className="text-2xl md:text-3xl text-[#777777] font-light leading-relaxed">
+              <h2 className="text-2xl md:text-3xl text-[#767676] font-light leading-relaxed">
                 Why coherence of emotion, thought, and action has become a strategic advantage for leaders
               </h2>
 
-              <div className="flex items-center gap-4 text-sm text-[#777777]">
+              <div className="flex items-center gap-4 text-sm text-[#767676]">
                 <span>By Ernesto Tages</span>
                 <span>•</span>
                 <span>27 pages</span>
@@ -139,11 +139,11 @@ export default function EmotionalExcellence() {
                 In an era where technical competence is table stakes, emotional excellence has emerged as the defining characteristic of exceptional leadership. This white paper explores how the coherence of emotion, thought, and action creates a strategic advantage in complex organizational environments.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-8 text-justify">
                 Leaders who master emotional excellence don't suppress or ignore emotions—they integrate them intelligently into decision-making. They recognize that emotions carry information, that feelings signal values, and that the gap between what we feel and what we do creates organizational friction that undermines trust and effectiveness.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-12 text-justify">
                 This white paper examines the practice of emotional excellence: how leaders develop the capacity to feel clearly, think rigorously, and act coherently even under pressure. It explores the neuroscience of emotional regulation, the organizational cost of emotional incoherence, and the practical disciplines that transform emotional intelligence from a soft skill into a strategic capability.
               </p>
 
@@ -178,7 +178,7 @@ export default function EmotionalExcellence() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   The Cost of Clarity
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   How ethical leaders transform tension into trust across complex systems.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">
@@ -193,7 +193,7 @@ export default function EmotionalExcellence() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   El liderazgo ético en Iberoamérica
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   How emotion, responsibility, and power shape ethical leadership in Ibero-America.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">

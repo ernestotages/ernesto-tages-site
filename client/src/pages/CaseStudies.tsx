@@ -22,7 +22,7 @@ export default function CaseStudies() {
         {/* Breadcrumb Navigation */}
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <div className="flex items-center text-sm text-[#777777]">
+            <div className="flex items-center text-sm text-[#767676]">
               <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 {t("resources.caseStudiesPage.breadcrumbHome")}
               </Link>
@@ -36,7 +36,7 @@ export default function CaseStudies() {
           </div>
         </nav>
 
-        <main className="flex-grow">
+        <div className="flex-grow">
           {/* Header Section */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function CaseStudies() {
                 <h1 className="text-4xl md:text-5xl text-[#121212] font-light">
                   {t("resources.caseStudiesPage.title")}
                 </h1>
-                <p className="text-xl text-[#777777] leading-relaxed">
+                <p className="text-xl text-[#767676] leading-relaxed">
                   {t("resources.caseStudiesPage.subtitle")}
                 </p>
               </div>
@@ -61,10 +61,10 @@ export default function CaseStudies() {
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     {t("resources.caseStudiesPage.caseA.title")}
                   </h2>
-                  <p className="text-lg text-[#777777] italic mb-4">
+                  <p className="text-lg text-[#767676] italic mb-4">
                     {t("resources.caseStudiesPage.caseA.tagline")}
                   </p>
-                  <p className="text-base text-[#777777] leading-relaxed mb-4">
+                  <p className="text-base text-[#767676] leading-relaxed mb-4">
                     {t("resources.caseStudiesPage.caseA.summary")}
                   </p>
                   <Link
@@ -81,10 +81,10 @@ export default function CaseStudies() {
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     {t("resources.caseStudiesPage.caseB.title")}
                   </h2>
-                  <p className="text-lg text-[#777777] italic mb-4">
+                  <p className="text-lg text-[#767676] italic mb-4">
                     {t("resources.caseStudiesPage.caseB.tagline")}
                   </p>
-                  <p className="text-base text-[#777777] leading-relaxed mb-4">
+                  <p className="text-base text-[#767676] leading-relaxed mb-4">
                     {t("resources.caseStudiesPage.caseB.summary")}
                   </p>
                   <Link
@@ -101,10 +101,10 @@ export default function CaseStudies() {
                   <h2 className="text-2xl text-[#121212] font-light mb-2">
                     {t("resources.caseStudiesPage.caseC.title")}
                   </h2>
-                  <p className="text-lg text-[#777777] italic mb-4">
+                  <p className="text-lg text-[#767676] italic mb-4">
                     {t("resources.caseStudiesPage.caseC.tagline")}
                   </p>
-                  <p className="text-base text-[#777777] leading-relaxed mb-4">
+                  <p className="text-base text-[#767676] leading-relaxed mb-4">
                     {t("resources.caseStudiesPage.caseC.summary")}
                   </p>
                   <Link
@@ -119,7 +119,7 @@ export default function CaseStudies() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
       </div>
 

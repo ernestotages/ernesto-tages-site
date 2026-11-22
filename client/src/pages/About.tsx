@@ -40,19 +40,19 @@ export default function About() {
                 <h1 className="text-4xl md:text-5xl text-[#121212]">
                   {t("about.hero.title")}
                 </h1>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#707070] leading-relaxed">
                   {t("about.hero.p1")}
                 </p>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#707070] leading-relaxed">
                   {t("about.hero.p2")}
                 </p>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#707070] leading-relaxed">
                   {t("about.hero.p3")}
                 </p>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#707070] leading-relaxed">
                   {t("about.hero.p4")}
                 </p>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#707070] leading-relaxed">
                   {t("about.hero.p5")}
                 </p>
               </div>
@@ -88,21 +88,21 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl text-[#121212] text-center">
               {t("about.approach.title")}
             </h2>
-            <h3 className="text-xl md:text-2xl text-[#777777] text-center italic">
+            <h3 className="text-xl md:text-2xl text-[#767676] text-center italic">
               {t("about.approach.subtitle")}
             </h3>
 
             <div className="space-y-6 mt-12">
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.intro")}
               </p>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.phase1")}
               </p>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.phase3")}
               </p>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.phase4")}
               </p>
 
@@ -114,10 +114,10 @@ export default function About() {
                   <h4 className="text-xl text-[#121212] mb-2">
                     {t("about.approach.pillar1Title")}
                   </h4>
-                  <p className="text-lg text-[#777777] italic mb-3">
+                  <p className="text-lg text-[#707070] italic mb-3">
                     {t("about.approach.pillar1Subtitle")}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed">
+                  <p className="text-lg text-[#707070] leading-relaxed">
                     {t("about.approach.pillar1Text")}
                   </p>
                 </div>
@@ -126,10 +126,10 @@ export default function About() {
                   <h4 className="text-xl text-[#121212] mb-2">
                     {t("about.approach.pillar2Title")}
                   </h4>
-                  <p className="text-lg text-[#777777] italic mb-3">
+                  <p className="text-lg text-[#707070] italic mb-3">
                     {t("about.approach.pillar2Subtitle")}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed">
+                  <p className="text-lg text-[#707070] leading-relaxed">
                     {t("about.approach.pillar2Text")}
                   </p>
                 </div>
@@ -138,10 +138,10 @@ export default function About() {
                   <h4 className="text-xl text-[#121212] mb-2">
                     {t("about.approach.pillar3Title")}
                   </h4>
-                  <p className="text-lg text-[#777777] italic mb-3">
+                  <p className="text-lg text-[#707070] italic mb-3">
                     {t("about.approach.pillar3Subtitle")}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed">
+                  <p className="text-lg text-[#707070] leading-relaxed">
                     {t("about.approach.pillar3Text")}
                   </p>
                 </div>
@@ -150,7 +150,7 @@ export default function About() {
               <h3 className="text-2xl md:text-3xl text-[#121212] mt-12 text-center">
                 {t("about.approach.distinctiveTitle")}
               </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.distinctiveText")}
               </p>
 
@@ -166,7 +166,7 @@ export default function About() {
                 </div>
               </blockquote>
 
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("about.approach.closingText")}
               </p>
 

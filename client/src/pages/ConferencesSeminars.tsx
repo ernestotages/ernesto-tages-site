@@ -32,25 +32,25 @@ export default function ConferencesSeminars() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.topic1")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.topic2")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.topic3")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.topic4")}
                       </span>
                     </li>
@@ -61,10 +61,10 @@ export default function ConferencesSeminars() {
                   <h3 className="text-2xl text-[#121212] mb-4">
                     {t("services.conferencesDetails.approach")}
                   </h3>
-                  <p className="text-lg text-[#777777] leading-relaxed mb-3">
+                  <p className="text-lg text-[#707070] leading-relaxed mb-3">
                     {t("services.conferencesDetails.approachText1")}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed">
+                  <p className="text-lg text-[#707070] leading-relaxed">
                     {t("services.conferencesDetails.approachText2")}
                   </p>
                 </div>
@@ -76,19 +76,19 @@ export default function ConferencesSeminars() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.format1")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.format2")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.conferencesDetails.format3")}
                       </span>
                     </li>

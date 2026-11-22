@@ -31,10 +31,10 @@ export default function Services() {
             <h1 className="text-4xl md:text-5xl text-[#121212]">
               {t("services.hero.title")}
             </h1>
-            <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#707070] leading-relaxed">
               {t("services.hero.subtitle")}
             </p>
-            <p className="text-lg text-[#777777] leading-relaxed">
+            <p className="text-lg text-[#707070] leading-relaxed">
               {t("services.hero.intro")}
             </p>
           </div>
@@ -67,10 +67,10 @@ export default function Services() {
               <h3 className="text-2xl text-[#121212]">
                 {t("services.twoLines.individual.title")}
               </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("services.twoLines.individual.tagline")}
               </p>
-              <p className="text-base text-[#777777] leading-relaxed">
+              <p className="text-base text-[#767676] leading-relaxed">
                 {t("services.twoLines.individual.description")}
               </p>
               <div className="mt-6">
@@ -98,10 +98,10 @@ export default function Services() {
               <h3 className="text-2xl text-[#121212]">
                 {t("services.twoLines.conferences.title")}
               </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("services.twoLines.conferences.tagline")}
               </p>
-              <p className="text-base text-[#777777] leading-relaxed">
+              <p className="text-base text-[#767676] leading-relaxed">
                 {t("services.twoLines.conferences.description")}
               </p>
               <div className="mt-6">
@@ -112,7 +112,7 @@ export default function Services() {
             </div>
           </div>
 
-          <p className="text-lg text-[#777777] text-center mt-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-[#767676] text-center mt-12 max-w-4xl mx-auto leading-relaxed">
             {t("services.twoLines.closing")}
           </p>
 
@@ -121,7 +121,7 @@ export default function Services() {
             <Link href="/clarity-matrix" className="block">
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer text-left">
                 <h3 className="text-2xl text-[#121212] mb-3">{t("clarityMatrixCard.title")}</h3>
-                <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                   {t("clarityMatrixCard.description")}
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">

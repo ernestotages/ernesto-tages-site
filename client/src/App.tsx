@@ -16,6 +16,7 @@ import { siteGraph } from "./lib/structuredData";
 import { localizedHref, pageLocales, parseLocalePath } from "./routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CookieNotice from "./components/CookieNotice";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -59,7 +60,7 @@ const PAGES: [string, ComponentType<any>][] = [
 ];
 
 function Router() {
-  const { urlLocale } = useLanguage();
+  const { urlLocale, t } = useLanguage();
   // Only the language versions that exist are routed: /es/clarity-matrix,
   // for instance, falls through to the (Spanish) not-found page.
   const pages = PAGES.filter(([path]) => pageLocales(path).includes(urlLocale));
@@ -71,7 +72,12 @@ function Router() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(siteGraph)}</script>
       </Helmet>
+      {/* Visually hidden until focused (first Tab on the page). */}
+      <a href="#main-content" className="skip-link">
+        {t("nav.skipToContent")}
+      </a>
       <Header />
+      <main id="main-content" tabIndex={-1} className="outline-none">
       <Switch>
         {pages.map(([path, component]) => (
           <Route key={path} path={path} component={component} />
@@ -80,7 +86,9 @@ function Router() {
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>
+      </main>
       <Footer />
+      <CookieNotice />
     </>
   );
 }
