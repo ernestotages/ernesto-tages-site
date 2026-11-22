@@ -1,9 +1,12 @@
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
+import { canonicalUrl } from "@/lib/structuredData";
+import { localizedPath } from "@/routes";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudies() {
   const { t, language } = useLanguage();
+  const pageUrl = (path: string) => canonicalUrl(localizedPath(path, language));
 
   return (
     <>
@@ -129,20 +132,20 @@ export default function CaseStudies() {
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Home",
-              "item": "https://ernestotages.com/"
+              "name": t("resources.caseStudiesPage.breadcrumbHome"),
+              "item": pageUrl("/")
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Resources",
-              "item": "https://ernestotages.com/resources"
+              "name": t("resources.caseStudiesPage.breadcrumbResources"),
+              "item": pageUrl("/resources")
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Case Studies",
-              "item": "https://ernestotages.com/resources/case-studies"
+              "name": t("resources.caseStudiesPage.breadcrumbCaseStudies"),
+              "item": pageUrl("/resources/case-studies")
             }
           ]
         })}

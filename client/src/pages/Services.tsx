@@ -17,10 +17,10 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Consultancy and Conferences in Ethical Leadership | Ernesto Tages"
-        description="Individual consultancy and corporate programs in ethical leadership. Strategic sessions, conferences, and seminars integrating intellectual rigor, emotional management, and integrity."
-        ogTitle="Services: Individual Consultancy and Corporate Programs"
-        ogDescription="Personalized support for executives and teams facing complex ethical dilemmas. Decisional clarity and conscious leadership."
+        title={t("seo.services.title")}
+        description={t("seo.services.description")}
+        ogTitle={t("seo.services.ogTitle")}
+        ogDescription={t("seo.services.ogDescription")}
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

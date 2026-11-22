@@ -93,10 +93,10 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Ernesto Tages | Ethical Leadership Consultancy"
-        description="Get in touch to schedule an ethical leadership consultancy session. Personalized support for executives facing complex dilemmas and seeking decisional clarity."
-        ogTitle="Contact - Schedule a Consultancy Session"
-        ogDescription="Book a conversation to explore how to transform leadership dilemmas into ethical and strategic decisions. Individual consultancy and corporate programs available."
+        title={t("seo.contact.title")}
+        description={t("seo.contact.description")}
+        ogTitle={t("seo.contact.ogTitle")}
+        ogDescription={t("seo.contact.ogDescription")}
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

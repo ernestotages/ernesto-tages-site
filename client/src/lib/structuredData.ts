@@ -1,5 +1,6 @@
 export const SITE_URL = "https://ernestotages.com";
 export const PERSON_ID = `${SITE_URL}/#person`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const person = {
   "@type": "Person",
@@ -35,9 +36,18 @@ export const professionalService = {
   founder: { "@id": PERSON_ID },
 };
 
+export const website = {
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  name: "Ernesto Tages",
+  url: `${SITE_URL}/`,
+  inLanguage: ["en", "es", "pt"],
+  publisher: { "@id": PERSON_ID },
+};
+
 export const siteGraph = {
   "@context": "https://schema.org",
-  "@graph": [person, professionalService],
+  "@graph": [person, professionalService, website],
 };
 
 /** Canonical URL for a path: absolute, no trailing slash (root stays "/"). */
