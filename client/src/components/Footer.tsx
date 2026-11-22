@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
 import { postForm } from "@/lib/forms";
+import { Link } from "wouter";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -117,15 +118,37 @@ export default function Footer() {
                 )}
               </Button>
             </form>
+            <p className="text-xs text-[#858585] max-w-md text-left md:text-right">
+              {t("footer.newsletter.privacyNotice")}
+              <Link href="/privacy" className="underline hover:text-white transition-colors">
+                {t("footer.privacyLink")}
+              </Link>
+              .
+            </p>
           </div>
         </div>
 
         {/* Bottom - Copyright */}
         <div className="border-t border-gray-600/50 pt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-4 text-center">
             <p className="text-xs text-[#858585]">
               {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
             </p>
+            <Link href="/privacy" className="text-xs text-gray-300 hover:text-white underline-offset-2 hover:underline transition-colors">
+              {t("footer.privacyLink")}
+            </Link>
+            <Link href="/legal" className="text-xs text-gray-300 hover:text-white underline-offset-2 hover:underline transition-colors">
+              {t("footer.legalLink")}
+            </Link>
+            {/* Livro de Reclamações Eletrónico: legally required, kept visible. */}
+            <a
+              href="https://www.livroreclamacoes.pt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white border border-gray-400 rounded px-3 py-1 hover:border-white transition-colors"
+            >
+              {t("footer.complaintsBook")}
+            </a>
           </div>
         </div>
       </div>

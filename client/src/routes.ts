@@ -52,6 +52,8 @@ export const PAGE_PATHS = [
   "/cost-of-clarity",
   "/emotional-excellence",
   "/iberoamerican-ethical-leadership",
+  "/privacy",
+  "/legal",
 ] as const;
 
 /**
