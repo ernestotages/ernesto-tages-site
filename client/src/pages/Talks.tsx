@@ -19,10 +19,11 @@ export default function Talks() {
         <section className="py-20 bg-white">
           <div className="container max-w-4xl">
             <div className="mb-6">
-              <Link href="/resources">
-                <a className="text-[#D9307E] hover:underline inline-flex items-center gap-2">
-                  ← {t("resources.talksPage.backToResources")}
-                </a>
+              <Link
+                href="/resources"
+                className="text-[#D9307E] hover:underline inline-flex items-center gap-2"
+              >
+                ← {t("resources.talksPage.backToResources")}
               </Link>
             </div>
 

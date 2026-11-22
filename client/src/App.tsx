@@ -1,10 +1,10 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { LanguageProvider } from "./contexts/LanguageContext";
+import { LanguageProvider, type Language } from "./contexts/LanguageContext";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { siteGraph } from "./lib/structuredData";
 import Header from "./components/Header";
@@ -71,18 +71,32 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
-function App() {
+interface AppProps {
+  /** Set only during build-time pre-rendering: the URL being rendered. */
+  ssrPath?: string;
+  /** Collects <Helmet> tags during pre-rendering. */
+  helmetContext?: Record<string, unknown>;
+  initialLanguage?: Language;
+}
+
+function App({ ssrPath, helmetContext, initialLanguage }: AppProps = {}) {
   return (
     <ErrorBoundary>
-      <HelmetProvider>
-        <LanguageProvider>
+      <HelmetProvider context={helmetContext}>
+        <LanguageProvider initialLanguage={initialLanguage}>
           <ThemeProvider
             defaultTheme="light"
             // switchable
           >
             <TooltipProvider>
               <Toaster />
-              <Router />
+              {ssrPath !== undefined ? (
+                <WouterRouter ssrPath={ssrPath}>
+                  <Router />
+                </WouterRouter>
+              ) : (
+                <Router />
+              )}
             </TooltipProvider>
           </ThemeProvider>
         </LanguageProvider>
