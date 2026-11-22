@@ -28,7 +28,7 @@
 ### Forms
 - [ ] Contact form submission
 - [ ] Newsletter subscription
-- [ ] reCAPTCHA v3 on newsletter form
+- [ ] Honeypot + time-based bot check on newsletter and contact forms
 
 ### Footer
 - [x] Newsletter input placeholder shows "* E-mail"

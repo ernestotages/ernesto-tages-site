@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import { postForm } from "@/lib/forms";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,11 @@ export default function Contact() {
   const [errors, setErrors] = useState<string[]>([]);
   // Remounts the error alert on every attempt so a repeated error is announced again.
   const [attempt, setAttempt] = useState(0);
+  // When the form appeared, for the server's time-based bot check.
+  const shownAt = useRef(0);
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
   const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,13 +35,17 @@ export default function Contact() {
 
     // Check honeypot - if filled, it's a bot
     if (formData.honeypot) {
-      console.log("Bot detected via honeypot");
       setIsSubmitting(false);
       return;
     }
 
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.subject.trim() ||
+      !formData.message.trim()
+    ) {
       setErrors([t("contact.form.error")]);
       setIsSubmitting(false);
       return;
@@ -43,53 +53,42 @@ export default function Contact() {
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(formData.email.trim())) {
       setErrors([t("contact.form.invalidEmail")]);
       setIsSubmitting(false);
       return;
     }
 
-    try {
-      // Send email via Web3Forms
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "f13a29e8-61ee-475d-8cb2-6738a6f9779f",
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          from_name: "Ernesto Tages Website",
-          to_email: "info@ernestotages.com",
-        }),
-      });
+    // Sent by the contact function (netlify/functions/contact.mts), which
+    // validates the input again on the server.
+    const result = await postForm("contact", {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      botcheck: formData.honeypot,
+      elapsedMs: Date.now() - shownAt.current,
+    });
+    setIsSubmitting(false);
 
-      const result = await response.json();
+    if (result.ok) {
+      // Show success message
+      setShowSuccess(true);
+      setFormData({ name: "", email: "", subject: "", message: "", honeypot: "" });
 
-      if (result.success) {
-        // Show success message
-        setShowSuccess(true);
-        setFormData({ name: "", email: "", subject: "", message: "", honeypot: "" });
+      // Scroll to top to show success message
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
-        // Scroll to top to show success message
-        window.scrollTo({ top: 0, behavior: "smooth" });
-
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 5000);
-      } else {
-        setErrors([t("contact.form.sendFailed")]);
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } else if (result.error === "missing_fields") {
+      setErrors([t("contact.form.error")]);
+    } else if (result.error === "invalid_email") {
+      setErrors([t("contact.form.invalidEmail")]);
+    } else {
       setErrors([t("contact.form.sendFailed")]);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -140,12 +139,19 @@ export default function Contact() {
               {/* noValidate: the form keeps its own (localized) validation messages;
                   `required` / aria-required still mark the fields. */}
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
-                {/* Web3Forms Access Key */}
-                <input type="hidden" name="access_key" value="f13a29e8-61ee-475d-8cb2-6738a6f9779f" />
-                <input type="hidden" name="from_name" value="Ernesto Tages Website" />
-                
                 {/* Honeypot field - hidden from users, visible to bots */}
-                <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  checked={formData.honeypot !== ""}
+                  onChange={(e) =>
+                    setFormData({ ...formData, honeypot: e.target.checked ? "on" : "" })
+                  }
+                  className="hidden"
+                  style={{ display: "none" }}
+                />
 
                 <div>
                   <label
@@ -157,6 +163,7 @@ export default function Contact() {
                   <Input
                     id="name"
                     name="name"
+                    maxLength={100}
                     required
                     aria-required="true"
                     type="text"
@@ -178,6 +185,7 @@ export default function Contact() {
                   <Input
                     id="email"
                     name="email"
+                    maxLength={254}
                     required
                     aria-required="true"
                     type="email"
@@ -199,6 +207,7 @@ export default function Contact() {
                   <Input
                     id="subject"
                     name="subject"
+                    maxLength={200}
                     required
                     aria-required="true"
                     type="text"
@@ -220,6 +229,7 @@ export default function Contact() {
                           <Textarea
                     id="message"
                     name="message"
+                    maxLength={5000}
                     required
                     aria-required="true"
                     value={formData.message}
