@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudyA() {
@@ -12,6 +13,7 @@ export default function CaseStudyA() {
   return (
     <>
       <SEO
+        ogType="article"
         title={`${t(`${c}.title`)} | ${t(`${p}.breadcrumbCaseStudies`)}`}
         description={t(`${c}.seoDescription`)}
         lang={language}
@@ -300,10 +302,8 @@ export default function CaseStudyA() {
           "@type": "Article",
           "headline": "When Every Option Has a Cost",
           "description": "A case study on ethical leadership: deciding without innocence, but with integrity.",
-          "author": {
-            "@type": "Person",
-            "name": "Ernesto Tages"
-          },
+          "author": personRef,
+          "datePublished": "2025-12-01",
           "publisher": {
             "@type": "Person",
             "name": "Ernesto Tages"

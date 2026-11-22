@@ -160,6 +160,9 @@ export default function ClarityMatrix() {
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
               <img
                 src="/clarity-matrix-diagram.png"
+                width={2048}
+                height={1143}
+                loading="lazy"
                 alt="The Clarity Matrix™ - Four quadrants showing Entropic Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity"
                 className="w-full h-auto"
               />

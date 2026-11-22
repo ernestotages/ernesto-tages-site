@@ -25,8 +25,12 @@ export default function About() {
               {/* Left Column: Photo */}
               <div className="relative">
                 <img
-                  src="/SiteAbout_2486.jpg"
+                  src="/SiteAbout_2486-520.webp"
+                  srcSet="/SiteAbout_2486-520.webp 520w, /SiteAbout_2486-1040.webp 1040w"
+                  sizes="(min-width: 768px) 520px, 100vw"
                   alt="Ernesto Tages"
+                  width={520}
+                  height={780}
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>

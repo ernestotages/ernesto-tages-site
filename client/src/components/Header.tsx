@@ -40,6 +40,8 @@ export default function Header() {
               <img
                 src="/logo_ET.jpg"
                 alt="Ernesto Tages"
+                width={1269}
+                height={507}
                 className="h-12 w-auto cursor-pointer select-none"
                 draggable="false"
               />

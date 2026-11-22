@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudyC() {
@@ -12,6 +13,7 @@ export default function CaseStudyC() {
   return (
     <>
       <SEO
+        ogType="article"
         title={`${t(`${c}.title`)} | ${t(`${p}.breadcrumbCaseStudies`)}`}
         description={t(`${c}.seoDescription`)}
         lang={language}
@@ -288,10 +290,8 @@ export default function CaseStudyC() {
           "@type": "Article",
           "headline": "When the Right Decision Costs",
           "description": "A case study on sustaining authority after integrity has been exercised: absorbing cost without deformation.",
-          "author": {
-            "@type": "Person",
-            "name": "Ernesto Tages"
-          },
+          "author": personRef,
+          "datePublished": "2025-12-01",
           "publisher": {
             "@type": "Person",
             "name": "Ernesto Tages"

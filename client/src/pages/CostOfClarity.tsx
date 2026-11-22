@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { personRef } from "@/lib/structuredData";
 import { Helmet } from "react-helmet-async";
 import { Download, ArrowRight } from "lucide-react";
 
@@ -17,6 +18,7 @@ export default function CostOfClarity() {
   return (
     <>
       <SEO
+        ogType="article"
         title="The Cost of Clarity: Ethical Leadership Under Tension"
         description="An exploration of how ethical leadership often entails unavoidable costs. For leaders navigating stakeholder tensions."
         ogTitle="The Cost of Clarity — Ethical Leadership Under Tension"
@@ -26,15 +28,11 @@ export default function CostOfClarity() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Report",
+            "@type": "Article",
             "name": "The Cost of Clarity",
             "headline": "How Ethical Leaders Transform Tension into Trust Across Complex Systems",
             "description": "An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.",
-            "author": {
-              "@type": "Person",
-              "name": "Ernesto Tages",
-              "url": "https://ernestotages.com"
-            },
+            "author": personRef,
             "publisher": {
               "@type": "Person",
               "name": "Ernesto Tages",

@@ -2,7 +2,95 @@
   command = "pnpm run build"
   publish = "dist/public"
 
+# SPA rewrites only for real routes. Anything else falls through to the
+# final rule and is served by the app's 404 page with HTTP status 404.
+
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/individual-consultancy"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/conferences-seminars"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/insights-essays"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/frameworks-tools"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/talks"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/case-studies"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/case-studies/case-a"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/case-studies/case-b"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources/case-studies/case-c"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/clarity-matrix"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cost-of-clarity"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/emotional-excellence"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/iberoamerican-ethical-leadership"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
