@@ -218,7 +218,7 @@
 - [x] Test meta tags preview before publishing
 
 ## Contact Form Email Integration
-- [x] Integrate Web3Forms API for email sending
+- [x] Send contact form e-mails through Brevo (netlify/functions/contact.mts)
 - [x] Configure form to send to info@ernestotages.com
 - [x] Test email delivery
 
@@ -415,7 +415,7 @@
 ## Adapt Backend for Netlify Functions
 - [x] Convert tRPC backend to Netlify Functions
 - [x] Create newsletter subscription function
-- [ ] Create contact form submission function (not needed - using Web3Forms)
+- [x] Create contact form submission function (netlify/functions/contact.mts)
 - [ ] Test newsletter function works correctly after deployment
 - [x] Create new production build for Netlify
 

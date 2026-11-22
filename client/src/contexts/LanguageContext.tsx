@@ -591,18 +591,12 @@ const translations: Record<Language, any> = {
       line2: "It may have been moved or deleted.",
       goHome: "Go Home",
     },
-    // Cookie notice (components/CookieNotice.tsx).
-    cookies: {
-      label: "Cookie notice",
-      message: "This site uses analytics cookies only with your consent.",
-      accept: "Accept",
-      reject: "Reject",
-      // privacyLink: add here once the privacy policy page exists.
-    },
     footer: {
       tagline: "Clarity for the decisions that matter.",
-      // Opens the cookie notice again.
-      cookieSettings: "Cookie settings",
+      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
+      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
+      // add the page to routes.ts, sitemap.xml and netlify.toml.
+      // privacyLink: "...",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -616,16 +610,6 @@ const translations: Record<Language, any> = {
         submitting: "Subscribing...",
         success: "Thank you for subscribing!",
         error: "Subscription failed. Please try again.",
-        adBlocker: "Please disable your ad blocker to subscribe to the newsletter.",
-        verificationFailed: "Verification failed. Please try again.",
-      },
-      // Rendered as: before <privacy link> and <terms link> after.
-      recaptcha: {
-        before: "This site is protected by reCAPTCHA and the Google",
-        privacy: "Privacy Policy",
-        and: "and",
-        terms: "Terms of Service",
-        after: "apply.",
       },
       rights: "All rights reserved",
     },
@@ -1142,18 +1126,12 @@ const translations: Record<Language, any> = {
       line2: "Es posible que se haya trasladado o eliminado.",
       goHome: "Ir al inicio",
     },
-    // Cookie notice (components/CookieNotice.tsx).
-    cookies: {
-      label: "Aviso de cookies",
-      message: "Este sitio utiliza cookies de análisis solo con su consentimiento.",
-      accept: "Aceptar",
-      reject: "Rechazar",
-      // privacyLink: add here once the privacy policy page exists.
-    },
     footer: {
       tagline: "Claridad para las decisiones que importan.",
-      // Opens the cookie notice again.
-      cookieSettings: "Configuración de cookies",
+      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
+      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
+      // add the page to routes.ts, sitemap.xml and netlify.toml.
+      // privacyLink: "...",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -1167,16 +1145,6 @@ const translations: Record<Language, any> = {
         submitting: "Suscribiendo...",
         success: "Gracias por suscribirse.",
         error: "No se ha podido completar la suscripción. Por favor, inténtelo de nuevo.",
-        adBlocker: "Por favor, desactive su bloqueador de anuncios para suscribirse al boletín.",
-        verificationFailed: "La verificación ha fallado. Por favor, inténtelo de nuevo.",
-      },
-      // Rendered as: before <privacy link> and <terms link> after.
-      recaptcha: {
-        before: "Este sitio está protegido por reCAPTCHA y se aplican la",
-        privacy: "Política de privacidad",
-        and: "y los",
-        terms: "Términos del servicio",
-        after: "de Google.",
       },
       rights: "Todos los derechos reservados",
     },
@@ -1693,18 +1661,12 @@ const translations: Record<Language, any> = {
       line2: "Pode ter sido movida ou eliminada.",
       goHome: "Voltar ao início",
     },
-    // Cookie notice (components/CookieNotice.tsx).
-    cookies: {
-      label: "Aviso de cookies",
-      message: "Este site utiliza cookies de análise apenas com o seu consentimento.",
-      accept: "Aceitar",
-      reject: "Rejeitar",
-      // privacyLink: add here once the privacy policy page exists.
-    },
     footer: {
       tagline: "Clareza para as decisões que importam.",
-      // Opens the cookie notice again.
-      cookieSettings: "Definições de cookies",
+      // PRIVACY POLICY LINK — placeholder. When the privacy policy page exists,
+      // add privacyLink here (en/es/pt) and link it in the footer (Footer.tsx);
+      // add the page to routes.ts, sitemap.xml and netlify.toml.
+      // privacyLink: "...",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -1718,16 +1680,6 @@ const translations: Record<Language, any> = {
         submitting: "A subscrever...",
         success: "Obrigado pela sua subscrição.",
         error: "Não foi possível concluir a subscrição. Por favor, tente novamente.",
-        adBlocker: "Por favor, desative o seu bloqueador de anúncios para subscrever a newsletter.",
-        verificationFailed: "A verificação falhou. Por favor, tente novamente.",
-      },
-      // Rendered as: before <privacy link> and <terms link> after.
-      recaptcha: {
-        before: "Este site está protegido pelo reCAPTCHA e aplicam-se a",
-        privacy: "Política de Privacidade",
-        and: "e os",
-        terms: "Termos de Serviço",
-        after: "da Google.",
       },
       rights: "Todos os direitos reservados",
     },

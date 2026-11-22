@@ -43,8 +43,8 @@
 - Seletor de idioma (English/Español/Português)
 
 ### Formulários
-- **Contact Form**: Envia para info@ernestotages.com
-- **Newsletter**: Integrado com Brevo + reCAPTCHA v3
+- **Contact Form**: Envia via Brevo (Netlify Function `contact`) para CONTACT_TO_EMAIL
+- **Newsletter**: Integrado com Brevo (Netlify Function `subscribe`, honeypot + verificação de tempo)
 - Placeholder do email: "* E-mail" (com espaço)
 
 ### Multilíngue

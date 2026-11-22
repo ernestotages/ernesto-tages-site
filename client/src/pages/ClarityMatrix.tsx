@@ -311,7 +311,7 @@ export default function ClarityMatrix() {
               <div>
                 <h4 className="text-xl font-semibold text-[#121212] mb-3">Individual Reflection</h4>
                 <p className="leading-relaxed">
-                  Use the Clarity Matrix™ as a diagnostic tool for self-assessment. When facing a complex decision, locate yourself within the matrix. Ask: where is my coherence breaking down? What state am I operating from?
+                  Use the Clarity Matrix™ as a tool for orientation, not evaluation. When facing a complex decision, locate yourself within the matrix. Ask: where is my coherence breaking down? What state am I operating from?
                 </p>
               </div>
               <div>

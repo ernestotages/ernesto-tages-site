@@ -16,7 +16,6 @@ import { siteGraph } from "./lib/structuredData";
 import { localizedHref, pageLocales, parseLocalePath } from "./routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CookieNotice from "./components/CookieNotice";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -88,7 +87,6 @@ function Router() {
       </Switch>
       </main>
       <Footer />
-      <CookieNotice />
     </>
   );
 }

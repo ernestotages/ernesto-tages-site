@@ -1,88 +1,41 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
-import { trpc } from "@/lib/trpc";
-import { loadRecaptcha, RECAPTCHA_SITE_KEY } from "@/lib/recaptcha";
-import { openCookieSettings } from "@/lib/consent";
-
-// Declare grecaptcha on window
-declare global {
-  interface Window {
-    grecaptcha: {
-      enterprise: {
-        ready: (callback: () => void) => void;
-        execute: (siteKey: string, options: { action: string }) => Promise<string>;
-      };
-    };
-  }
-}
-
+import { postForm } from "@/lib/forms";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [honeypot, setHoneypot] = useState(""); // Anti-robot honeypot field
+  const [isPending, setIsPending] = useState(false);
+  // When the form appeared, for the server's time-based bot check.
+  const shownAt = useRef(0);
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
   const { t } = useLanguage();
-  
-  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
-    onSuccess: () => {
-      toast.success(t("footer.newsletter.success"));
-      setEmail("");
-    },
-    onError: (error) => {
-      console.error("Newsletter subscription error:", error);
-      toast.error(t("footer.newsletter.error"));
-    },
-  });
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || subscribeMutation.isPending) return;
-    
-    try {
-      // Load reCAPTCHA on demand (usually already started on input focus)
-      try {
-        await loadRecaptcha();
-      } catch {
-        // handled by the check below
-      }
-      if (typeof window.grecaptcha === 'undefined') {
-        toast.error(t("footer.newsletter.adBlocker"));
-        return;
-      }
-      
-      // Generate reCAPTCHA token with timeout
-      const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('reCAPTCHA timeout')), 10000)
-      );
-      
-      const recaptchaPromise = new Promise<string>((resolve, reject) => {
-        window.grecaptcha.enterprise.ready(async () => {
-          try {
-            const token = await window.grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, {
-              action: 'newsletter_subscribe'
-            });
-            resolve(token);
-          } catch (error) {
-            reject(error);
-          }
-        });
-      });
-      
-      const token = await Promise.race([recaptchaPromise, timeoutPromise]) as string;
-      
+    if (!email || isPending) return;
 
-      
-      // Submit with reCAPTCHA token
-      subscribeMutation.mutate({ email, recaptchaToken: token });
-    } catch (error) {
-      console.error("Newsletter subscription error:", error);
-      if (error instanceof Error && error.message === 'reCAPTCHA timeout') {
-        toast.error(t("footer.newsletter.adBlocker"));
-      } else {
-        toast.error(t("footer.newsletter.verificationFailed"));
-      }
+    setIsPending(true);
+    const result = await postForm("subscribe", {
+      email,
+      botcheck: honeypot,
+      elapsedMs: Date.now() - shownAt.current,
+    });
+    setIsPending(false);
+
+    if (result.ok) {
+      toast.success(t("footer.newsletter.success"));
+      setEmail("");
+    } else if (result.error === "invalid_email") {
+      toast.error(t("contact.form.invalidEmail"));
+    } else {
+      toast.error(t("footer.newsletter.error"));
     }
   };
 
@@ -120,6 +73,18 @@ export default function Footer() {
               onSubmit={handleNewsletterSubmit}
               className="flex flex-col sm:flex-row gap-2 w-full md:justify-end"
             >
+              {/* Honeypot field - hidden from users, filled in by bots */}
+              <input
+                type="text"
+                name="botcheck"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                className="hidden"
+                style={{ display: "none" }}
+              />
               <label htmlFor="newsletter-email" className="sr-only">
                 {t("footer.newsletter.emailLabel")}
               </label>
@@ -131,21 +96,18 @@ export default function Footer() {
                 placeholder={t("footer.newsletter.placeholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                onFocus={() => {
-                  loadRecaptcha().catch(() => {});
-                }}
                 required
                 aria-required="true"
-                disabled={subscribeMutation.isPending}
+                disabled={isPending}
                 className="bg-white text-[#121212] border-none w-full sm:max-w-xs placeholder:text-gray-400"
               />
               <Button
                 type="submit"
                 variant="outline"
-                disabled={subscribeMutation.isPending}
+                disabled={isPending}
                 className="border-[#D9307E] text-[#D9307E] hover:bg-[#D9307E] hover:text-white transition-colors disabled:opacity-50 font-light"
               >
-                {subscribeMutation.isPending ? (
+                {isPending ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     {t("footer.newsletter.submitting")}
@@ -158,32 +120,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom - Copyright and reCAPTCHA Notice */}
+        {/* Bottom - Copyright */}
         <div className="border-t border-gray-600/50 pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
             <p className="text-xs text-[#858585]">
               {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
             </p>
-            <span aria-hidden="true" className="hidden sm:inline text-xs text-[#858585]">·</span>
-            <p className="text-xs text-[#858585]">
-              {t("footer.recaptcha.before")}{" "}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">
-                {t("footer.recaptcha.privacy")}
-              </a>{" "}
-              {t("footer.recaptcha.and")}{" "}
-              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">
-                {t("footer.recaptcha.terms")}
-              </a>{" "}
-              {t("footer.recaptcha.after")}
-            </p>
-            <span aria-hidden="true" className="hidden sm:inline text-xs text-[#858585]">·</span>
-            <button
-              type="button"
-              onClick={openCookieSettings}
-              className="text-xs text-[#858585] underline hover:text-gray-300"
-            >
-              {t("footer.cookieSettings")}
-            </button>
           </div>
         </div>
       </div>
