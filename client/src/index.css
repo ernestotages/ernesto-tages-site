@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./fonts.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -44,13 +45,13 @@
 
 :root {
   /* Ernesto Tages Brand Colors */
-  /* White: #FFFFFF, Graphite Black: #121212, Light Gray: #F4F4F4, Warm Gray: #777777, Magenta: #D9307E */
+  /* White: #FFFFFF, Graphite Black: #121212, Light Gray: #F4F4F4, Warm Gray: #767676, Magenta: #D9307E */
   --primary: #D9307E; /* Magenta accent */
   --primary-foreground: #FFFFFF;
   --sidebar-primary: #121212;
   --sidebar-primary-foreground: #FFFFFF;
   --chart-1: #D9307E;
-  --chart-2: #777777;
+  --chart-2: #767676;
   --chart-3: #F4F4F4;
   --chart-4: #121212;
   --chart-5: #FFFFFF;
@@ -64,7 +65,7 @@
   --secondary: #F4F4F4; /* Light gray */
   --secondary-foreground: #121212;
   --muted: #F4F4F4;
-  --muted-foreground: #777777; /* Warm gray */
+  --muted-foreground: #767676; /* Warm gray */
   --accent: #D9307E; /* Magenta */
   --accent-foreground: #FFFFFF;
   --destructive: #D9307E;
@@ -238,4 +239,40 @@
     animation: fadeInSlideRight 0.3s ease-out forwards;
     opacity: 0; /* Start invisible */
   }
+}
+/*
+ * Accessibility. Kept outside @layer so it wins over utility classes such as
+ * `outline-none` on form controls.
+ */
+
+/* Clearly visible keyboard focus on every link, button and form field. */
+a[href]:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid #D9307E;
+  outline-offset: 2px;
+}
+
+/* "Skip to content": off-screen until it receives keyboard focus. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 60;
+  padding: 0.5rem 1rem;
+  background: #FFFFFF;
+  color: #121212;
+  border: 1px solid #121212;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  transform: translateY(-120%);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0.5rem);
 }

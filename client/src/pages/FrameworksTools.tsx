@@ -30,7 +30,7 @@ export default function FrameworksTools() {
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
                       {t("clarityMatrixCard.title")}
                     </h3>
-                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                       {t("clarityMatrixCard.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">

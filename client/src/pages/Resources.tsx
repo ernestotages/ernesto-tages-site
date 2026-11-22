@@ -23,7 +23,7 @@ export default function Resources() {
             <h1 className="text-4xl md:text-5xl font-bold text-[#121212]">
               {t("resources.hero.title")}
             </h1>
-            <p className="text-xl text-[#777777] leading-relaxed">
+            <p className="text-xl text-[#707070] leading-relaxed">
               {t("resources.hero.subtitle")}
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function Resources() {
               <h3 className="text-2xl font-semibold text-[#121212]">
                 {t("resources.blocks.insights.title")}
               </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("resources.blocks.insights.description")}
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function Resources() {
               <h3 className="text-2xl font-semibold text-[#121212]">
                 {t("resources.blocks.frameworks.title")}
               </h3>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#767676] leading-relaxed">
                 {t("resources.blocks.frameworks.description")}
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function Resources() {
                 <h3 className="text-2xl font-semibold text-[#121212]">
                   {t("resources.blocks.caseStudies.title")}
                 </h3>
-                <p className="text-lg text-[#777777] leading-relaxed">
+                <p className="text-lg text-[#767676] leading-relaxed">
                   {t("resources.blocks.caseStudies.description")}
                 </p>
               </div>

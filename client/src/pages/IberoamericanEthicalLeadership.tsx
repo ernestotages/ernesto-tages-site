@@ -117,11 +117,11 @@ export default function IberoamericanEthicalLeadership() {
                 El liderazgo ético en Iberoamérica
               </h1>
 
-              <h2 className="text-2xl md:text-3xl text-[#777777] font-light leading-relaxed">
+              <h2 className="text-2xl md:text-3xl text-[#767676] font-light leading-relaxed">
                 Cómo emoción, responsabilidad y poder moldean el liderazgo ético en Iberoamérica
               </h2>
 
-              <div className="flex items-center gap-4 text-sm text-[#777777]">
+              <div className="flex items-center gap-4 text-sm text-[#767676]">
                 <span>Por Ernesto Tages</span>
                 <span>•</span>
                 <span>31 páginas</span>
@@ -140,11 +140,11 @@ export default function IberoamericanEthicalLeadership() {
                 Una exploración integral de cómo la emoción, la responsabilidad y el poder moldean el liderazgo ético en Iberoamérica. Este white paper ofrece siete movimientos que trazan una brújula moral para el liderazgo contemporáneo.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-8 text-justify">
                 El liderazgo ético en Iberoamérica no puede ser importado de otras tradiciones sin adaptación. Surge de una historia particular de tensiones entre lo individual y lo colectivo, entre la autoridad formal y la legitimidad moral, entre las instituciones heredadas y las aspiraciones democráticas.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-12 text-justify">
                 Este white paper examina cómo los líderes iberoamericanos navegan dilemas éticos específicos de la región: el peso de las jerarquías informales, la gestión de lealtades cruzadas, la construcción de confianza en contextos de alta incertidumbre, y la práctica del poder con responsabilidad en sistemas donde las reglas formales coexisten con normas culturales profundas.
               </p>
 
@@ -179,7 +179,7 @@ export default function IberoamericanEthicalLeadership() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   The Cost of Clarity
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   How ethical leaders transform tension into trust across complex systems.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">
@@ -194,7 +194,7 @@ export default function IberoamericanEthicalLeadership() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   Emotional Excellence
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   Why coherence of emotion, thought, and action has become a strategic advantage for leaders.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">

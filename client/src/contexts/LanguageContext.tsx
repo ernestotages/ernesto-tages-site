@@ -94,6 +94,7 @@ const translations: Record<Language, any> = {
       close: "Close",
       toggleMenu: "Toggle menu",
       notifications: "Notifications",
+      skipToContent: "Skip to content",
     },
     home: {
       hero: {
@@ -580,7 +581,7 @@ const translations: Record<Language, any> = {
     clarityMatrixCard: {
       title: "The Clarity Matrix™",
       description:
-        "A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.",
+        "A framework for ethical clarity under pressure. Navigate complex decisions through four states: Entropic Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.",
       cta: "Explore framework",
     },
     notFound: {
@@ -590,9 +591,18 @@ const translations: Record<Language, any> = {
       line2: "It may have been moved or deleted.",
       goHome: "Go Home",
     },
+    // Cookie notice (components/CookieNotice.tsx).
+    cookies: {
+      label: "Cookie notice",
+      message: "This site uses analytics cookies only with your consent.",
+      accept: "Accept",
+      reject: "Reject",
+      // privacyLink: add here once the privacy policy page exists.
+    },
     footer: {
       tagline: "Clarity for the decisions that matter.",
-      logoAlt: "Methodology Logo",
+      // Opens the cookie notice again.
+      cookieSettings: "Cookie settings",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -600,6 +610,8 @@ const translations: Record<Language, any> = {
           "Thoughtful reflections for leaders seeking clarity, integrity and calm in complexity.",
         englishOnly: "Available in English only.",
         placeholder: "* E-mail",
+        // Accessible name of the e-mail field (visually hidden).
+        emailLabel: "Email address",
         button: "Subscribe",
         submitting: "Subscribing...",
         success: "Thank you for subscribing!",
@@ -628,6 +640,7 @@ const translations: Record<Language, any> = {
       close: "Cerrar",
       toggleMenu: "Abrir o cerrar el menú",
       notifications: "Notificaciones",
+      skipToContent: "Saltar al contenido",
     },
     home: {
       hero: {
@@ -1119,7 +1132,7 @@ const translations: Record<Language, any> = {
     clarityMatrixCard: {
       title: "The Clarity Matrix™",
       description:
-        "Un marco para la claridad ética bajo presión. Permite abordar decisiones complejas a través de cuatro estados: deriva ética, contención moral, dislocación estratégica y claridad ética. Concebido para orientar, no para evaluar.",
+        "Un marco para la claridad ética bajo presión. Permite abordar decisiones complejas a través de cuatro estados: deriva entrópica, contención moral, dislocación estratégica y claridad ética. Concebido para orientar, no para evaluar.",
       cta: "Explorar el marco",
     },
     notFound: {
@@ -1129,9 +1142,18 @@ const translations: Record<Language, any> = {
       line2: "Es posible que se haya trasladado o eliminado.",
       goHome: "Ir al inicio",
     },
+    // Cookie notice (components/CookieNotice.tsx).
+    cookies: {
+      label: "Aviso de cookies",
+      message: "Este sitio utiliza cookies de análisis solo con su consentimiento.",
+      accept: "Aceptar",
+      reject: "Rechazar",
+      // privacyLink: add here once the privacy policy page exists.
+    },
     footer: {
       tagline: "Claridad para las decisiones que importan.",
-      logoAlt: "Logotipo de la metodología",
+      // Opens the cookie notice again.
+      cookieSettings: "Configuración de cookies",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -1139,6 +1161,8 @@ const translations: Record<Language, any> = {
           "Reflexiones meditadas para líderes que buscan claridad, integridad y calma en medio de la complejidad.",
         englishOnly: "El boletín se publica únicamente en inglés.",
         placeholder: "* Correo electrónico",
+        // Accessible name of the e-mail field (visually hidden).
+        emailLabel: "Correo electrónico",
         button: "Suscribirse",
         submitting: "Suscribiendo...",
         success: "Gracias por suscribirse.",
@@ -1167,6 +1191,7 @@ const translations: Record<Language, any> = {
       close: "Fechar",
       toggleMenu: "Abrir ou fechar o menu",
       notifications: "Notificações",
+      skipToContent: "Saltar para o conteúdo",
     },
     home: {
       hero: {
@@ -1658,7 +1683,7 @@ const translations: Record<Language, any> = {
     clarityMatrixCard: {
       title: "The Clarity Matrix™",
       description:
-        "Um modelo para a clareza ética sob pressão. Permite abordar decisões complexas através de quatro estados: deriva ética, contenção moral, deslocação estratégica e clareza ética. Concebido para orientar, não para avaliar.",
+        "Um modelo para a clareza ética sob pressão. Permite abordar decisões complexas através de quatro estados: deriva entrópica, contenção moral, deslocação estratégica e clareza ética. Concebido para orientar, não para avaliar.",
       cta: "Explorar o modelo",
     },
     notFound: {
@@ -1668,9 +1693,18 @@ const translations: Record<Language, any> = {
       line2: "Pode ter sido movida ou eliminada.",
       goHome: "Voltar ao início",
     },
+    // Cookie notice (components/CookieNotice.tsx).
+    cookies: {
+      label: "Aviso de cookies",
+      message: "Este site utiliza cookies de análise apenas com o seu consentimento.",
+      accept: "Aceitar",
+      reject: "Rejeitar",
+      // privacyLink: add here once the privacy policy page exists.
+    },
     footer: {
       tagline: "Clareza para as decisões que importam.",
-      logoAlt: "Logótipo da metodologia",
+      // Opens the cookie notice again.
+      cookieSettings: "Definições de cookies",
       // The newsletter itself is published in English only.
       newsletter: {
         title: "The Clarity Compass",
@@ -1678,6 +1712,8 @@ const translations: Record<Language, any> = {
           "Reflexões ponderadas para líderes que procuram clareza, integridade e calma no meio da complexidade.",
         englishOnly: "A newsletter é publicada apenas em inglês.",
         placeholder: "* E-mail",
+        // Accessible name of the e-mail field (visually hidden).
+        emailLabel: "Endereço de e-mail",
         button: "Subscrever",
         submitting: "A subscrever...",
         success: "Obrigado pela sua subscrição.",

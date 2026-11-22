@@ -41,7 +41,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#121212] leading-tight">
                 {t("home.hero.title")}
               </h1>
-              <p className="text-xl md:text-2xl text-[#777777] leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#767676] leading-relaxed">
                 {t("home.hero.subtitle")}
               </p>
               <Button
@@ -65,10 +65,10 @@ export default function Home() {
             </h2>
 
             <div className="space-y-6">
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#707070] leading-relaxed">
                 {t("home.strategic.intro1")}
               </p>
-              <p className="text-lg text-[#777777] leading-relaxed">
+              <p className="text-lg text-[#707070] leading-relaxed">
                 {t("home.strategic.intro2")}
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
                 <h3 className="text-xl text-[#121212]">
                   {t("home.strategic.block1.title")}
                 </h3>
-                <p className="text-base text-[#777777] leading-relaxed">
+                <p className="text-base text-[#767676] leading-relaxed">
                   {t("home.strategic.block1.description")}
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function Home() {
                 <h3 className="text-xl text-[#121212]">
                   {t("home.strategic.block2.title")}
                 </h3>
-                <p className="text-base text-[#777777] leading-relaxed">
+                <p className="text-base text-[#767676] leading-relaxed">
                   {t("home.strategic.block2.description")}
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function Home() {
                 <h3 className="text-xl text-[#121212]">
                   {t("home.strategic.block3.title")}
                 </h3>
-                <p className="text-base text-[#777777] leading-relaxed">
+                <p className="text-base text-[#767676] leading-relaxed">
                   {t("home.strategic.block3.description")}
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function Home() {
               <Link href="/clarity-matrix" className="block">
                 <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer">
                   <h3 className="text-2xl text-[#121212] mb-3">{t("clarityMatrixCard.title")}</h3>
-                  <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                  <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                     {t("clarityMatrixCard.description")}
                   </p>
                   <div className="flex items-center text-[#D9307E] font-medium">

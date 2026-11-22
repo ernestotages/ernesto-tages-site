@@ -116,11 +116,11 @@ export default function CostOfClarity() {
                 The Cost of Clarity
               </h1>
 
-              <h2 className="text-2xl md:text-3xl text-[#777777] font-light leading-relaxed">
+              <h2 className="text-2xl md:text-3xl text-[#767676] font-light leading-relaxed">
                 How Ethical Leaders Transform Tension into Trust Across Complex Systems
               </h2>
 
-              <div className="flex items-center gap-4 text-sm text-[#777777]">
+              <div className="flex items-center gap-4 text-sm text-[#767676]">
                 <span>By Ernesto Tages</span>
                 <span>•</span>
                 <span>24 pages</span>
@@ -139,11 +139,11 @@ export default function CostOfClarity() {
                 An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-8 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-8 text-justify">
                 In complex organizational environments, leaders face decisions where every option carries a cost. The temptation is to delay, delegate, or disguise these costs. But ethical leadership demands something different: the courage to name costs clearly, distribute them fairly, and own them publicly.
               </p>
 
-              <p className="text-lg text-[#777777] leading-relaxed mb-12 text-justify">
+              <p className="text-lg text-[#767676] leading-relaxed mb-12 text-justify">
                 This white paper explores how clarity—when practiced with rigor and emotional coherence—becomes a strategic advantage. It examines real-world scenarios where leaders must choose between competing goods, navigate stakeholder tensions, and maintain institutional integrity while acknowledging the human cost of their decisions.
               </p>
 
@@ -178,7 +178,7 @@ export default function CostOfClarity() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   Emotional Excellence
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   Why coherence of emotion, thought, and action has become a strategic advantage for leaders.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">
@@ -193,7 +193,7 @@ export default function CostOfClarity() {
                 <h4 className="text-xl font-semibold text-[#121212] mb-2">
                   El liderazgo ético en Iberoamérica
                 </h4>
-                <p className="text-[#777777] mb-4">
+                <p className="text-[#767676] mb-4">
                   How emotion, responsibility, and power shape ethical leadership in Ibero-America.
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">

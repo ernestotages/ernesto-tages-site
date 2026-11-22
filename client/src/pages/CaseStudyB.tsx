@@ -27,7 +27,7 @@ export default function CaseStudyB() {
         {/* Breadcrumb Navigation */}
         <nav className="bg-white border-b border-gray-100 sticky top-[73px] z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <div className="flex items-center text-sm text-[#777777]">
+            <div className="flex items-center text-sm text-[#767676]">
               <Link href="/" className="hover:text-[#D9307E] transition-colors">
                 {t(`${p}.breadcrumbHome`)}
               </Link>
@@ -45,7 +45,7 @@ export default function CaseStudyB() {
           </div>
         </nav>
 
-        <main className="flex-grow">
+        <div className="flex-grow">
           {/* Header */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +62,7 @@ export default function CaseStudyB() {
                 <h1 className="text-4xl md:text-5xl text-[#121212] font-light">
                   {t(`${c}.title`)}
                 </h1>
-                <p className="text-2xl text-[#777777] italic">
+                <p className="text-2xl text-[#767676] italic">
                   {t(`${c}.subtitle`)}
                 </p>
               </div>
@@ -77,16 +77,16 @@ export default function CaseStudyB() {
                 {/* The Tension */}
                 <div className="space-y-4">
                   <h2 className="text-2xl text-[#121212] font-light">{t(`${c}.tension`)}</h2>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.tensionP1`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.tensionP2`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.tensionP3`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.tensionP4`)}
                   </p>
                 </div>
@@ -94,19 +94,19 @@ export default function CaseStudyB() {
                 {/* The Work of Clarification */}
                 <div className="space-y-4">
                   <h2 className="text-2xl text-[#121212] font-light">{t(`${c}.clarification`)}</h2>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.clarificationP1`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.clarificationP2`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.clarificationP3`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.clarificationP4`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.clarificationP5`)}
                   </p>
                 </div>
@@ -114,16 +114,16 @@ export default function CaseStudyB() {
                 {/* The Outcome */}
                 <div className="space-y-4">
                   <h2 className="text-2xl text-[#121212] font-light">{t(`${c}.outcome`)}</h2>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.outcomeP1`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.outcomeP2`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.outcomeP3`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#767676] leading-relaxed text-justify">
                     {t(`${c}.outcomeP4`)}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function CaseStudyB() {
           <div className="text-center py-8 bg-white">
             <button
               onClick={() => setShowExtendedReflection(!showExtendedReflection)}
-              className="text-lg text-[#777777] hover:text-[#D9307E] transition-colors italic"
+              className="text-lg text-[#767676] hover:text-[#D9307E] transition-colors italic"
             >
               {showExtendedReflection ? t(`${p}.hideExtended`) : t(`${p}.continueExtended`)}
             </button>
@@ -160,25 +160,25 @@ export default function CaseStudyB() {
                 {/* When Competence Stops Orienting Action */}
                 <div className="space-y-4">
                   <h3 className="text-2xl text-[#121212] font-light">{t(`${c}.extSection1Title`)}</h3>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P1`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P2`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P3`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P4`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P5`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P6`)}
                   </p>
-                  <p className="text-lg text-[#777777] leading-relaxed text-justify">
+                  <p className="text-lg text-[#707070] leading-relaxed text-justify">
                     {t(`${c}.extSection1P7`)}
                   </p>
                 </div>
@@ -191,7 +191,7 @@ export default function CaseStudyB() {
                 </div>
 
                 {/* Discreet Previous/Next Navigation */}
-                <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-200 text-sm text-[#777777]">
+                <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-200 text-sm text-[#707070]">
                   <Link href="/resources/case-studies/case-a" className="hover:text-[#D9307E] transition-colors">
                     {t(`${c}.prevLabel`)}
                   </Link>
@@ -204,7 +204,7 @@ export default function CaseStudyB() {
             </div>
           </section>
           )}
-        </main>
+        </div>
 
       </div>
 

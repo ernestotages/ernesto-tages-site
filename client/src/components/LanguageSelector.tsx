@@ -38,7 +38,7 @@ export default function LanguageSelector() {
             href={target(code)}
             hrefLang={code}
             lang={code}
-            className="text-left text-lg text-[#777777] hover:text-[#D9307E] transition-colors"
+            className="text-left text-lg text-[#767676] hover:text-[#D9307E] transition-colors"
           >
             {LABELS[code]}
           </a>

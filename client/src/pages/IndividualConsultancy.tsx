@@ -32,19 +32,19 @@ export default function IndividualConsultancy() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.obj1")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.obj2")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.obj3")}
                       </span>
                     </li>
@@ -58,25 +58,25 @@ export default function IndividualConsultancy() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.mod1")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.mod2")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.mod3")}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-[#D9307E] mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-[#777777]">
+                      <span className="text-lg text-[#707070]">
                         {t("services.individualDetails.mod4")}
                       </span>
                     </li>
@@ -87,7 +87,7 @@ export default function IndividualConsultancy() {
                   <h3 className="text-2xl text-[#121212] mb-4">
                     {t("services.individualDetails.outcome")}
                   </h3>
-                  <p className="text-lg text-[#777777] leading-relaxed">
+                  <p className="text-lg text-[#707070] leading-relaxed">
                     {t("services.individualDetails.outcomeText")}
                   </p>
                 </div>

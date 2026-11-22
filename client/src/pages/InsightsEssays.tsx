@@ -30,7 +30,7 @@ export default function InsightsEssays() {
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
                       {t("resources.insightsDetails.whitePapers.costOfClarity.title")}
                     </h3>
-                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                       {t("resources.insightsDetails.whitePapers.costOfClarity.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">
@@ -46,7 +46,7 @@ export default function InsightsEssays() {
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
                       {t("resources.insightsDetails.whitePapers.emotionalExcellence.title")}
                     </h3>
-                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                       {t("resources.insightsDetails.whitePapers.emotionalExcellence.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">
@@ -62,7 +62,7 @@ export default function InsightsEssays() {
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
                       {t("resources.insightsDetails.whitePapers.iberoamericanEthicalLeadership.title")}
                     </h3>
-                    <p className="text-lg text-[#777777] mb-4 leading-relaxed">
+                    <p className="text-lg text-[#767676] mb-4 leading-relaxed">
                       {t("resources.insightsDetails.whitePapers.iberoamericanEthicalLeadership.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">

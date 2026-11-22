@@ -17,11 +17,14 @@ export default function Contact() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
+  // Remounts the error alert on every attempt so a repeated error is announced again.
+  const [attempt, setAttempt] = useState(0);
   const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors([]);
+    setAttempt(a => a + 1);
     setIsSubmitting(true);
 
     // Check honeypot - if filled, it's a bot
@@ -107,7 +110,7 @@ export default function Contact() {
             <h1 className="text-4xl md:text-5xl text-[#121212]">
               {t("contact.hero.title")}
             </h1>
-            <p className="text-xl text-[#777777] leading-relaxed">
+            <p className="text-xl text-[#707070] leading-relaxed">
               {t("contact.hero.subtitle")}
             </p>
           </div>
@@ -118,21 +121,25 @@ export default function Contact() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
-            {/* Success Message */}
+            {/* Success Message (status region always present so it is announced) */}
+            <div role="status">
             {showSuccess && (
               <div className="mb-8 bg-[#F0FDF4] border border-[#86EFAC] rounded-lg p-6 flex items-start space-x-4 animate-fadeInSlideDown">
                 <CheckCircle className="w-6 h-6 text-[#16A34A] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[#16A34A] text-lg font-medium">
+                  <p className="text-[#12853C] text-lg font-medium">
                     {t("contact.form.success")}
                   </p>
                 </div>
               </div>
             )}
+            </div>
 
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border-t-4 border-[#D9307E]">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* noValidate: the form keeps its own (localized) validation messages;
+                  `required` / aria-required still mark the fields. */}
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 {/* Web3Forms Access Key */}
                 <input type="hidden" name="access_key" value="f13a29e8-61ee-475d-8cb2-6738a6f9779f" />
                 <input type="hidden" name="from_name" value="Ernesto Tages Website" />
@@ -150,6 +157,8 @@ export default function Contact() {
                   <Input
                     id="name"
                     name="name"
+                    required
+                    aria-required="true"
                     type="text"
                     value={formData.name}
                     onChange={(e) =>
@@ -169,6 +178,8 @@ export default function Contact() {
                   <Input
                     id="email"
                     name="email"
+                    required
+                    aria-required="true"
                     type="email"
                     value={formData.email}
                     onChange={(e) =>
@@ -188,6 +199,8 @@ export default function Contact() {
                   <Input
                     id="subject"
                     name="subject"
+                    required
+                    aria-required="true"
                     type="text"
                     value={formData.subject}
                     onChange={(e) =>
@@ -207,6 +220,8 @@ export default function Contact() {
                           <Textarea
                     id="message"
                     name="message"
+                    required
+                    aria-required="true"
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -217,9 +232,9 @@ export default function Contact() {
 
                 {/* Error Messages */}
                 {errors.length > 0 && (
-                  <div className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-lg p-4">
+                  <div key={attempt} role="alert" className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-lg p-4">
                     {errors.map((error, index) => (
-                      <p key={index} className="text-[#DC2626] text-sm">
+                      <p key={index} className="text-[#D92525] text-sm">
                         {error}
                       </p>
                     ))}

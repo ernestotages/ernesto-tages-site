@@ -117,7 +117,7 @@ export default function ClarityMatrix() {
                 The Clarity Matrix™
               </h1>
 
-              <h2 className="text-2xl md:text-3xl text-[#777777] font-light leading-relaxed">
+              <h2 className="text-2xl md:text-3xl text-[#767676] font-light leading-relaxed">
                 A framework for ethical clarity under pressure
               </h2>
 

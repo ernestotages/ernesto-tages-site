@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Loader2 } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { loadRecaptcha, RECAPTCHA_SITE_KEY } from "@/lib/recaptcha";
+import { openCookieSettings } from "@/lib/consent";
 
 // Declare grecaptcha on window
 declare global {
@@ -91,10 +92,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Left Column - Logo and Tagline */}
           <div className="flex flex-col items-start justify-end space-y-3">
+            {/* Brand mark: decorative, the tagline next to it names the brand. */}
             <img
               src="/logo-methodology-64.webp"
               srcSet="/logo-methodology-64.webp 1x, /logo-methodology-128.webp 2x"
-              alt={t("footer.logoAlt")}
+              alt=""
               width={64}
               height={64}
               loading="lazy"
@@ -111,15 +113,21 @@ export default function Footer() {
             <p className="text-sm text-gray-300 max-w-md text-left md:text-right font-light">
               {t("footer.newsletter.description")}
             </p>
-            <p className="text-xs text-gray-500 italic max-w-md text-left md:text-right">
+            <p className="text-xs text-[#858585] italic max-w-md text-left md:text-right">
               {t("footer.newsletter.englishOnly")}
             </p>
             <form
               onSubmit={handleNewsletterSubmit}
               className="flex flex-col sm:flex-row gap-2 w-full md:justify-end"
             >
+              <label htmlFor="newsletter-email" className="sr-only">
+                {t("footer.newsletter.emailLabel")}
+              </label>
               <Input
+                id="newsletter-email"
+                name="email"
                 type="email"
+                autoComplete="email"
                 placeholder={t("footer.newsletter.placeholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -127,6 +135,7 @@ export default function Footer() {
                   loadRecaptcha().catch(() => {});
                 }}
                 required
+                aria-required="true"
                 disabled={subscribeMutation.isPending}
                 className="bg-white text-[#121212] border-none w-full sm:max-w-xs placeholder:text-gray-400"
               />
@@ -152,21 +161,29 @@ export default function Footer() {
         {/* Bottom - Copyright and reCAPTCHA Notice */}
         <div className="border-t border-gray-600/50 pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-            <p className="text-[10px] text-gray-600 opacity-50">
+            <p className="text-xs text-[#858585]">
               {t("footer.rights")} © {new Date().getFullYear()} Ernesto Tages
             </p>
-            <span className="hidden sm:inline text-gray-600 opacity-50">·</span>
-            <p className="text-[10px] text-gray-600 opacity-50">
+            <span aria-hidden="true" className="hidden sm:inline text-xs text-[#858585]">·</span>
+            <p className="text-xs text-[#858585]">
               {t("footer.recaptcha.before")}{" "}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">
                 {t("footer.recaptcha.privacy")}
               </a>{" "}
               {t("footer.recaptcha.and")}{" "}
-              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">
                 {t("footer.recaptcha.terms")}
               </a>{" "}
               {t("footer.recaptcha.after")}
             </p>
+            <span aria-hidden="true" className="hidden sm:inline text-xs text-[#858585]">·</span>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="text-xs text-[#858585] underline hover:text-gray-300"
+            >
+              {t("footer.cookieSettings")}
+            </button>
           </div>
         </div>
       </div>

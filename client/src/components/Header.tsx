@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
@@ -8,6 +8,28 @@ export default function Header() {
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const closeMenu = (returnFocus: boolean) => {
+    setMenuOpen(false);
+    if (returnFocus) buttonRef.current?.focus();
+  };
+
+  // When the menu opens, move focus to its first link; Escape closes it and
+  // returns focus to the menu button.
+  useEffect(() => {
+    if (!menuOpen) return;
+    menuRef.current?.querySelector<HTMLElement>("a[href]")?.focus();
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeMenu(true);
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
 
   const navItems = [
     { path: "/", label: t("nav.home") },
@@ -49,9 +71,13 @@ export default function Header() {
 
             {/* Hamburger Menu Button */}
             <button
+              ref={buttonRef}
+              type="button"
               className="flex items-center space-x-2 p-2 text-[#121212] hover:text-[#D9307E] transition-colors relative z-50"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={t("nav.toggleMenu")}
+              aria-expanded={menuOpen}
+              aria-controls="site-menu"
             >
               {menuOpen ? (
                 <>
@@ -64,13 +90,21 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Dropdown Navigation Menu */}
-          {menuOpen && (
-            <div className="absolute right-4 sm:right-6 lg:right-8 top-20 bg-white border border-gray-200 rounded-lg shadow-lg py-4 px-6 min-w-[240px] z-50 animate-fadeInSlideDown">
+          {/* Dropdown Navigation Menu: always in the HTML (also pre-rendered),
+              hidden while closed. */}
+          <div
+              id="site-menu"
+              ref={menuRef}
+              hidden={!menuOpen}
+              className="absolute right-4 sm:right-6 lg:right-8 top-20 bg-white border border-gray-200 rounded-lg shadow-lg py-4 px-6 min-w-[240px] z-50 animate-fadeInSlideDown">
               <div className="flex flex-col space-y-4">
                 {/* Navigation Links */}
                 {navItems.map((item, index) => (
-                  <Link key={item.path} href={item.path}>
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    aria-current={isActive(item.path) ? "page" : undefined}
+                  >
                     <span
                       className={`block text-lg font-medium transition-colors cursor-pointer animate-fadeInSlideRight ${
                         isActive(item.path)
@@ -91,7 +125,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-          )}
         </nav>
       </header>
     </>
