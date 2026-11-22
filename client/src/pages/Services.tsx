@@ -57,7 +57,7 @@ export default function Services() {
               <div className="flex justify-center mb-4">
                 <img
                   src="/consultancy.webp"
-                  alt="Individual Consultancy"
+                  alt={t("services.twoLines.individual.title")}
                   width={937}
                   height={812}
                   loading="lazy"
@@ -88,7 +88,7 @@ export default function Services() {
               <div className="flex justify-center mb-4">
                 <img
                   src="/conferences.webp"
-                  alt="Professional Conferences and Seminars"
+                  alt={t("services.twoLines.conferences.title")}
                   width={937}
                   height={812}
                   loading="lazy"
@@ -120,12 +120,12 @@ export default function Services() {
           <div className="max-w-3xl mx-auto mt-12">
             <Link href="/clarity-matrix" className="block">
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer text-left">
-                <h3 className="text-2xl text-[#121212] mb-3">The Clarity Matrix™</h3>
+                <h3 className="text-2xl text-[#121212] mb-3">{t("clarityMatrixCard.title")}</h3>
                 <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                  A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.
+                  {t("clarityMatrixCard.description")}
                 </p>
                 <div className="flex items-center text-[#D9307E] font-medium">
-                  <span>Explore framework</span>
+                  <span>{t("clarityMatrixCard.cta")}</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
               </div>

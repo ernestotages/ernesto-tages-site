@@ -99,6 +99,12 @@ const useLocaleLocation = (router: RouterLike) => {
   ] as [string, (to: string, options?: any) => void];
 };
 
+/** Toast area, with its screen-reader label in the visitor's language. */
+function LocalizedToaster() {
+  const { t } = useLanguage();
+  return <Toaster containerAriaLabel={t("nav.notifications")} />;
+}
+
 function LocalizedRouter({ ssrPath }: { ssrPath?: string }) {
   const { language } = useLanguage();
   const hrefs = useCallback((href: string) => localizedHref(href, language), [language]);
@@ -145,7 +151,7 @@ function App({ ssrPath, helmetContext, initialLanguage }: AppProps = {}) {
             // switchable
           >
             <TooltipProvider>
-              <Toaster />
+              <LocalizedToaster />
               <LocalizedRouter ssrPath={ssrPath} />
             </TooltipProvider>
           </ThemeProvider>

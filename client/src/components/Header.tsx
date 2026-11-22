@@ -51,7 +51,7 @@ export default function Header() {
             <button
               className="flex items-center space-x-2 p-2 text-[#121212] hover:text-[#D9307E] transition-colors relative z-50"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
+              aria-label={t("nav.toggleMenu")}
             >
               {menuOpen ? (
                 <>

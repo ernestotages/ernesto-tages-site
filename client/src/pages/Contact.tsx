@@ -41,7 +41,7 @@ export default function Contact() {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setErrors(["Please enter a valid email address."]);
+      setErrors([t("contact.form.invalidEmail")]);
       setIsSubmitting(false);
       return;
     }
@@ -80,11 +80,11 @@ export default function Contact() {
           setShowSuccess(false);
         }, 5000);
       } else {
-        setErrors(["Failed to send message. Please try again."]);
+        setErrors([t("contact.form.sendFailed")]);
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      setErrors(["Failed to send message. Please try again."]);
+      setErrors([t("contact.form.sendFailed")]);
     } finally {
       setIsSubmitting(false);
     }
@@ -232,7 +232,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full bg-[#D9307E] hover:bg-[#b82567] text-white text-lg py-6 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? t("contact.form.sending") || "Sending..." : t("contact.form.send")}
+                  {isSubmitting ? t("contact.form.sending") : t("contact.form.send")}
                 </Button>
               </form>
             </div>

@@ -26,12 +26,12 @@ export default function Footer() {
   
   const subscribeMutation = trpc.newsletter.subscribe.useMutation({
     onSuccess: () => {
-      toast.success("Thank you for subscribing!");
+      toast.success(t("footer.newsletter.success"));
       setEmail("");
     },
     onError: (error) => {
       console.error("Newsletter subscription error:", error);
-      toast.error("Subscription failed. Please try again.");
+      toast.error(t("footer.newsletter.error"));
     },
   });
 
@@ -47,7 +47,7 @@ export default function Footer() {
         // handled by the check below
       }
       if (typeof window.grecaptcha === 'undefined') {
-        toast.error("Please disable your ad blocker to subscribe to the newsletter.");
+        toast.error(t("footer.newsletter.adBlocker"));
         return;
       }
       
@@ -78,9 +78,9 @@ export default function Footer() {
     } catch (error) {
       console.error("Newsletter subscription error:", error);
       if (error instanceof Error && error.message === 'reCAPTCHA timeout') {
-        toast.error("Please disable your ad blocker to subscribe to the newsletter.");
+        toast.error(t("footer.newsletter.adBlocker"));
       } else {
-        toast.error("Verification failed. Please try again.");
+        toast.error(t("footer.newsletter.verificationFailed"));
       }
     }
   };
@@ -94,7 +94,7 @@ export default function Footer() {
             <img
               src="/logo-methodology-64.webp"
               srcSet="/logo-methodology-64.webp 1x, /logo-methodology-128.webp 2x"
-              alt="Methodology Logo"
+              alt={t("footer.logoAlt")}
               width={64}
               height={64}
               loading="lazy"
@@ -107,12 +107,12 @@ export default function Footer() {
 
           {/* Right Column - Newsletter Subscription */}
           <div className="flex flex-col items-start md:items-end space-y-4">
-            <h3 className="text-2xl font-light text-white">The Clarity Compass</h3>
+            <h3 className="text-2xl font-light text-white">{t("footer.newsletter.title")}</h3>
             <p className="text-sm text-gray-300 max-w-md text-left md:text-right font-light">
-              Thoughtful reflections for leaders seeking clarity, integrity and calm in complexity.
+              {t("footer.newsletter.description")}
             </p>
             <p className="text-xs text-gray-500 italic max-w-md text-left md:text-right">
-              Available in English only.
+              {t("footer.newsletter.englishOnly")}
             </p>
             <form
               onSubmit={handleNewsletterSubmit}
@@ -120,7 +120,7 @@ export default function Footer() {
             >
               <Input
                 type="email"
-                placeholder="* E-mail"
+                placeholder={t("footer.newsletter.placeholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onFocus={() => {
@@ -139,10 +139,10 @@ export default function Footer() {
                 {subscribeMutation.isPending ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Subscribing...
+                    {t("footer.newsletter.submitting")}
                   </>
                 ) : (
-                  "Subscribe"
+                  t("footer.newsletter.button")
                 )}
               </Button>
             </form>
@@ -157,15 +157,15 @@ export default function Footer() {
             </p>
             <span className="hidden sm:inline text-gray-600 opacity-50">·</span>
             <p className="text-[10px] text-gray-600 opacity-50">
-              This site is protected by reCAPTCHA and the Google{" "}
+              {t("footer.recaptcha.before")}{" "}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
-                Privacy Policy
+                {t("footer.recaptcha.privacy")}
               </a>{" "}
-              and{" "}
+              {t("footer.recaptcha.and")}{" "}
               <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">
-                Terms of Service
+                {t("footer.recaptcha.terms")}
               </a>{" "}
-              apply.
+              {t("footer.recaptcha.after")}
             </p>
           </div>
         </div>
