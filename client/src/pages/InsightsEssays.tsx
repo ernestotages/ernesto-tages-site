@@ -28,13 +28,13 @@ export default function InsightsEssays() {
                 <Link href="/cost-of-clarity">
                   <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                      The Cost of Clarity
+                      {t("resources.insightsDetails.whitePapers.costOfClarity.title")}
                     </h3>
                     <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                      An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.
+                      {t("resources.insightsDetails.whitePapers.costOfClarity.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">
-                      <span>Read more</span>
+                      <span>{t("resources.insightsDetails.readMore")}</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
@@ -44,13 +44,13 @@ export default function InsightsEssays() {
                 <Link href="/emotional-excellence">
                   <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                      Emotional Excellence
+                      {t("resources.insightsDetails.whitePapers.emotionalExcellence.title")}
                     </h3>
                     <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                      Why coherence of emotion, thought, and action has become a strategic advantage for leaders. This white paper explores how emotional excellence transforms leadership effectiveness in complex organizational environments.
+                      {t("resources.insightsDetails.whitePapers.emotionalExcellence.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">
-                      <span>Read more</span>
+                      <span>{t("resources.insightsDetails.readMore")}</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
@@ -60,13 +60,13 @@ export default function InsightsEssays() {
                 <Link href="/iberoamerican-ethical-leadership">
                   <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer">
                     <h3 className="text-2xl font-semibold text-[#121212] mb-3">
-                      El liderazgo ético en Iberoamérica
+                      {t("resources.insightsDetails.whitePapers.iberoamericanEthicalLeadership.title")}
                     </h3>
                     <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                      A comprehensive exploration of how emotion, responsibility, and power shape ethical leadership in Ibero-America. This white paper offers seven movements that outline a moral compass for contemporary leadership.
+                      {t("resources.insightsDetails.whitePapers.iberoamericanEthicalLeadership.description")}
                     </p>
                     <div className="flex items-center text-[#D9307E] font-medium">
-                      <span>Read more</span>
+                      <span>{t("resources.insightsDetails.readMore")}</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>

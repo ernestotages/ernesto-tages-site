@@ -92,6 +92,8 @@ const translations: Record<Language, any> = {
       resources: "Resources",
       contact: "Contact",
       close: "Close",
+      toggleMenu: "Toggle menu",
+      notifications: "Notifications",
     },
     home: {
       hero: {
@@ -280,6 +282,25 @@ const translations: Record<Language, any> = {
             "How leaders who understand emotion make sharper, fairer, and more humane decisions.",
         },
         download: "PDF download",
+        // Cards for the white papers. Titles are not translated (titles of works).
+        whitePapers: {
+          costOfClarity: {
+            title: "The Cost of Clarity",
+            description:
+              "An exploration of how ethical leadership requires accepting unavoidable costs rather than avoiding them. This white paper examines the practice of costly clarity and how leaders can transform tension into trust through coherent decision-making.",
+          },
+          emotionalExcellence: {
+            title: "Emotional Excellence",
+            description:
+              "Why coherence of emotion, thought, and action has become a strategic advantage for leaders. This white paper explores how emotional excellence transforms leadership effectiveness in complex organizational environments.",
+          },
+          iberoamericanEthicalLeadership: {
+            title: "El liderazgo ético en Iberoamérica",
+            description:
+              "A comprehensive exploration of how emotion, responsibility, and power shape ethical leadership in Ibero-America. This white paper offers seven movements that outline a moral compass for contemporary leadership.",
+          },
+        },
+        readMore: "Read more",
       },
       frameworksDetails: {
         title: "Frameworks & Tools",
@@ -515,6 +536,9 @@ const translations: Record<Language, any> = {
         send: "Send Message",
         success: "Thank you — your message has been received. I'll reply soon.",
         error: "Please fill in all fields.",
+        sending: "Sending...",
+        invalidEmail: "Please enter a valid email address.",
+        sendFailed: "Failed to send message. Please try again.",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -551,6 +575,14 @@ const translations: Record<Language, any> = {
         ogDescription: "Book a conversation to explore how to transform leadership dilemmas into ethical and strategic decisions. Individual consultancy and corporate programs available.",
       },
     },
+    // Card linking to /clarity-matrix (Home, Services, Frameworks & Tools).
+    // The name of the framework is not translated.
+    clarityMatrixCard: {
+      title: "The Clarity Matrix™",
+      description:
+        "A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.",
+      cta: "Explore framework",
+    },
     notFound: {
       title: "Page not found | Ernesto Tages",
       heading: "Page Not Found",
@@ -560,16 +592,28 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Clarity for the decisions that matter.",
+      logoAlt: "Methodology Logo",
+      // The newsletter itself is published in English only.
       newsletter: {
-        title: "Stay Connected",
+        title: "The Clarity Compass",
         description:
-          "Receive thoughtful updates — new essays, decision tools, and reflections on ethical leadership.",
-        placeholder: "Your email",
-        button: "Join the Newsletter",
+          "Thoughtful reflections for leaders seeking clarity, integrity and calm in complexity.",
+        englishOnly: "Available in English only.",
+        placeholder: "* E-mail",
+        button: "Subscribe",
         submitting: "Subscribing...",
         success: "Thank you for subscribing!",
-        error: "Something went wrong. Please try again.",
-        already_subscribed: "You're already subscribed!",
+        error: "Subscription failed. Please try again.",
+        adBlocker: "Please disable your ad blocker to subscribe to the newsletter.",
+        verificationFailed: "Verification failed. Please try again.",
+      },
+      // Rendered as: before <privacy link> and <terms link> after.
+      recaptcha: {
+        before: "This site is protected by reCAPTCHA and the Google",
+        privacy: "Privacy Policy",
+        and: "and",
+        terms: "Terms of Service",
+        after: "apply.",
       },
       rights: "All rights reserved",
     },
@@ -582,6 +626,8 @@ const translations: Record<Language, any> = {
       resources: "Recursos",
       contact: "Contacto",
       close: "Cerrar",
+      toggleMenu: "Abrir o cerrar el menú",
+      notifications: "Notificaciones",
     },
     home: {
       hero: {
@@ -589,7 +635,7 @@ const translations: Record<Language, any> = {
           "Transformando Dilemas de Liderazgo en Acción Decisiva y Ética",
         subtitle:
           "Guío a líderes en las exigencias éticas y emocionales de la responsabilidad, ayudándoles a navegar la complejidad y decidir con claridad, rigor y equilibrio.",
-        cta: "Descubre cómo puedo ayudar",
+        cta: "Descubra cómo puedo ayudarle",
       },
       strategic: {
         title: "Apoyo estratégico para decisiones críticas",
@@ -623,7 +669,7 @@ const translations: Record<Language, any> = {
         p3: "Durante casi tres décadas, he cultivado una disciplina diaria que integra técnicas orientales y occidentales de reflexión y auto-observación — una práctica que ha profundizado mi comprensión de la naturaleza humana y las corrientes emocionales que moldean nuestras elecciones. Me permite apoyar a líderes no solo con rigor ético e intelectual, sino también con una visión humana — uniendo claridad analítica con conciencia interior.",
         p4: "He acompañado a líderes de los sectores público, privado y social en momentos de presión, incertidumbre y responsabilidad ética. Mi enfoque es riguroso pero empático: escuchar con cuidado, clarificar lo que realmente importa y fomentar una acción sabia y oportuna.",
         p5: "En el núcleo de mi trabajo hay una convicción: el liderazgo alcanza su forma más elevada cuando se fundamenta en el pensamiento crítico, la honestidad emocional y el servicio.",
-        cta: "Conoce más sobre mi enfoque",
+        cta: "Conozca más sobre mi enfoque",
       },
             approach: {
         title: "Guiando con Claridad.",
@@ -658,7 +704,7 @@ const translations: Record<Language, any> = {
         blockquote2: "Y la claridad no es un don — es una disciplina.",
         closingText:
           "Aquí, el rigor y la reflexión encuentran forma — renovando la claridad y la energía para la acción decisiva.",
-        cta: "Explora mis programas",
+        cta: "Explore mis programas",
       },
     },
     services: {
@@ -726,14 +772,14 @@ const translations: Record<Language, any> = {
         format1: "Conferencias (presenciales o virtuales)",
         format2: "Seminarios o retiros personalizados",
         format3: "Sesiones informativas privadas para juntas o liderazgo",
-        cta: "Solicitar una propuesta para tu organización",
+        cta: "Solicitar una propuesta para su organización",
       },
     },
     resources: {
       hero: {
         title: "Rigor y reflexión para la acción decisiva",
         subtitle:
-          "Un espacio donde las ideas y las prácticas nutren la claridad ética en el liderazgo. Aquí encontrarás ideas, lecturas y herramientas diseñadas para fortalecer la claridad ética — reflexiones prácticas para líderes que eligen pensar antes de actuar.",
+          "Un espacio donde las ideas y las prácticas nutren la claridad ética en el liderazgo. Aquí encontrará ideas, lecturas y herramientas diseñadas para fortalecer la claridad ética — reflexiones prácticas para líderes que eligen pensar antes de actuar.",
       },
       blocks: {
         insights: {
@@ -775,6 +821,25 @@ const translations: Record<Language, any> = {
             "Cómo los líderes que entienden la emoción toman decisiones más agudas, justas y humanas.",
         },
         download: "Descargar PDF",
+        // Cards for the white papers. Titles are not translated (titles of works).
+        whitePapers: {
+          costOfClarity: {
+            title: "The Cost of Clarity",
+            description:
+              "Una exploración de cómo el liderazgo ético exige aceptar los costes inevitables en lugar de eludirlos. Este libro blanco examina la práctica de la claridad costosa y cómo los líderes pueden transformar la tensión en confianza mediante decisiones coherentes.",
+          },
+          emotionalExcellence: {
+            title: "Emotional Excellence",
+            description:
+              "Por qué la coherencia entre emoción, pensamiento y acción se ha convertido en una ventaja estratégica para los líderes. Este libro blanco analiza cómo la excelencia emocional transforma la eficacia del liderazgo en entornos organizativos complejos.",
+          },
+          iberoamericanEthicalLeadership: {
+            title: "El liderazgo ético en Iberoamérica",
+            description:
+              "Una exploración exhaustiva de cómo la emoción, la responsabilidad y el poder configuran el liderazgo ético en Iberoamérica. Este libro blanco propone siete movimientos que trazan una brújula moral para el liderazgo contemporáneo.",
+          },
+        },
+        readMore: "Leer más",
       },
       frameworksDetails: {
         title: "Marcos y Herramientas",
@@ -859,7 +924,7 @@ const translations: Record<Language, any> = {
           outcomeP2: "El ejecutivo eligió un camino que implicaba costos visibles y aceptó que esos costos tendrían que ser llevados abiertamente, sin mitigación retórica. La decisión se volvió habitable — no porque fuera cómoda, sino porque era coherente.",
           outcomeP3: "En las semanas siguientes, pudo liderar sin el ruido interno constante de la justificación. La decisión seguía siendo difícil de explicar en ciertos contextos — pero ya no le exigía distorsionar ni los hechos ni a sí mismo para defenderla. Las críticas podían enfrentarse sin necesitar la defensividad para permanecer funcional.",
           outcomeP4: "La presión no desapareció. Pero ya no afectaba el juicio. Podía pensar hacia adelante nuevamente. La autoridad ya no se gastaba gestionando la contradicción interna — se hizo disponible para el trabajo que realmente la requería. El discernimiento había sido restaurado, y con él la capacidad de decidir nuevamente sin erosión.",
-          quote1: "La integridad no es elegir el mejor resultado. Es elegir la decisión cuyo costo estás dispuesto a llevar sin distorsión.",
+          quote1: "La integridad no es elegir el mejor resultado. Es elegir la decisión cuyo costo está dispuesto a llevar sin distorsión.",
           extSection1Title: "Despejando la Niebla Sin Simplificar la Realidad",
           extSection1P1: "Lo que hacía difícil esta decisión no era la incertidumbre, sino la claridad. Lo que hacía peligrosa esta situación no era solo la complejidad, sino la erosión del discernimiento bajo presión sostenida.",
           extSection1P2: "Desde relativamente temprano en el proceso, el ejecutivo comprendía los contornos de la situación. Los hechos eran conocidos. Los escenarios habían sido mapeados. El asesor legal había proporcionado su análisis; los asesores financieros habían modelado las implicaciones. Lo que permanecía sin resolver no era lo que podía suceder, sino lo que significaría actuar — y si ese significado podía sostenerse en el tiempo sin requerir autojustificación para permanecer tolerable.",
@@ -1000,16 +1065,19 @@ const translations: Record<Language, any> = {
       hero: {
         title: "Iniciemos una conversación reflexiva",
         subtitle:
-          "Si deseas explorar cómo puedo apoyarte a ti o a tu equipo, estaré encantado de escuchar. Escribe con confianza — cada mensaje se recibe con discreción y se responde personalmente.",
+          "Si desea explorar cómo puedo apoyarle a usted o a su equipo, estaré encantado de escuchar. Escriba con confianza — cada mensaje se recibe con discreción y se responde personalmente.",
       },
       form: {
         name: "Nombre Completo",
         email: "Correo Electrónico",
         subject: "Asunto",
-        message: "Tu Mensaje",
+        message: "Su mensaje",
         send: "Enviar Mensaje",
-        success: "Gracias — tu mensaje ha sido recibido. Responderé pronto.",
-        error: "Por favor completa todos los campos.",
+        success: "Gracias — su mensaje ha sido recibido. Responderé pronto.",
+        error: "Por favor, complete todos los campos.",
+        sending: "Enviando...",
+        invalidEmail: "Por favor, introduzca una dirección de correo electrónico válida.",
+        sendFailed: "No se ha podido enviar el mensaje. Por favor, inténtelo de nuevo.",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -1046,6 +1114,14 @@ const translations: Record<Language, any> = {
         ogDescription: "Reserve una conversación para explorar cómo transformar los dilemas de liderazgo en decisiones éticas y estratégicas. Consultoría individual y programas corporativos disponibles.",
       },
     },
+    // Card linking to /clarity-matrix (Home, Services, Frameworks & Tools).
+    // The name of the framework is not translated.
+    clarityMatrixCard: {
+      title: "The Clarity Matrix™",
+      description:
+        "Un marco para la claridad ética bajo presión. Permite abordar decisiones complejas a través de cuatro estados: deriva ética, contención moral, dislocación estratégica y claridad ética. Concebido para orientar, no para evaluar.",
+      cta: "Explorar el marco",
+    },
     notFound: {
       title: "Página no encontrada | Ernesto Tages",
       heading: "Página no encontrada",
@@ -1055,16 +1131,28 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Claridad para las decisiones que importan.",
+      logoAlt: "Logotipo de la metodología",
+      // The newsletter itself is published in English only.
       newsletter: {
-        title: "Mantente Conectado",
+        title: "The Clarity Compass",
         description:
-          "Recibe actualizaciones reflexivas — nuevos ensayos, herramientas de decisión y reflexiones sobre liderazgo ético.",
-        placeholder: "Tu correo",
-        button: "Unirse al Newsletter",
+          "Reflexiones meditadas para líderes que buscan claridad, integridad y calma en medio de la complejidad.",
+        englishOnly: "El boletín se publica únicamente en inglés.",
+        placeholder: "* Correo electrónico",
+        button: "Suscribirse",
         submitting: "Suscribiendo...",
-        success: "¡Gracias por suscribirte!",
-        error: "Algo salió mal. Por favor inténtalo de nuevo.",
-        already_subscribed: "¡Ya estás suscrito!",
+        success: "Gracias por suscribirse.",
+        error: "No se ha podido completar la suscripción. Por favor, inténtelo de nuevo.",
+        adBlocker: "Por favor, desactive su bloqueador de anuncios para suscribirse al boletín.",
+        verificationFailed: "La verificación ha fallado. Por favor, inténtelo de nuevo.",
+      },
+      // Rendered as: before <privacy link> and <terms link> after.
+      recaptcha: {
+        before: "Este sitio está protegido por reCAPTCHA y se aplican la",
+        privacy: "Política de privacidad",
+        and: "y los",
+        terms: "Términos del servicio",
+        after: "de Google.",
       },
       rights: "Todos los derechos reservados",
     },
@@ -1077,6 +1165,8 @@ const translations: Record<Language, any> = {
       resources: "Recursos",
       contact: "Contacto",
       close: "Fechar",
+      toggleMenu: "Abrir ou fechar o menu",
+      notifications: "Notificações",
     },
     home: {
       hero: {
@@ -1270,6 +1360,25 @@ const translations: Record<Language, any> = {
             "Como os líderes que entendem a emoção tomam decisões mais aguçadas, justas e humanas.",
         },
         download: "Descarregar PDF",
+        // Cards for the white papers. Titles are not translated (titles of works).
+        whitePapers: {
+          costOfClarity: {
+            title: "The Cost of Clarity",
+            description:
+              "Uma exploração de como a liderança ética exige aceitar custos inevitáveis em vez de os evitar. Este livro branco analisa a prática da clareza custosa e a forma como os líderes podem transformar a tensão em confiança através de decisões coerentes.",
+          },
+          emotionalExcellence: {
+            title: "Emotional Excellence",
+            description:
+              "Porque é que a coerência entre emoção, pensamento e ação se tornou uma vantagem estratégica para os líderes. Este livro branco analisa a forma como a excelência emocional transforma a eficácia da liderança em contextos organizacionais complexos.",
+          },
+          iberoamericanEthicalLeadership: {
+            title: "El liderazgo ético en Iberoamérica",
+            description:
+              "Uma exploração aprofundada de como a emoção, a responsabilidade e o poder moldam a liderança ética na Ibero-América. Este livro branco propõe sete movimentos que traçam uma bússola moral para a liderança contemporânea.",
+          },
+        },
+        readMore: "Ler mais",
       },
       frameworksDetails: {
         title: "Estruturas e Ferramentas",
@@ -1505,6 +1614,9 @@ const translations: Record<Language, any> = {
         send: "Enviar Mensagem",
         success: "Obrigado — a sua mensagem foi recebida. Responderei em breve.",
         error: "Por favor preencha todos os campos.",
+        sending: "A enviar...",
+        invalidEmail: "Por favor, introduza um endereço de e-mail válido.",
+        sendFailed: "Não foi possível enviar a mensagem. Por favor, tente novamente.",
       },
     },
     // Page <title>, meta description and Open Graph text.
@@ -1541,6 +1653,14 @@ const translations: Record<Language, any> = {
         ogDescription: "Marque uma conversa para explorar como transformar dilemas de liderança em decisões éticas e estratégicas. Consultoria individual e programas corporativos disponíveis.",
       },
     },
+    // Card linking to /clarity-matrix (Home, Services, Frameworks & Tools).
+    // The name of the framework is not translated.
+    clarityMatrixCard: {
+      title: "The Clarity Matrix™",
+      description:
+        "Um modelo para a clareza ética sob pressão. Permite abordar decisões complexas através de quatro estados: deriva ética, contenção moral, deslocação estratégica e clareza ética. Concebido para orientar, não para avaliar.",
+      cta: "Explorar o modelo",
+    },
     notFound: {
       title: "Página não encontrada | Ernesto Tages",
       heading: "Página Não Encontrada",
@@ -1550,16 +1670,28 @@ const translations: Record<Language, any> = {
     },
     footer: {
       tagline: "Clareza para as decisões que importam.",
+      logoAlt: "Logótipo da metodologia",
+      // The newsletter itself is published in English only.
       newsletter: {
-        title: "Mantenha-se Conectado",
+        title: "The Clarity Compass",
         description:
-          "Receba atualizações reflexivas — novos ensaios, ferramentas de decisão e reflexões sobre liderança ética.",
-        placeholder: "O seu email",
-        button: "Juntar-se à Newsletter",
+          "Reflexões ponderadas para líderes que procuram clareza, integridade e calma no meio da complexidade.",
+        englishOnly: "A newsletter é publicada apenas em inglês.",
+        placeholder: "* E-mail",
+        button: "Subscrever",
         submitting: "A subscrever...",
-        success: "Obrigado por subscrever!",
-        error: "Algo correu mal. Por favor tente novamente.",
-        already_subscribed: "Já está subscrito!",
+        success: "Obrigado pela sua subscrição.",
+        error: "Não foi possível concluir a subscrição. Por favor, tente novamente.",
+        adBlocker: "Por favor, desative o seu bloqueador de anúncios para subscrever a newsletter.",
+        verificationFailed: "A verificação falhou. Por favor, tente novamente.",
+      },
+      // Rendered as: before <privacy link> and <terms link> after.
+      recaptcha: {
+        before: "Este site está protegido pelo reCAPTCHA e aplicam-se a",
+        privacy: "Política de Privacidade",
+        and: "e os",
+        terms: "Termos de Serviço",
+        after: "da Google.",
       },
       rights: "Todos os direitos reservados",
     },

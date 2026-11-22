@@ -119,12 +119,12 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <Link href="/clarity-matrix" className="block">
                 <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#D9307E] hover:shadow-md transition-shadow cursor-pointer">
-                  <h3 className="text-2xl text-[#121212] mb-3">The Clarity Matrix™</h3>
+                  <h3 className="text-2xl text-[#121212] mb-3">{t("clarityMatrixCard.title")}</h3>
                   <p className="text-lg text-[#777777] mb-4 leading-relaxed">
-                    A framework for ethical clarity under pressure. Navigate complex decisions through four states: Ethical Drift, Moral Containment, Strategic Dislocation, and Ethical Clarity. Designed for orientation, not evaluation.
+                    {t("clarityMatrixCard.description")}
                   </p>
                   <div className="flex items-center text-[#D9307E] font-medium">
-                    <span>Explore framework</span>
+                    <span>{t("clarityMatrixCard.cta")}</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
                 </div>
