@@ -1,12 +1,14 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import SEO from "@/components/SEO";
-import { personRef } from "@/lib/structuredData";
+import { canonicalUrl, personRef } from "@/lib/structuredData";
+import { localizedPath } from "@/routes";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudyB() {
   const [showExtendedReflection, setShowExtendedReflection] = useState(false);
   const { t, language } = useLanguage();
+  const pageUrl = (path: string) => canonicalUrl(localizedPath(path, language));
   const p = "resources.caseStudiesPage";
   const c = `${p}.caseB`;
 
@@ -211,8 +213,8 @@ export default function CaseStudyB() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "When Decisions No Longer Settle",
-          "description": "A case study on discernment under ultimate authority: restoring the capacity for decisions to conclude.",
+          "headline": t(`${c}.title`),
+          "description": t(`${c}.seoDescription`),
           "author": personRef,
           "datePublished": "2025-12-01",
           "publisher": {
@@ -220,7 +222,7 @@ export default function CaseStudyB() {
             "name": "Ernesto Tages"
           },
           "inLanguage": language,
-          "url": "https://ernestotages.com/resources/case-studies/case-b"
+          "url": pageUrl("/resources/case-studies/case-b")
         })}
       </script>
 
@@ -232,26 +234,26 @@ export default function CaseStudyB() {
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Home",
-              "item": "https://ernestotages.com/"
+              "name": t(`${p}.breadcrumbHome`),
+              "item": pageUrl("/")
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Resources",
-              "item": "https://ernestotages.com/resources"
+              "name": t(`${p}.breadcrumbResources`),
+              "item": pageUrl("/resources")
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Case Studies",
-              "item": "https://ernestotages.com/resources/case-studies"
+              "name": t(`${p}.breadcrumbCaseStudies`),
+              "item": pageUrl("/resources/case-studies")
             },
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "When Decisions No Longer Settle",
-              "item": "https://ernestotages.com/resources/case-studies/case-b"
+              "name": t(`${c}.title`),
+              "item": pageUrl("/resources/case-studies/case-b")
             }
           ]
         })}

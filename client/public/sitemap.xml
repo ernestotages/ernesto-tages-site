@@ -1,67 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ernestotages.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/"/>
     <lastmod>2026-11-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/about"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/services/individual-consultancy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/individual-consultancy"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/services/conferences-seminars</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/conferences-seminars"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/insights-essays</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/insights-essays"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/frameworks-tools</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/frameworks-tools"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/case-studies/case-a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-a"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/case-studies/case-b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-b"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/resources/case-studies/case-c</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-c"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ernestotages.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/contact"/>
     <lastmod>2026-11-22</lastmod>
     <priority>0.6</priority>
   </url>
@@ -84,5 +137,239 @@
     <loc>https://ernestotages.com/iberoamerican-ethical-leadership</loc>
     <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/about"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/services/individual-consultancy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/individual-consultancy"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/services/conferences-seminars</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/conferences-seminars"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/insights-essays</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/insights-essays"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/frameworks-tools</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/frameworks-tools"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/case-studies/case-a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-a"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/case-studies/case-b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-b"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/resources/case-studies/case-c</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-c"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/contact"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/about"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/services/individual-consultancy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/individual-consultancy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/individual-consultancy"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/services/conferences-seminars</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/services/conferences-seminars"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/services/conferences-seminars"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/insights-essays</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/insights-essays"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/insights-essays"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/frameworks-tools</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/frameworks-tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/frameworks-tools"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/case-studies/case-a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-a"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-a"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/case-studies/case-b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-b"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/resources/case-studies/case-c</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/resources/case-studies/case-c"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/resources/case-studies/case-c"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ernestotages.com/pt/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ernestotages.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ernestotages.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ernestotages.com/pt/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ernestotages.com/contact"/>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>

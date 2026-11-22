@@ -1,12 +1,14 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import SEO from "@/components/SEO";
-import { personRef } from "@/lib/structuredData";
+import { canonicalUrl, personRef } from "@/lib/structuredData";
+import { localizedPath } from "@/routes";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CaseStudyC() {
   const [showExtendedReflection, setShowExtendedReflection] = useState(false);
   const { t, language } = useLanguage();
+  const pageUrl = (path: string) => canonicalUrl(localizedPath(path, language));
   const p = "resources.caseStudiesPage";
   const c = `${p}.caseC`;
 
@@ -288,8 +290,8 @@ export default function CaseStudyC() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "When the Right Decision Costs",
-          "description": "A case study on sustaining authority after integrity has been exercised: absorbing cost without deformation.",
+          "headline": t(`${c}.title`),
+          "description": t(`${c}.seoDescription`),
           "author": personRef,
           "datePublished": "2025-12-01",
           "publisher": {
@@ -297,7 +299,7 @@ export default function CaseStudyC() {
             "name": "Ernesto Tages"
           },
           "inLanguage": language,
-          "url": "https://ernestotages.com/resources/case-studies/case-c"
+          "url": pageUrl("/resources/case-studies/case-c")
         })}
       </script>
 
@@ -309,26 +311,26 @@ export default function CaseStudyC() {
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Home",
-              "item": "https://ernestotages.com/"
+              "name": t(`${p}.breadcrumbHome`),
+              "item": pageUrl("/")
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Resources",
-              "item": "https://ernestotages.com/resources"
+              "name": t(`${p}.breadcrumbResources`),
+              "item": pageUrl("/resources")
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Case Studies",
-              "item": "https://ernestotages.com/resources/case-studies"
+              "name": t(`${p}.breadcrumbCaseStudies`),
+              "item": pageUrl("/resources/case-studies")
             },
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "When the Right Decision Costs",
-              "item": "https://ernestotages.com/resources/case-studies/case-c"
+              "name": t(`${c}.title`),
+              "item": pageUrl("/resources/case-studies/case-c")
             }
           ]
         })}

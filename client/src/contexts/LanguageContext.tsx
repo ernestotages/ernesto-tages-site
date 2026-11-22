@@ -1,25 +1,53 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { isTranslated, type Locale } from "@/routes";
 
-export type Language = "en" | "es" | "pt";
+export type Language = Locale;
 
 interface LanguageContextType {
+  /** Language of the site chrome (header, footer, navigation links). */
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  /** Locale given by the URL prefix ("/es/..." -> "es"). */
+  urlLocale: Language;
+  /** Current page path without the locale prefix. */
+  pagePath: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
+/**
+ * The language comes from the URL: /es/... is Spanish, /pt/... Portuguese,
+ * everything else English, so pre-rendered pages and the hydrated app always
+ * agree and there is no flash of another language.
+ *
+ * The visitor's choice is remembered for the visit: on the few pages that
+ * exist in one language only (e.g. /clarity-matrix), the header and footer
+ * keep the language the visitor was browsing in. Nothing ever redirects
+ * based on the browser language.
+ */
 export function LanguageProvider({
   children,
   initialLanguage = "en",
+  urlLocale,
+  pagePath = "/",
 }: {
   children: ReactNode;
   initialLanguage?: Language;
+  urlLocale?: Language;
+  pagePath?: string;
 }) {
-  const [language, setLanguage] = useState<Language>(initialLanguage);
+  const locale = urlLocale ?? initialLanguage;
+  const translated = isTranslated(pagePath);
+  const [sessionLanguage, setSessionLanguage] = useState<Language>(locale);
+
+  useEffect(() => {
+    if (translated) setSessionLanguage(locale);
+  }, [translated, locale]);
+
+  const language = translated ? locale : sessionLanguage;
 
   const t = (key: string): string => {
     const keys = key.split(".");
@@ -33,7 +61,15 @@ export function LanguageProvider({
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage: setSessionLanguage,
+        t,
+        urlLocale: locale,
+        pagePath,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
@@ -480,6 +516,47 @@ const translations: Record<Language, any> = {
         success: "Thank you — your message has been received. I'll reply soon.",
         error: "Please fill in all fields.",
       },
+    },
+    // Page <title>, meta description and Open Graph text.
+    seo: {
+      home: {
+        title: "Ernesto Tages - Ethical Leadership Consultancy",
+        description: "Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity.",
+        keywords: "ethical leadership, leadership consultancy, decision-making, emotional mastery, executive advisory, moral clarity, ethical decision-making",
+        ogTitle: "Ernesto Tages - Ethical Leadership Consultancy",
+        ogDescription: "Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity.",
+      },
+      about: {
+        title: "About Ernesto Tages | Ethical Leadership Mentor",
+        description: "Philosopher and consultant with 25+ years of experience in ethical leadership. Supporting executives from public, private, and social sectors to transform complex dilemmas into clear, ethical decisions.",
+        ogTitle: "Ernesto Tages - Profile and Experience",
+        ogDescription: "Expert in emotional management and decisional clarity. Author, speaker, and mentor for leaders facing complex ethical dilemmas.",
+      },
+      services: {
+        title: "Consultancy and Conferences in Ethical Leadership | Ernesto Tages",
+        description: "Individual consultancy and corporate programs in ethical leadership. Strategic sessions, conferences, and seminars integrating intellectual rigor, emotional management, and integrity.",
+        ogTitle: "Services: Individual Consultancy and Corporate Programs",
+        ogDescription: "Personalized support for executives and teams facing complex ethical dilemmas. Decisional clarity and conscious leadership.",
+      },
+      resources: {
+        title: "Reflection and Ethical Leadership Resources | Ernesto Tages",
+        description: "Articles, essays, and practical tools on ethical leadership, emotional management, and decisional clarity. Free resources for executives seeking to decide with integrity.",
+        ogTitle: "Free Resources: Articles and Ethical Leadership Tools",
+        ogDescription: "Library of content on ethical dilemmas, emotion management, and conscious decision-making. For leaders who value rigor and integrity.",
+      },
+      contact: {
+        title: "Contact Ernesto Tages | Ethical Leadership Consultancy",
+        description: "Get in touch to schedule an ethical leadership consultancy session. Personalized support for executives facing complex dilemmas and seeking decisional clarity.",
+        ogTitle: "Contact - Schedule a Consultancy Session",
+        ogDescription: "Book a conversation to explore how to transform leadership dilemmas into ethical and strategic decisions. Individual consultancy and corporate programs available.",
+      },
+    },
+    notFound: {
+      title: "Page not found | Ernesto Tages",
+      heading: "Page Not Found",
+      line1: "Sorry, the page you are looking for doesn't exist.",
+      line2: "It may have been moved or deleted.",
+      goHome: "Go Home",
     },
     footer: {
       tagline: "Clarity for the decisions that matter.",
@@ -935,6 +1012,47 @@ const translations: Record<Language, any> = {
         error: "Por favor completa todos los campos.",
       },
     },
+    // Page <title>, meta description and Open Graph text.
+    seo: {
+      home: {
+        title: "Ernesto Tages - Consultoría en Liderazgo Ético",
+        description: "Consultoría especializada en liderazgo ético para directivos. Acompañamiento estratégico en la gestión de dilemas complejos, la claridad en la toma de decisiones y la integridad organizacional.",
+        keywords: "liderazgo ético, consultoría de liderazgo, toma de decisiones, dominio emocional, asesoramiento a directivos, claridad moral, toma de decisiones éticas",
+        ogTitle: "Ernesto Tages - Consultoría en Liderazgo Ético",
+        ogDescription: "Consultoría especializada en liderazgo ético para directivos. Acompañamiento estratégico en la gestión de dilemas complejos, la claridad en la toma de decisiones y la integridad organizacional.",
+      },
+      about: {
+        title: "Sobre Ernesto Tages | Mentor en Liderazgo Ético",
+        description: "Filósofo y consultor con más de 25 años de experiencia en liderazgo ético. Acompaña a directivos de los sectores público, privado y social para transformar dilemas complejos en decisiones claras y éticas.",
+        ogTitle: "Ernesto Tages - Perfil y trayectoria",
+        ogDescription: "Experto en gestión emocional y claridad en la toma de decisiones. Autor, conferenciante y mentor de líderes que afrontan dilemas éticos complejos.",
+      },
+      services: {
+        title: "Consultoría y Conferencias en Liderazgo Ético | Ernesto Tages",
+        description: "Consultoría individual y programas corporativos en liderazgo ético. Sesiones estratégicas, conferencias y seminarios que integran rigor intelectual, gestión emocional e integridad.",
+        ogTitle: "Servicios: Consultoría Individual y Programas Corporativos",
+        ogDescription: "Acompañamiento personalizado para directivos y equipos que afrontan dilemas éticos complejos. Claridad en la toma de decisiones y liderazgo consciente.",
+      },
+      resources: {
+        title: "Recursos de Reflexión y Liderazgo Ético | Ernesto Tages",
+        description: "Artículos, ensayos y herramientas prácticas sobre liderazgo ético, gestión emocional y claridad en la toma de decisiones. Recursos gratuitos para directivos que desean decidir con integridad.",
+        ogTitle: "Recursos gratuitos: artículos y herramientas de liderazgo ético",
+        ogDescription: "Biblioteca de contenidos sobre dilemas éticos, gestión de las emociones y toma de decisiones consciente. Para líderes que valoran el rigor y la integridad.",
+      },
+      contact: {
+        title: "Contacto con Ernesto Tages | Consultoría en Liderazgo Ético",
+        description: "Póngase en contacto para concertar una sesión de consultoría en liderazgo ético. Acompañamiento personalizado para directivos que afrontan dilemas complejos y buscan claridad en sus decisiones.",
+        ogTitle: "Contacto - Concierte una sesión de consultoría",
+        ogDescription: "Reserve una conversación para explorar cómo transformar los dilemas de liderazgo en decisiones éticas y estratégicas. Consultoría individual y programas corporativos disponibles.",
+      },
+    },
+    notFound: {
+      title: "Página no encontrada | Ernesto Tages",
+      heading: "Página no encontrada",
+      line1: "Lo sentimos, la página que busca no existe.",
+      line2: "Es posible que se haya trasladado o eliminado.",
+      goHome: "Ir al inicio",
+    },
     footer: {
       tagline: "Claridad para las decisiones que importan.",
       newsletter: {
@@ -1388,6 +1506,47 @@ const translations: Record<Language, any> = {
         success: "Obrigado — a sua mensagem foi recebida. Responderei em breve.",
         error: "Por favor preencha todos os campos.",
       },
+    },
+    // Page <title>, meta description and Open Graph text.
+    seo: {
+      home: {
+        title: "Ernesto Tages - Consultoria em Liderança Ética",
+        description: "Consultoria especializada em liderança ética para executivos. Acompanhamento estratégico na gestão de dilemas complexos, na clareza decisória e na integridade organizacional.",
+        keywords: "liderança ética, consultoria de liderança, tomada de decisão, domínio emocional, aconselhamento executivo, clareza moral, tomada de decisão ética",
+        ogTitle: "Ernesto Tages - Consultoria em Liderança Ética",
+        ogDescription: "Consultoria especializada em liderança ética para executivos. Acompanhamento estratégico na gestão de dilemas complexos, na clareza decisória e na integridade organizacional.",
+      },
+      about: {
+        title: "Sobre Ernesto Tages | Mentor em Liderança Ética",
+        description: "Filósofo e consultor com mais de 25 anos de experiência em liderança ética. Acompanha executivos dos setores público, privado e social na transformação de dilemas complexos em decisões claras e éticas.",
+        ogTitle: "Ernesto Tages - Perfil e Percurso",
+        ogDescription: "Especialista em gestão emocional e clareza decisória. Autor, orador e mentor de líderes que enfrentam dilemas éticos complexos.",
+      },
+      services: {
+        title: "Consultoria e Conferências em Liderança Ética | Ernesto Tages",
+        description: "Consultoria individual e programas corporativos em liderança ética. Sessões estratégicas, conferências e seminários que integram rigor intelectual, gestão emocional e integridade.",
+        ogTitle: "Serviços: Consultoria Individual e Programas Corporativos",
+        ogDescription: "Acompanhamento personalizado para executivos e equipas que enfrentam dilemas éticos complexos. Clareza decisória e liderança consciente.",
+      },
+      resources: {
+        title: "Recursos de Reflexão e Liderança Ética | Ernesto Tages",
+        description: "Artigos, ensaios e ferramentas práticas sobre liderança ética, gestão emocional e clareza decisória. Recursos gratuitos para executivos que procuram decidir com integridade.",
+        ogTitle: "Recursos Gratuitos: Artigos e Ferramentas de Liderança Ética",
+        ogDescription: "Biblioteca de conteúdos sobre dilemas éticos, gestão das emoções e tomada de decisão consciente. Para líderes que valorizam o rigor e a integridade.",
+      },
+      contact: {
+        title: "Contactar Ernesto Tages | Consultoria em Liderança Ética",
+        description: "Entre em contacto para marcar uma sessão de consultoria em liderança ética. Acompanhamento personalizado para executivos que enfrentam dilemas complexos e procuram clareza decisória.",
+        ogTitle: "Contacto - Marque uma Sessão de Consultoria",
+        ogDescription: "Marque uma conversa para explorar como transformar dilemas de liderança em decisões éticas e estratégicas. Consultoria individual e programas corporativos disponíveis.",
+      },
+    },
+    notFound: {
+      title: "Página não encontrada | Ernesto Tages",
+      heading: "Página Não Encontrada",
+      line1: "Lamentamos, mas a página que procura não existe.",
+      line2: "Pode ter sido movida ou eliminada.",
+      goHome: "Voltar ao início",
     },
     footer: {
       tagline: "Clareza para as decisões que importam.",

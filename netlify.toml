@@ -3,11 +3,17 @@
   publish = "dist/public"
 
 # Every public page is pre-rendered at build time to its own HTML file
-# (scripts/prerender.mjs). Each rule below serves that page's own file.
-# "/" is served by index.html directly. The build fails if a pre-rendered
-# route is missing here.
-# Anything else falls through to the final rule: the pre-rendered
-# not-found page with HTTP status 404.
+# (scripts/prerender.mjs), once per language: English at the unprefixed
+# paths, Spanish under /es/ and Portuguese under /pt/ (same slugs).
+# Each rule below serves that page's own file. "/" is served by index.html
+# directly. The build fails if a pre-rendered route is missing here.
+# Pages that exist in one language only (/clarity-matrix, /cost-of-clarity,
+# /emotional-excellence, /iberoamerican-ethical-leadership) have no /es/ or
+# /pt/ rule, so those URLs return the localized 404.
+# Anything else falls through to the 404 rules at the end: the pre-rendered
+# not-found page (in the URL's language) with HTTP status 404.
+
+# --- English ---
 
 [[redirects]]
   from = "/about"
@@ -110,6 +116,191 @@
   to = "/iberoamerican-ethical-leadership.html"
   status = 200
   force = true
+
+# --- Spanish (/es/...) ---
+
+[[redirects]]
+  from = "/es"
+  to = "/es.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/about"
+  to = "/es/about.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/services"
+  to = "/es/services.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/services/individual-consultancy"
+  to = "/es/services/individual-consultancy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/services/conferences-seminars"
+  to = "/es/services/conferences-seminars.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources"
+  to = "/es/resources.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/insights-essays"
+  to = "/es/resources/insights-essays.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/frameworks-tools"
+  to = "/es/resources/frameworks-tools.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/talks"
+  to = "/es/resources/talks.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/case-studies"
+  to = "/es/resources/case-studies.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/case-studies/case-a"
+  to = "/es/resources/case-studies/case-a.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/case-studies/case-b"
+  to = "/es/resources/case-studies/case-b.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/resources/case-studies/case-c"
+  to = "/es/resources/case-studies/case-c.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/contact"
+  to = "/es/contact.html"
+  status = 200
+  force = true
+
+# --- Portuguese (/pt/...) ---
+
+[[redirects]]
+  from = "/pt"
+  to = "/pt.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/about"
+  to = "/pt/about.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/services"
+  to = "/pt/services.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/services/individual-consultancy"
+  to = "/pt/services/individual-consultancy.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/services/conferences-seminars"
+  to = "/pt/services/conferences-seminars.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources"
+  to = "/pt/resources.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/insights-essays"
+  to = "/pt/resources/insights-essays.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/frameworks-tools"
+  to = "/pt/resources/frameworks-tools.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/talks"
+  to = "/pt/resources/talks.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/case-studies"
+  to = "/pt/resources/case-studies.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/case-studies/case-a"
+  to = "/pt/resources/case-studies/case-a.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/case-studies/case-b"
+  to = "/pt/resources/case-studies/case-b.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/resources/case-studies/case-c"
+  to = "/pt/resources/case-studies/case-c.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pt/contact"
+  to = "/pt/contact.html"
+  status = 200
+  force = true
+
+# Unknown URLs under a language prefix get the not-found page in that
+# language, still with HTTP 404.
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/404.html"
+  status = 404
 
 [[redirects]]
   from = "/*"

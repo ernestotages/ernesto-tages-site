@@ -12,7 +12,13 @@ import App from "./App";
 import { trpc } from "./lib/trpc";
 import type { Locale } from "./routes";
 
-export { getPrerenderRoutes, PAGE_PATHS } from "./routes";
+export {
+  getPrerenderRoutes,
+  PAGE_PATHS,
+  LOCALES,
+  DEFAULT_LOCALE,
+  localizedPath,
+} from "./routes";
 
 export function render(url: string, locale: Locale = "en") {
   const queryClient = new QueryClient();

@@ -9,10 +9,10 @@ export default function Resources() {
   return (
     <>
       <SEO
-        title="Reflection and Ethical Leadership Resources | Ernesto Tages"
-        description="Articles, essays, and practical tools on ethical leadership, emotional management, and decisional clarity. Free resources for executives seeking to decide with integrity."
-        ogTitle="Free Resources: Articles and Ethical Leadership Tools"
-        ogDescription="Library of content on ethical dilemmas, emotion management, and conscious decision-making. For leaders who value rigor and integrity."
+        title={t("seo.resources.title")}
+        description={t("seo.resources.description")}
+        ogTitle={t("seo.resources.ogTitle")}
+        ogDescription={t("seo.resources.ogDescription")}
         ogImage="/og-image.png"
       />
     <div className="min-h-screen bg-white">

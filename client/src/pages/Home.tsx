@@ -25,11 +25,11 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Ernesto Tages - Ethical Leadership Consultancy"
-        description="Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity."
-        keywords="ethical leadership, leadership consultancy, decision-making, emotional mastery, executive advisory, moral clarity, ethical decision-making"
-        ogTitle="Ernesto Tages - Ethical Leadership Consultancy"
-        ogDescription="Specialized consultancy in ethical leadership for executives. Strategic support in managing complex dilemmas, decisional clarity, and organizational integrity."
+        title={t("seo.home.title")}
+        description={t("seo.home.description")}
+        keywords={t("seo.home.keywords")}
+        ogTitle={t("seo.home.ogTitle")}
+        ogDescription={t("seo.home.ogDescription")}
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">

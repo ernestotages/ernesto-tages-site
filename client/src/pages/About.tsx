@@ -10,10 +10,10 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Ernesto Tages | Ethical Leadership Mentor"
-        description="Philosopher and consultant with 25+ years of experience in ethical leadership. Supporting executives from public, private, and social sectors to transform complex dilemmas into clear, ethical decisions."
-        ogTitle="Ernesto Tages - Profile and Experience"
-        ogDescription="Expert in emotional management and decisional clarity. Author, speaker, and mentor for leaders facing complex ethical dilemmas."
+        title={t("seo.about.title")}
+        description={t("seo.about.description")}
+        ogTitle={t("seo.about.ogTitle")}
+        ogDescription={t("seo.about.ogDescription")}
         ogImage="/og-image.png"
       />
       <div className="min-h-screen bg-white">
